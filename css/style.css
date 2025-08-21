@@ -225,7 +225,7 @@ body {
   font-family: "Cygre";
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 100%;
   font-weight: 400;
   font-variant-ligatures: none;
@@ -361,7 +361,7 @@ div::-webkit-scrollbar-thumb {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-top: 136px;
 }
 
 picture {
@@ -392,7 +392,7 @@ picture img {
 }
 
 section {
-  padding: 80px 0;
+  padding: 35px 0 50px 0;
 }
 @media (max-width: 1549px) {
   section {
@@ -1266,7 +1266,7 @@ section {
   background-repeat: no-repeat;
   position: relative;
   border: solid 1px rgb(255, 255, 255);
-  top: 3px;
+  top: 0;
 }
 @media (hover: hover) {
   .btn-chat:hover {
@@ -1311,20 +1311,16 @@ h6,
 
 h1,
 .caption--h1 {
-  font-size: 44px;
-  line-height: 120%;
+  font-size: 60px;
+  line-height: 42px;
   font-weight: 400;
-}
-@media (max-width: 1549px) {
-  h1,
-  .caption--h1 {
-    font-size: 36px;
-  }
+  text-transform: uppercase;
 }
 @media (max-width: 1199px) {
   h1,
   .caption--h1 {
-    font-size: 32px;
+    font-size: 45px;
+    line-height: 50px;
   }
 }
 @media (max-width: 1023px) {
@@ -1336,7 +1332,14 @@ h1,
 @media (max-width: 767px) {
   h1,
   .caption--h1 {
-    font-size: 24px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 389px) {
+  h1,
+  .caption--h1 {
+    font-size: 35px;
+    line-height: 42px;
   }
 }
 
@@ -2160,7 +2163,7 @@ h4,
 
 .grettings-main {
   position: relative;
-  height: 893px;
+  height: 852px;
   padding: 102px 0;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
@@ -2190,7 +2193,7 @@ h4,
 
 .grettings-slider {
   overflow: visible;
-  height: 700px;
+  height: 665px;
 }
 @media (max-width: 1800px) {
   .grettings-slider {
@@ -2258,7 +2261,7 @@ h4,
 }
 .grettings-slider .swiper-slide:nth-child(2n) .grettings-item::before {
   bottom: auto;
-  top: -17px;
+  top: -30px;
 }
 @media (max-width: 767px) {
   .grettings-slider .swiper-slide:nth-child(2n) .grettings-item::before {
@@ -2302,8 +2305,8 @@ h4,
   transition: all 0.3s;
   width: 56px;
   height: 56px;
-  right: -16px;
-  bottom: -17px;
+  right: -23px;
+  bottom: -11px;
   z-index: -1;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='28' cy='28' r='28' fill='%23F59E11'/%3e%3ccircle cx='28' cy='28' r='6' fill='white'/%3e%3c/svg%3e ");
   background-position: center;
@@ -2342,7 +2345,8 @@ h4,
 .grettings-item .grettings-item__text {
   font-weight: 400;
   font-size: 17px;
-  line-height: 28px;
+  line-height: 22px;
+  margin-bottom: 5px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1549px) {
@@ -2352,9 +2356,12 @@ h4,
   }
 }
 .grettings-item .btn {
-  margin-top: 8px;
+  font-size: 16px;
+  margin: 0;
   width: auto;
+  height: 46px;
   min-width: 194px;
+  padding: 0 26px 0 5px;
 }
 
 .adv-main {
@@ -4577,6 +4584,7 @@ h4,
   z-index: 3;
   border-radius: 60px;
   overflow: hidden;
+  padding-top: 145px;
 }
 @media (max-width: 767px) {
   .about-main {
@@ -4594,8 +4602,8 @@ h4,
   font-size: 25px;
   line-height: 35px;
   text-transform: uppercase;
-  padding: 60px;
-  margin-bottom: 111px;
+  padding: 32px 60px 42px 60px;
+  margin-bottom: 110px;
 }
 @media (max-width: 1549px) {
   .about-main .about-main__numbers {
@@ -4712,7 +4720,7 @@ h4,
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 21px;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -4720,9 +4728,13 @@ h4,
     gap: 15px;
   }
 }
+.about-main__info p {
+  font-size: 16px;
+  line-height: 26px;
+}
 .about-main__info ul {
   margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -4756,11 +4768,11 @@ h4,
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  padding: 60px;
+  padding: 42px 60px 33px 76px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 4px;
 }
 @media (max-width: 1549px) {
   .about-main__info ul li {
@@ -4810,7 +4822,9 @@ h4,
   }
 }
 .about-main__info ul li p {
-  max-width: 408px;
+  font-size: 16px;
+  max-width: 300px;
+  text-transform: none;
 }
 @media (max-width: 1549px) {
   .about-main__info ul li p {

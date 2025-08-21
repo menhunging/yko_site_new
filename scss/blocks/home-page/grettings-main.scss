@@ -1,6 +1,6 @@
 .grettings-main {
   position: relative;
-  height: 893px;
+  height: 852px;
   padding: 102px 0;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
@@ -29,7 +29,7 @@
 
 .grettings-slider {
   overflow: visible;
-  height: 700px;
+  height: 665px;
 
   @media (max-width: 1800px) {
     padding: 0 90px;
@@ -93,7 +93,7 @@
 
         &::before {
           bottom: auto;
-          top: -17px;
+          top: -30px;
 
           @include responsive767 {
             right: 0px;
@@ -134,8 +134,8 @@
   @include before {
     width: 56px;
     height: 56px;
-    right: -16px;
-    bottom: -17px;
+    right: -23px;
+    bottom: -11px;
     z-index: -1;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='28' cy='28' r='28' fill='%23F59E11'/%3e%3ccircle cx='28' cy='28' r='6' fill='white'/%3e%3c/svg%3e ");
     background-position: center;
@@ -173,7 +173,8 @@
   .grettings-item__text {
     font-weight: 400;
     font-size: 17px;
-    line-height: 28px;
+    line-height: 22px;
+    margin-bottom: 5px;
     color: $colorWhite;
 
     @include responsive1549 {
@@ -183,8 +184,11 @@
   }
 
   .btn {
-    margin-top: 8px;
+    font-size: 16px;
+    margin: 0;
     width: auto;
+    height: 46px;
     min-width: 194px;
+    padding: 0 26px 0 5px;
   }
 }
