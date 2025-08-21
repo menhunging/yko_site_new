@@ -1,0 +1,17 @@
+.village-page .call-form {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 124px;
+  padding-bottom: 0;
+}
+.village-page .call-form .container {
+  position: relative;
+}
+.village-page .call-form.call-question-form .picture-block {
+  width: 1340px;
+  height: 639px;
+  top: auto;
+  bottom: 47px;
+  right: -629px;
+  z-index: -1;
+}

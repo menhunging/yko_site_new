@@ -1,0 +1,210 @@
+.adv-main {
+  position: relative;
+
+  @include before {
+    background-color: $colorGrayLight;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50px);
+    z-index: -1;
+  }
+
+  .adv-main__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+
+    @include responsive1549 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    @include responsive767 {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .adv-main__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $colorGray;
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      gap: 20px;
+      font-size: 16px;
+    }
+  }
+
+  .adv-main__name {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    color: $colorBlack;
+    margin-top: 10px;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include responsive1199 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 0;
+      max-width: 50%;
+    }
+
+    @include responsive1023 {
+      max-width: 75%;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin-top: -10px;
+
+    @include responsive767 {
+      margin: 0;
+    }
+  }
+}
+
+.adv-section-main {
+  padding: 70px 0;
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  @include responsive1023 {
+    padding: 50px 0;
+  }
+
+  @include responsive767 {
+    padding: 30px 0;
+  }
+
+  @include before {
+    background-image: url('./../img/svg/lines.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1135.98px;
+    height: 456px;
+    top: 0;
+    left: -401px;
+    z-index: -1;
+  }
+
+  @include after {
+    background-image: url('./../img/svg/lines.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1135.98px;
+    height: 456px;
+    bottom: 89px;
+    right: -380.98px;
+    z-index: -1;
+  }
+
+  .adv-section-main__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1176px;
+    margin: 0 auto;
+
+    @include responsive1023 {
+      gap: 20px;
+    }
+
+    @include responsive767 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .adv-section-main__item {
+    background-color: $colorWhite;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 221px;
+    position: relative;
+    padding-left: 210px;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 35px;
+      min-height: 180px;
+      padding-left: 150px;
+    }
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include responsive1023 {
+      padding-left: 100px;
+      font-size: 20px;
+      line-height: 24px;
+      min-height: 150px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+      gap: 5px;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      transform: translateY(-50%);
+
+      @include responsive1549 {
+        left: 50px;
+      }
+
+      @include responsive1023 {
+        width: 50px;
+        left: 25px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $colorGray;
+
+      @include responsive767 {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}

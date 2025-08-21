@@ -1,0 +1,117 @@
+.geoplan {
+  &-section {
+    padding: 76px 0 36px;
+    &__head {
+      margin-bottom: 52px;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    
+        @include responsive1199 {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    
+      p {
+        max-width: 904px;
+        color: $colorGray;
+      }
+    }
+    &__body {
+      &-item {
+        position: relative;
+      }
+      .container {
+        position: absolute;
+        bottom: 71px;
+        left:50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+      }
+      .geoplan-info {
+        position: relative;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 40px;
+        display: flex;
+        align-items: stretch;
+        column-gap: 54px;
+        padding: 29px 44px;
+        &__item {
+          display: flex;
+          align-items: center;
+          // column-gap: 18px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          box-sizing: border-box;
+          padding-bottom: 6px;
+
+          &.sale, &.sold {
+            padding-left: 74px;
+            @include before {
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDUiIGhlaWdodD0iNDUiIHZpZXdCb3g9IjAgMCA0NSA0NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjIuMDgwNyIgY3k9IjIyLjA4MTIiIHI9IjIxLjQ2NzMiIHN0cm9rZT0iIzIxMjEyMSIgc3Ryb2tlLXdpZHRoPSIxLjIyNjciLz4KPHBhdGggZD0iTTI5LjcyMzEgMTguNzA1OEMyNy43MDQ0IDE3LjAxNDMgMjUuNjQ2NCAxNS4zNzA2IDIzLjU5NTYgMTMuNzE5NkMyMi40MzE4IDEyLjc4MyAyMC42MTM2IDEyLjc1MjYgMTkuNDYyNSAxMy42NzU3QzE3LjM2NDYgMTUuMzU3MSAxNS4yNjczIDE3LjA0MTMgMTMuMjExNiAxOC43NzVDMTIuMjQ2IDE5LjU4OTYgMTEuODU1MSAyMC43MTggMTIuMDQ3OCAyMS45ODY1QzEyLjQwMTUgMjQuMzEzNyAxMi44MjI5IDI2LjYzMDEgMTMuMTcyOCAyOC45NTg0QzEzLjQ0OCAzMC43OTExIDE1LjA2NTIgMzIuMDQyOCAxNi42OTY0IDMxLjk5ODlDMTguMjkwOSAzMS45NTYxIDE5Ljg4NzIgMzEuOTg5OSAyMS40ODI4IDMxLjk4OTNDMjMuMTQwNSAzMS45ODkzIDI0Ljc5ODIgMzEuOTk0OSAyNi40NTU5IDMxLjk4NzZDMjguMDU5MyAzMS45ODAzIDI5LjUzMSAzMC43MDg0IDI5Ljc5NjcgMjkuMTEwM0MzMC4xODE1IDI2Ljc5NSAzMC41NzE5IDI0LjQ4MDcgMzAuOTQxMiAyMi4xNjMxQzMxLjE1ODggMjAuNzkyOCAzMC43NzczIDE5LjU4OTYgMjkuNzIzMSAxOC43MDU4Wk0yMy41NDAzIDI3LjI0NjdDMjMuNTQwMyAyOC4zODY5IDIyLjYyMjMgMjkuMzE5NiAyMS41IDI5LjMxOTZDMjAuMzc3NyAyOS4zMTk2IDE5LjQ1OTcgMjguMzg2OSAxOS40NTk3IDI3LjI0NjdWMjUuNTY3NUMxOS40NTk3IDI0LjQyNzMgMjAuMzc3NyAyMy40OTQ2IDIxLjUgMjMuNDk0NkMyMi42MjIzIDIzLjQ5NDYgMjMuNTQwMyAyNC40MjczIDIzLjU0MDMgMjUuNTY3NVYyNy4yNDY3WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==);
+              height: 56px;
+              width: 56px;
+            }
+          }
+          &.sale {
+            .geoplan-info__item-title {
+              color: #19A658;
+            }
+          }
+          &.sold {
+            .geoplan-info__item-title {
+              color: #E31E24;
+            }
+          }
+          &-title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+          }
+          &-count {
+            font-size: 34px;
+            line-height: 1;
+            font-weight: 400;
+          }
+        }
+      }
+      .picture-block {
+        padding: 71px 0;
+        border-radius: 60px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        @include before {
+          position: relative;
+          top: 0;
+          left: 0;
+          padding-top: 39.64%;
+          width: 100%;
+          display: block;
+        }
+        picture {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}

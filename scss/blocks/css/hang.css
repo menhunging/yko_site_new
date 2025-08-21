@@ -1,0 +1,21 @@
+.hang {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.hang-section__head {
+  margin-bottom: 43px;
+}
+.hang-section__head p {
+  max-width: calc(100% / 12 * 7.5 + 20px);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #8E8E8E;
+  margin-top: 20px;
+}
+.hang__wrapper {
+  padding: 97px 0 83px;
+  overflow: hidden;
+  border-radius: 60px;
+  background-color: #8E8E8E;
+}

@@ -1,0 +1,239 @@
+.primer-houses {
+  background-color: #f8f8f8;
+  border-radius: 60px;
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  z-index: 3;
+
+  @include responsive1199 {
+    padding: 80px 0;
+  }
+
+  @include responsive1023 {
+    padding: 60px 0;
+  }
+
+  @include responsive767 {
+    border-radius: 30px;
+    padding: 40px 0;
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='503' height='397' viewBox='0 0 503 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M253.611 75.0967L252.571 76.8398L129.551 3.4873L129.161 3.25488L128.774 3.49121L7.60742 77.8076L-117.034 3.4873L-117.424 3.25488L-117.81 3.49121L-238.978 77.8076L-363.618 3.4873L-364.008 3.25488L-364.395 3.49121L-483.909 76.7842L-484.968 75.0654L-364.016 0.875977L-239.374 75.1973L-238.984 75.4297L-238.598 75.1924L-117.431 0.875977L7.21094 75.1973L7.60059 75.4297L7.9873 75.1924L129.153 0.875977L253.611 75.0967Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M253.611 138.924L252.571 140.667L129.551 67.3145L129.161 67.082L128.774 67.3184L7.60742 141.635L-117.034 67.3145L-117.424 67.082L-117.81 67.3184L-238.978 141.635L-363.618 67.3145L-364.008 67.082L-364.395 67.3184L-483.909 140.611L-484.968 138.893L-364.016 64.7031L-239.374 139.024L-238.984 139.257L-238.598 139.02L-117.431 64.7031L7.21094 139.024L7.60059 139.257L7.9873 139.02L129.153 64.7031L253.611 138.924Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M501.971 266.577L500.931 268.32L377.91 194.968L377.521 194.735L377.134 194.972L255.967 269.288L131.325 194.968L130.936 194.735L130.549 194.972L8.5127 269.82L-117.033 194.968L-117.423 194.735L-117.81 194.972L-237.324 268.265L-238.383 266.546L-117.431 192.356L8.09863 267.21L8.48828 267.442L8.875 267.205L130.928 192.356L255.57 266.678L255.96 266.91L256.347 266.673L377.513 192.356L501.971 266.577Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M253.611 202.75L252.571 204.493L129.551 131.141L129.161 130.908L128.775 131.145L7.60742 205.461L-117.033 131.141L-117.423 130.908L-117.81 131.145L-237.324 204.438L-238.383 202.719L-117.431 128.529L7.21094 202.851L7.60059 203.083L7.9873 202.846L129.154 128.529L253.611 202.75Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M501.969 330.404L500.929 332.147L377.909 258.795L377.519 258.562L377.134 258.799L255.966 333.115L131.325 258.795L130.935 258.562L130.549 258.799L11.0339 332.092L9.97534 330.373L130.927 256.184L255.569 330.505L255.959 330.737L256.345 330.5L377.512 256.184L501.969 330.404Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M501.97 394.23L500.93 395.975L377.91 322.621L377.52 322.389L377.134 322.625L257.619 395.918L256.56 394.199L377.512 320.01L501.97 394.23Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 989px;
+    height: 397px;
+    bottom: -10px;
+    left: -250px;
+    z-index: -1;
+  }
+
+  @include after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='803' height='397' viewBox='0 0 803 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M739.611 75.0967L738.571 76.8398L615.551 3.4873L615.161 3.25488L614.774 3.49121L493.607 77.8076L368.966 3.4873L368.576 3.25488L368.19 3.49121L247.022 77.8076L122.382 3.4873L121.992 3.25488L121.605 3.49121L2.09082 76.7842L1.03223 75.0654L121.984 0.875977L246.626 75.1973L247.016 75.4297L247.402 75.1924L368.569 0.875977L493.211 75.1973L493.601 75.4297L493.987 75.1924L615.153 0.875977L739.611 75.0967Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M739.611 138.924L738.571 140.667L615.551 67.3145L615.161 67.082L614.774 67.3184L493.607 141.635L368.966 67.3145L368.576 67.082L368.19 67.3184L247.022 141.635L122.382 67.3145L121.992 67.082L121.605 67.3184L2.09082 140.611L1.03223 138.893L121.984 64.7031L246.626 139.024L247.016 139.257L247.402 139.02L368.569 64.7031L493.211 139.024L493.601 139.257L493.987 139.02L615.153 64.7031L739.611 138.924Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M987.971 266.577L986.931 268.32L863.91 194.968L863.521 194.735L863.134 194.972L741.967 269.288L617.325 194.968L616.936 194.735L616.549 194.972L494.513 269.82L368.967 194.968L368.577 194.735L368.19 194.972L248.676 268.265L247.617 266.546L368.569 192.356L494.099 267.21L494.488 267.442L494.875 267.205L616.928 192.356L741.57 266.678L741.96 266.91L742.347 266.673L863.513 192.356L987.971 266.577Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M739.611 202.75L738.571 204.493L615.551 131.141L615.161 130.908L614.775 131.145L493.607 205.461L368.967 131.141L368.577 130.908L368.19 131.145L248.676 204.438L247.617 202.719L368.569 128.529L493.211 202.851L493.601 203.083L493.987 202.846L615.154 128.529L739.611 202.75Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M987.969 330.404L986.929 332.147L863.909 258.795L863.519 258.562L863.134 258.799L741.966 333.115L617.325 258.795L616.935 258.562L616.549 258.799L497.034 332.092L495.975 330.373L616.927 256.184L741.569 330.505L741.959 330.737L742.345 330.5L863.512 256.184L987.969 330.404Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3cpath d='M987.97 394.23L986.93 395.975L863.91 322.621L863.52 322.389L863.134 322.625L743.619 395.918L742.56 394.199L863.512 320.01L987.97 394.23Z' fill='%23A9A9A9' stroke='%23F8F8F8' stroke-width='1.5'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 989px;
+    height: 397px;
+    bottom: 140px;
+    right: -120px;
+    z-index: -1;
+
+    @include responsive1549 {
+      bottom: 20px;
+    }
+
+    @include responsive1199 {
+      display: none;
+    }
+  }
+
+  .primer-houses__head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include responsive1023 {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    @include responsive767 {
+      gap: 20px 10px;
+    }
+
+    .caption {
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+
+    .btn {
+      margin-left: auto;
+      width: auto;
+      min-width: 265px;
+      height: 55px;
+      line-height: 55px;
+
+      @include responsive1023 {
+        margin-left: 0;
+        margin-right: auto;
+        display: none;
+      }
+
+      @include responsive767 {
+        height: 50px;
+        line-height: 50px;
+        padding-bottom: 11px;
+        min-width: 220px;
+      }
+
+      @include responsive389 {
+        min-width: 180px;
+      }
+    }
+
+    .swiper-controls {
+      @include responsive1023 {
+        display: none;
+      }
+    }
+  }
+
+  .primer-houses__body {
+    margin-top: 45px;
+
+    @include responsive1199 {
+      margin-top: 35px;
+    }
+
+    @include responsive1023 {
+      margin-top: 25px;
+    }
+  }
+}
+
+.sliderHouses {
+  overflow: visible;
+
+  .swiper-slide {
+    background-color: $colorWhite;
+    border-radius: 40px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+
+    &.swiper-slide-next + .swiper-slide,
+    &.swiper-slide-next,
+    &.swiper-slide-active {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    @include responsive767 {
+      border-radius: 25px;
+    }
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 378px;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include responsive1549 {
+      height: 210px;
+    }
+
+    @include responsive767 {
+      padding-top: calc(255 / 328 * 100%);
+      border-radius: 25px;
+    }
+  }
+
+  .sliderHouses__content {
+    padding: 25px 36px;
+
+    @include responsive1023 {
+      padding: 20px 30px;
+    }
+
+    @include responsive767 {
+      padding: 15px 20px;
+    }
+  }
+
+  .caption {
+    text-transform: uppercase;
+  }
+}
+
+.primer-houses__data {
+  display: flex;
+  gap: 50px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 27px;
+  margin-top: 25px;
+
+  @include responsive1549 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 20px;
+    gap: 30px;
+  }
+
+  @include responsive1199 {
+    padding-left: 0;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include responsive1023 {
+    gap: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  @include responsive479 {
+  }
+
+  @include responsive389 {
+  }
+
+  li {
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8e8e8e;
+    display: block;
+
+    @include responsive1023 {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: auto;
+    }
+  }
+}
+
+.primer-houses__controls-mobile {
+  display: none;
+
+  @include responsive1023 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}

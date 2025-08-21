@@ -1,0 +1,15 @@
+.press-page .page-content {
+  position: relative;
+  padding-top: 33px;
+}
+.press-page .tabs-linkLink {
+  margin: 0;
+  top: 8px;
+}
+.press-page .press-list {
+  margin: 87px 0 60px;
+  display: grid;
+  grid-template-columns: repeat(3, calc((100% - 40px) / 3));
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+}

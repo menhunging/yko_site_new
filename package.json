@@ -1,0 +1,12 @@
+ {
+    "scripts": {
+      "sass": "sass --watch scss/style.scss:css/style.css",
+      "serve": "live-server --port=3000 --watch=css",
+      "dev": "concurrently \"npm run sass\" \"npm run serve\""
+    },
+  
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "live-server": "^1.2.2"
+  }
+}

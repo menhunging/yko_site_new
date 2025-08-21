@@ -1,0 +1,18 @@
+@import "about-description";
+@import "about-information";
+@import "about-infographics";
+
+.about-page {
+  .main {
+    padding-top: 137px;
+  }
+  .call-form {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 124px;
+    padding-bottom: 0;
+    @include before {
+      top: 37px;
+    }
+  }
+}

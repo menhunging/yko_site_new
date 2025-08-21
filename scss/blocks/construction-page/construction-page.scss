@@ -1,0 +1,16 @@
+@import "construction-slider";
+@import "rutube-reviews-slider";
+
+.construction-page {
+  .technologies-section__head {
+    .container {
+      align-items: flex-start;
+    }
+    .btn {
+      height: 56px;
+      font-size: 16px;
+      white-space: pre;
+      margin-top: 20px;
+    }
+  }
+}

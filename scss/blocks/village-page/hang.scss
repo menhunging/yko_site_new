@@ -1,0 +1,167 @@
+.hang {
+  padding-top: 0;
+  padding-bottom: 0;
+  .container {
+    position: relative;
+  }
+  &-section__head {
+    margin-bottom: 43px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    p {
+      max-width: calc(100% / 12 * 7.5 + 20px);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #8e8e8e;
+      margin-top: 20px;
+    }
+  }
+  &__wrapper {
+    padding: 97px 0 83px;
+    overflow: hidden;
+    border-radius: 60px;
+    background-color: #F8F8F8;
+  }
+
+  &-slider {
+    overflow: visible;
+    position: static;
+    margin-top: 45px;
+    .swiper {
+      &-wrapper {
+        align-items: stretch;
+      }
+      &-slide {
+        height: initial;
+        transition: all 0.3s;
+        overflow: hidden;
+        border-radius: 50px;
+        padding: 12px;
+        background-color: white;
+        opacity: 0.33;
+        display: flex;
+        flex-direction: column;
+        @include before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
+          border-radius: 50px;
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+          padding: 1px;
+        }
+        &-prev {
+          opacity: 0;
+        }
+        &-active,
+        &-next {
+          opacity: 1;
+        }
+      }
+    }
+    .picture-block {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 40px;
+      flex: none;
+      @include before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-top: 60.45%
+      }
+    }
+    .text-block {
+      flex: 1;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 24px 39px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .caption {
+        line-height: 42px;
+        margin-bottom: 17px;
+        text-transform: uppercase;
+      }
+      p {
+        color: #8E8E8E;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .swiper-controls {
+    // position: absolute;
+    position: relative;
+    grid-column-start: 2;
+    top: 16px;
+    right: 0;
+    gap: 10px;
+
+    @include responsive1549 {
+      top: 20px;
+      right: 20px;
+    }
+
+    @include responsive1199 {
+      top: 10px;
+      right: 20px;
+    }
+
+    @include responsive767 {
+      top: -2px;
+    }
+  }
+
+  .swiperBtnPrev {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: transparent;
+    &:hover {
+      background-color: white;
+    }
+
+    @include responsive767 {
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+    }
+  }
+
+  .swiperBtnNext {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: transparent;
+    &:hover {
+      background-color: white;
+    }
+
+    @include responsive767 {
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+    }
+  }
+}

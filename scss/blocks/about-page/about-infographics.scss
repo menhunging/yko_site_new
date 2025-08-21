@@ -1,0 +1,70 @@
+.about-infographics {
+  box-sizing: border-box;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 96px 0;
+  position: relative;
+  min-height: 886px;
+  overflow: hidden;
+  picture {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__inner {
+    box-sizing: border-box;
+    border-radius: 60px;
+    padding: 94px 89px 77px 102px;
+    backdrop-filter: blur(13px);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    @include before {
+      content: "";
+      position: absolute;
+      top: -3.73px;
+      left: -3.73px;
+      right: -3.73px;
+      bottom: -3.73px;
+      background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      border-radius: 63.73px;
+      z-index: -1;
+      pointer-events: none;
+      user-select: none;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      padding: 3.73px;
+    }
+    .caption {
+      margin-bottom: 33px;
+      color: #ffffff;
+      i {
+        font-size: 31px;
+        line-height: 1;
+      }
+    }
+    p {
+      font-size: 24px;
+      color: #ffffff;
+      line-height: 35px;
+      font-family: $fontMain;
+      margin-bottom: 35px;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

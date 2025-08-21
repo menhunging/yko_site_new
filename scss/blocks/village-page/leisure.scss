@@ -1,0 +1,137 @@
+.leisure {
+  padding-top: 0;
+  margin-bottom: 79px;
+  padding-bottom: 0;
+  position: relative;
+  @include before {
+    content: "";
+    background-image: url('./../img/svg/lines.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1135px;
+    height: 456px;
+    // z-index: -1;
+    pointer-events: none;
+    left: -468px;
+    bottom: -197px;
+  }
+  .container {
+    position: relative;
+  }
+  &-slider {
+    overflow: visible;
+    position: static;
+    margin-top: 45px;
+    .swiper {
+      &-wrapper {
+        align-items: stretch;
+      }
+      &-slide {
+        height: initial;
+        transition: all 0.3s;
+        overflow: hidden;
+        border-radius: 40px;
+        background-color: white;
+        opacity: .33;
+        display: flex;
+        flex-direction: column;
+        &-prev {
+          opacity: 0;
+        }
+        &-active, &-next, &-next + .swiper-slide {
+          opacity: 1;
+        }
+      }
+
+    }
+    .picture-block {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 40px;
+      flex: none;
+      @include before {
+        content: '';
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-top: 85.42%;
+      }
+    }
+    .text-block {
+      flex: 1;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 26px 36px 42px;
+      line-height: 42px;
+      text-transform: uppercase;
+    }
+  }
+  &__wrapper {
+    padding-top: 97px;
+    padding-bottom: 121px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    border-radius: 60px;
+  }
+
+  .swiper-controls {
+    // position: absolute;
+    position: relative;
+    top: 16px;
+    right: 0;
+    gap: 10px;
+
+    @include responsive1549 {
+      top: 20px;
+      right: 20px;
+    }
+
+    @include responsive1199 {
+      top: 10px;
+      right: 20px;
+    }
+
+    @include responsive767 {
+      top: -2px;
+    }
+  }
+
+  .swiperBtnPrev {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: transparent;
+    &:hover {
+      background-color: white;
+    }
+
+    @include responsive767 {
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+    }
+  }
+
+  .swiperBtnNext {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: transparent;
+    &:hover {
+      background-color: white;
+    }
+
+    @include responsive767 {
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+    }
+  }
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, viewport-fit=cover"
+    />
+
+    <title>Пресс-центр</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../img/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../favicon/img/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../../img/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../img/favicon/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../libs/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../libs/selectric/selectric.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../libs/micromodal/micromodal.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../libs/fancybox/fancybox.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body class="press-page">
+    <div class="site-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <span class="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </span>
+
+            <div class="logo">
+              <a href="/">
+                <div class="picture-block">
+                  <picture>
+                    <img src="./../../img/svg/logo.svg" alt="logo" />
+                  </picture>
+                </div>
+              </a>
+            </div>
+
+            <div class="header-top">
+              <p class="header-top__adress">
+                МО г.о. Солнечногорск, КП Солнечный город ул. Виноградная д.6
+              </p>
+
+              <a href="mailto:info.sk-uko@mail.ru" class="header-top__mail"
+                >info.sk-uko@mail.ru</a
+              >
+            </div>
+
+            <div class="header-bottom">
+              <nav class="menu">
+                <div class="menu__head">
+                  <span class="menu__close"></span>
+
+                  <div class="logo logo--mobile">
+                    <a href="/">
+                      <div class="picture-block">
+                        <picture>
+                          <img src="./../../img/svg/logo.svg" alt="logo" />
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <ul>
+                  <li><a href="#">О компании</a></li>
+                  <li>
+                    <a href="#" class="arrow">Поселки</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Солнечный город</a></li>
+                      <li><a href="#">Маслово</a></li>
+                      <li><a href="#">Солнечные луга</a></li>
+                      <li><a href="#">Курилово-лайф</a></li>
+                      <li><a href="#">Новое курилово</a></li>
+                      <li><a href="#">Пятница берег</a></li>
+                      <li><a href="#">Лопотово парк</a></li>
+                      <li><a href="#">Дивный лес</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Строительство</a></li>
+                  <li><a href="#">Пресс-центр</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+
+              <div class="header-bottom__controls">
+                <div class="social">
+                  <ul>
+                    <li>
+                      <a
+                        href="#"
+                        class="social__link social__link--telegram"
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="social__link social__link--phone"></a>
+                    </li>
+                  </ul>
+                </div>
+                <a href="tel:+74954456188" class="header-bottom__phone"
+                  >+7 (495) 445-61-88</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="breadcrumbs">
+          <div class="container">
+            <nav aria-label="Хлебные крошки">
+              <ul
+                class="breadcrumbs__list"
+                itemscope
+                itemtype="https://schema.org/BreadcrumbList"
+              >
+                <li
+                  class="breadcrumbs__item"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/ListItem"
+                >
+                  <a
+                    href="/"
+                    itemprop="item"
+                    class="breadcrumbs-link breadcrumbs-link--main"
+                  >
+                    <span itemprop="name" class="visually-hidden">Главная</span>
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </li>
+
+                <li
+                  class="breadcrumbs__item"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/ListItem"
+                >
+                  <a href="/about" itemprop="item" class="breadcrumbs-link">
+                    <span itemprop="name">Пресс-центр</span>
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="page-content tabsSection">
+          <div class="container">
+            <div class="section-title">
+              <h2 class="caption caption--h2">Пресс-центр</h2>
+              <div class="tabs-linkLink">
+                <li><a href="#video-press" class="active">Видео-новости</a></li>
+                <li><a href="#text-press">Новости</a></li>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="press-list press-list-video tabsSlider opened"
+            id="video-press"
+          >
+            <div class="container">
+              <div class="press-list__wrapper">
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <a
+                    href="./../../img/video/video.webm"
+                    class="play"
+                    data-fancybox="video"
+                  ></a>
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="press-list press-list-text tabsSlider" id="text-press">
+            <div class="container">
+              <div class="press-list__wrapper">
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="press-list__item">
+                  <div class="picture-block">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./../../img/pic-reviews.webp"
+                      />
+                      <img src="./../../img/pic-reviews.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="news-text">
+                    <a href="#" class="news-text__link"
+                      >очень длинная новость</a
+                    >
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <div class="news-text__footer">
+                      <div class="news-text__controls">
+                        <span class="news-text__title">дата публикации</span>
+                        <span class="news-text__date">01.05.2022</span>
+                      </div>
+                      <a href="" class="btn btn--overDark">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="press-list-pagination">
+              <a class="pagination-prev"></a>
+              <a href="" class="pagination-item">1</a>
+              <a href="" class="pagination-item">2</a>
+              <a href="" class="pagination-item">3</a>
+              <a href="" class="pagination-item item-current">4</a>
+              <a class="pagination-separator">...</a>
+              <a href="" class="pagination-item">10</a>
+              <a class="pagination-next"></a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer-col footer-logo">
+              <div class="logo">
+                <a href="/">
+                  <div class="picture-block">
+                    <picture>
+                      <img src="./../../img/svg/logo.svg" alt="logo" />
+                    </picture>
+                  </div>
+                </a>
+              </div>
+
+              <span class="copyText">
+                <p>ООО «ЮКО», <span class="thisYear"></span> &copy;</p>
+              </span>
+            </div>
+
+            <div class="footer-col footer-col__data">
+              <p>
+                ОГРН 1197746218636<br />
+                ИНН 7716934653<br />
+                КПП 771601001<br />
+              </p>
+            </div>
+
+            <div class="footer-col footer-col__info">
+              <span class="footer__text">
+                МО г.о. Солнечногорск, КП Солнечный город ул. Виноградная д.6
+              </span>
+
+              <span class="footer__text"> без выходных с 10 до 20 </span>
+
+              <a href="mailto:info.sk-uko@mail.ru" class="footer__text">
+                info.sk-uko@mail.ru
+              </a>
+            </div>
+
+            <div class="footer-col footer-col__social">
+              <a href="tel:+74954456188">+7 (495) 445-61-88</a>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="social__link social__link--telegram"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="social__link social__link--phone"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col footer-col__menu">
+              <ul class="footer-menu">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Строительство</a></li>
+                <li><a href="#">Пресс-центр</a></li>
+                <li><a href="#">Контакты</a></li>
+
+                <li>
+                  <a href="#">Поселки</a>
+                  <ul class="footer-menu__sub">
+                    <li><a href="#">Солнечный город</a></li>
+                    <li><a href="#">Лопотово парк</a></li>
+                    <li><a href="#">Пятница берег</a></li>
+                    <li><a href="#">Солнечные луга</a></li>
+                    <li><a href="#">Маслово</a></li>
+                    <li><a href="#">Дивный лес</a></li>
+                    <li><a href="#">Новое курилово</a></li>
+                    <li><a href="#">Курилово-лайф</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-col footer-bottom">
+              <a href="#">Политика конфиденциальности</a>
+
+              <span class="develop-block"
+                >Разработано в
+                <a href="#" target="_blank">Internet Team</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="overlay"></div>
+  </body>
+
+  <script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
+  <script src="../../libs/swiper/swiper-bundle.min.js"></script>
+  <script src="../../libs/selectric/jquery.selectric.min.js"></script>
+  <script src="../../libs/micromodal/micromodal.min.js"></script>
+  <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+  <script src="../../libs/fancybox/fancybox.umd.js"></script>
+  <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+  <!-- <script src="../../libs/aos/aos.js"></script> -->
+  <script src="../../js/main.js"></script>
+  <script src="../../js/custom.js"></script>
+</html>

@@ -1,0 +1,164 @@
+.faq-section {
+  background-color: #f8f8f8;
+  border-radius: 60px;
+  overflow: hidden;
+  padding-bottom: 200px;
+
+  @include responsive767 {
+    padding-bottom: 160px;
+    padding-top: 50px;
+    border-radius: 30px;
+  }
+
+  .faq-list {
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @include responsive767 {
+      margin-top: 25px;
+    }
+  }
+
+  .faq-item {
+    padding: 28px 46px;
+    // border: solid 1px $colorBlack;
+    // background-color: $colorWhite;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    $border: 1px;
+    color: #fff;
+    background: #000;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+
+    @include after {
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-color: $colorWhite;
+      z-index: -1;
+      border-radius: 28px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(
+        to right,
+        #000 0%,
+        rgba(0, 0, 0, 0.11) 70%,
+        rgba(0, 0, 0, 0.07) 75%,
+        rgba(0, 0, 0, 0.05) 100%
+      );
+      border-radius: 30px;
+    }
+
+    @include responsive1549 {
+      padding: 24px;
+    }
+
+    @include responsive767 {
+      padding: 24px 12px;
+    }
+  }
+
+  .faq-section__quest {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 65px;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-right: 80px;
+    color: $colorBlack;
+
+    @include responsive1549 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include responsive767 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 0.730248L6.62593 7L1.25185 0.730248' stroke='%23212121' stroke-width='2'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: solid 1px $colorBlack;
+      position: absolute;
+      right: 12px;
+      top: 8px;
+
+      @include responsive1549 {
+        top: -7px;
+      }
+
+      @include responsive1023 {
+        top: -13px;
+      }
+
+      @include responsive767 {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background-size: 10px;
+        right: 0;
+      }
+    }
+
+    &.active {
+      &::before {
+        transform: rotate(-180deg);
+
+        @include responsive767 {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  .faq-section__answer {
+    display: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #8e8e8e;
+    padding: 20px 0;
+
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    p {
+      & + p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
