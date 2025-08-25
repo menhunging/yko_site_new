@@ -1221,6 +1221,109 @@ section {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='25' cy='25' r='24.5' stroke='black'/%3e%3cpath d='M24.7142 15C24.8977 15 25.0813 15 25.2649 15C25.263 15.003 25.2589 15.0071 25.2597 15.0089C25.2611 15.0118 25.2656 15.015 25.2688 15.0152C25.3955 15.022 25.5223 15.0273 25.649 15.0354C26.8606 15.1129 28.0201 15.4004 29.1255 15.902C30.2728 16.4225 31.2856 17.1355 32.165 18.0376C32.8123 18.7015 33.3577 19.4403 33.7983 20.2557C34.5165 21.5843 34.9111 23.0041 34.9867 24.5119C35.0414 25.6041 34.9219 26.6779 34.6227 27.7298C34.2044 29.2003 33.4865 30.5088 32.4673 31.6489C31.2714 32.9865 29.8209 33.9417 28.1147 34.5016C26.513 35.0272 24.879 35.1328 23.2209 34.8389C21.8883 34.6026 20.6554 34.1093 19.524 33.3666C18.2396 32.5234 17.2007 31.4429 16.412 30.125C15.5648 28.7086 15.1035 27.1731 15.0142 25.5264C14.9727 24.7619 15.0207 24.0014 15.155 23.2475C15.3009 22.428 15.5444 21.6381 15.8903 20.8808C16.5069 19.5305 17.3792 18.3716 18.5083 17.407C19.5001 16.5598 20.6155 15.9302 21.854 15.5195C22.58 15.2788 23.324 15.1245 24.086 15.0563C24.2787 15.0391 24.4716 15.0275 24.6647 15.0191C24.6813 15.0184 24.7084 15.0331 24.7142 15ZM28.3479 25.006C28.3479 23.0563 28.348 21.1067 28.3476 19.157C28.3476 19.0636 28.3638 19.0713 28.2592 19.0712C27.4018 19.071 26.5445 19.073 25.6871 19.0701C25.1514 19.0684 24.6171 19.0786 24.0876 19.172C23.5239 19.2715 22.9839 19.4388 22.4848 19.7244C21.9139 20.0512 21.4614 20.4953 21.1519 21.0787C20.9069 21.5405 20.7787 22.0355 20.7406 22.5551C20.7049 23.0406 20.7334 23.5218 20.8444 23.9968C21.0031 24.6761 21.3391 25.2599 21.8046 25.7734C22.1893 26.1979 22.6304 26.5576 23.0945 26.8906C23.1345 26.9193 23.142 26.9377 23.1121 26.9814C22.9305 27.2471 22.7526 27.5154 22.5729 27.7826C21.9526 28.7057 21.332 29.6286 20.7116 30.5516C20.6387 30.66 20.5652 30.7681 20.4932 30.8772C20.4819 30.8941 20.4575 30.9116 20.469 30.9324C20.4784 30.9494 20.5049 30.9383 20.5238 30.9405C20.5276 30.941 20.5316 30.9406 20.5355 30.9406C21.2347 30.9407 21.9338 30.9404 22.633 30.9421C22.6805 30.9423 22.7064 30.9253 22.7317 30.8872C22.9887 30.5004 23.2476 30.1149 23.5059 29.729C24.2257 28.6542 24.9453 27.5792 25.6661 26.5051C25.6924 26.4661 25.6879 26.4492 25.6495 26.4235C25.2943 26.186 24.9398 25.9473 24.5865 25.7069C24.2409 25.4716 23.9052 25.2233 23.6077 24.9274C23.3149 24.636 23.0789 24.3067 22.9436 23.9131C22.7722 23.415 22.7256 22.9026 22.8079 22.3839C22.8927 21.8492 23.1634 21.4241 23.6171 21.1211C24.0142 20.8558 24.4609 20.7399 24.9292 20.6956C25.3343 20.6573 25.7411 20.679 26.1471 20.6747C26.2808 20.6733 26.2807 20.6743 26.2807 20.8052C26.2806 24.1522 26.2806 27.4991 26.2807 30.8461C26.2807 30.9372 26.2698 30.9284 26.3611 30.9284C26.9997 30.9288 27.6384 30.928 28.277 30.9299C28.3312 30.93 28.3493 30.9194 28.3493 30.8605C28.3474 28.9091 28.3478 26.9576 28.3479 25.006Z' fill='black'/%3e%3c/svg%3e ");
 }
 
+.popup-send {
+  width: 487px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  padding: 35px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: 492px;
+}
+@media (max-width: 767px) {
+  .popup-send {
+    width: 95%;
+    padding: 20px;
+    min-height: 150px;
+  }
+}
+.popup-send .popup-send__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.popup-send .input-item input {
+  border-radius: 30px;
+  border: solid 1px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-transform: none;
+  padding: 0 40px;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .popup-send .input-item input {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.popup-send .input-item input::placeholder {
+  text-transform: none;
+}
+.popup-send::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: -1;
+  border-radius: 28px;
+}
+.popup-send:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.11) 70%, rgba(0, 0, 0, 0.07) 75%, rgba(0, 0, 0, 0.05) 100%);
+  border-radius: 30px;
+}
+.popup-send input:checked + label::before {
+  background-color: transparent;
+}
+.popup-send input:checked + label::after {
+  background-color: #f59e11;
+  opacity: 1;
+}
+.popup-send label {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(0, 0, 0);
+  padding-left: 40px;
+}
+.popup-send label::before {
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 1px rgb(0, 0, 0);
+  width: 30px;
+  height: 30px;
+}
+.popup-send label:after {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  left: 10px;
+  opacity: 0;
+}
+.popup-send .btn {
+  width: 100%;
+}
+
 .btn {
   cursor: pointer;
   outline: none;
@@ -1507,8 +1610,8 @@ h4,
   cursor: pointer;
   transition: all 0.3s;
   position: absolute;
-  right: 0;
-  top: 45px;
+  right: -40px;
+  top: -30px;
   display: flex;
   z-index: 10;
   font-weight: 400;
@@ -1516,27 +1619,18 @@ h4,
   line-height: 17px;
   color: #292929;
   align-items: center;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='41' height='42' viewBox='0 0 41 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M40.2989 1.48466C41.0797 2.26569 41.0797 3.5321 40.2989 4.31309L23.3269 21.285L40.2996 38.2577C41.0806 39.0387 41.0806 40.3051 40.2996 41.0861C39.5185 41.867 38.2521 41.8671 37.4711 41.0861L20.4985 24.1135L3.52932 41.0826C2.74834 41.8636 1.48196 41.8635 0.700892 41.0826C-0.0801572 40.3016 -0.0801559 39.0353 0.700892 38.2542L17.6701 21.285L0.701583 4.31654C-0.0792663 3.53552 -0.0793054 2.26912 0.701583 1.48812C1.48258 0.707122 2.74895 0.707232 3.53001 1.48812L20.4985 18.4566L37.4704 1.48466C38.2515 0.703738 39.5179 0.703656 40.2989 1.48466Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.6226 22H17.589L10.7863 12.991L3.98357 22H0.919286L8.85579 11.3976L0.919286 0.549999H3.98357L10.7863 9.83479L17.589 0.549999H20.6226L12.6861 11.3976L20.6226 22Z' fill='black'/%3e%3c/svg%3e ");
   background-position: center;
   background-repeat: no-repeat;
-  width: 56px;
-  height: 56px;
-}
-@media (max-width: 1199px) {
-  .modal__close {
-    width: 30px;
-    height: 30px;
-    top: 50px;
-    background-size: contain;
-  }
+  width: 36px;
+  height: 36px;
+  filter: invert(1);
 }
 @media (max-width: 767px) {
   .modal__close {
     width: 20px;
     height: 20px;
-    top: 50px;
-    background-size: contain;
-    right: 10px;
+    right: 20px;
   }
 }
 .modal__close svg {
@@ -1564,7 +1658,8 @@ h4,
 }
 
 .modal__overlay {
-  background-color: #edeadf;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
   transition: all 0.3s;
 }
 
