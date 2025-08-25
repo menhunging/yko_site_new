@@ -514,6 +514,31 @@ $(document).ready(function () {
     sliders.length && sliderinit();
   }
 
+  if ($(".adv-partner__slider").length > 0) {
+    const swiper = new Swiper(".adv-partner__slider", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".adv-partner__slider .swiperBtnPrev",
+        nextEl: ".adv-partner__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // if ($("[data-aos]").length > 0) {
   //   if ($(window).width() < 1280) {
   //     AOS.init({
