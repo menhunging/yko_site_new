@@ -1,5 +1,14 @@
 .breadcrumbs {
   padding: 25px 0;
+
+  @include responsive1199 {
+    padding: 25px 0 0;
+  }
+
+  @include responsive767 {
+    padding: 21px 0 0;
+  }
+
   .breadcrumbs-link {
     position: relative;
     font-size: 14px;

@@ -50,6 +50,8 @@ h2,
   }
 
   @include responsive1199 {
+    font-size: 45px;
+    line-height: 55px;
   }
 
   @include responsive1023 {

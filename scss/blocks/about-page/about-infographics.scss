@@ -5,10 +5,16 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 96px 0;
+  padding: 83px 0;
   position: relative;
   min-height: 886px;
   overflow: hidden;
+
+  @include responsive1199 {
+    padding: 200px 0 50px;
+    min-height: auto;
+  }
+
   picture {
     position: absolute;
     top: 0;
@@ -28,10 +34,15 @@
   &__inner {
     box-sizing: border-box;
     border-radius: 60px;
-    padding: 94px 89px 77px 102px;
+    padding: 78px 89px 94px 100px;
     backdrop-filter: blur(13px);
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
+
+    @include responsive1199 {
+      padding: 56px 89px 70px 78px;
+    }
+
     @include before {
       content: "";
       position: absolute;
@@ -51,6 +62,11 @@
     .caption {
       margin-bottom: 33px;
       color: #ffffff;
+
+      @include responsive1199 {
+        margin-bottom: 18px;
+      }
+
       i {
         font-size: 31px;
         line-height: 1;
@@ -62,9 +78,37 @@
       line-height: 35px;
       font-family: $fontMain;
       margin-bottom: 35px;
+
+      @include responsive1199 {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
     }
     & > :last-child {
       margin-bottom: 0;
+    }
+  }
+  &__second {
+    padding: 48px 0;
+
+    @include responsive1199 {
+      padding: 187px 0 32px;
+    }
+
+    .about-infographics__inner {
+      margin-top: 30px;
+      margin-bottom: 48px;
+      padding: 77px 89px 55px 100px;
+
+      @include responsive1199 {
+        margin-bottom: 0;
+        padding: 56px 89px 30px 76px;
+      }
+
+      .caption {
+        margin-bottom: 24px;
+      }
     }
   }
 }

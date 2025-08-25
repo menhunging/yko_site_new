@@ -1,10 +1,20 @@
 .about-information {
-  padding: 117px 0;
+  padding: 96px 0 117px;
+
+  @include responsive1199 {
+    padding: 62px 0 57px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: calc(50% - 10px) calc(50% - 10px);
-    grid-column-gap: 20px;
+    grid-column-gap: 15px;
     position: relative;
+
+    @include responsive1199 {
+      grid-template-columns: calc(45% - 10px) calc(55% - 10px);
+    }
+
     @include before {
       background-image: url('./../img/svg/lines.svg');
       background-position: center;
@@ -16,8 +26,8 @@
     }
     &--left-img {
       @include before {
-        right: -676px;
-        top: -54px;
+        right: -685px;
+        top: -42px;
       }
       & > :first-child {
         align-items: flex-end;
@@ -27,8 +37,15 @@
       }
       & > :last-child {
         align-items: flex-start;
-        padding-left: 80px;
+        padding-left: 78px;
         padding-right: 0;
+        padding-top: 50px;
+
+        @include responsive1199 {
+          padding-left: 62px;
+          padding-top: 20px;
+          padding-right: 50px;
+        }
         
         & > :last-child {
           margin-bottom: 0;
@@ -37,13 +54,20 @@
     }
     &--right-img {
       @include before {
-        left: -676px;
-        bottom: 618px;
+        left: -677px;
+        bottom: 630px;
+
+        @include responsive1199 {
+          left: -837px;
+          bottom: 190px;
+        }
+
       }
       & > :first-child {
         align-items: flex-start;
         padding-right: 80px;
         padding-left: 0;
+        padding-top: 58px;
         & > :last-child {
           margin-bottom: 0;
         }
@@ -52,11 +76,17 @@
         align-items: flex-start;
         picture {
           left: -20px;
+          top: 20px;
         }
       }
     }
     .caption {
-      margin-bottom: 38px;
+      margin-bottom: 30px;
+
+      @include responsive1199 {
+        margin-bottom: 8px;
+      }
+
     }
     p {
       font-size: 24px;
@@ -64,6 +94,12 @@
       line-height: 35px;
       font-family: $fontMain;
       margin-bottom: 35px;
+
+      @include responsive1199 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
     }
     
     picture {
@@ -73,8 +109,16 @@
       overflow: hidden;
       border-radius: 80px;
       min-height: 698px;
+      max-height: 698px;
       object-position: center;
       object-fit: cover;
+
+      @include responsive1199 {
+        border-radius: 43px;
+        min-height: 395px;
+        max-height: 395px;
+      }
+
       img {
         height: 100%;
         width: 100%;
@@ -86,5 +130,21 @@
     justify-content: center;
     box-sizing: border-box;
     flex-direction: column;
+  }
+  &__second {
+    padding: 96px 0 138px;
+
+    @include responsive1199 {
+      padding: 68px 0 94px;
+    }
+
+    .about-information__wrapper {
+
+      @include responsive1199 {
+        grid-template-columns: calc(56% - 10px) calc(44% - 10px);
+      }
+
+    }
+
   }
 }
