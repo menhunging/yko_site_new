@@ -3,11 +3,16 @@
   z-index: 3;
   border-radius: 60px;
   overflow: hidden;
-  padding-top: 145px;
+  padding: 145px 0 75px;
+
+  @include responsive1199 {
+    margin-top: 20px;
+    padding: 85px 0 50px;
+  }
 
   @include responsive767 {
     border-radius: 30px;
-    padding: 10px 0 30px;
+    padding: 52px 0 30px;
   }
 
   .about-main__numbers {
@@ -23,11 +28,11 @@
     padding: 32px 60px 42px 60px;
     margin-bottom: 110px;
 
-    @include responsive1549 {
+    @include responsive1199 {
       font-size: 20px;
       line-height: 30px;
-      padding: 40px;
-      margin-bottom: 60px;
+      padding: 22px 53px 42px 42px;
+      margin-bottom: 10px;
     }
 
     @include responsive1023 {
@@ -38,8 +43,8 @@
     @include responsive767 {
       font-size: 14px;
       line-height: 18px;
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 30px 32px;
+      margin-bottom: 10px;
     }
 
     @include responsive389 {
@@ -51,7 +56,6 @@
       justify-content: space-between;
 
       @include responsive1199 {
-        flex-wrap: wrap;
         gap: 20px;
       }
     }
@@ -63,14 +67,14 @@
       align-items: flex-start;
       gap: 24px;
 
-      @include responsive1199 {
+      @include responsive479 {
         gap: 12px;
         width: calc(50% - 24px);
         max-width: initial;
       }
 
-      @include responsive1023 {
-        gap: 4px;
+      @include responsive767 {
+        gap: 25px;
       }
 
       &:last-child {
@@ -84,8 +88,8 @@
       line-height: 120px;
       text-transform: uppercase;
 
-      @include responsive1549 {
-        font-size: 80px;
+      @include responsive1199 {
+        font-size: 90px;
         line-height: 90px;
       }
 
@@ -95,8 +99,8 @@
       }
 
       @include responsive767 {
-        font-size: 45px;
-        line-height: 50px;
+        font-size: 57px;
+        line-height: 30px;
       }
 
       @include responsive389 {
@@ -135,16 +139,31 @@
   gap: 21px;
   position: relative;
 
+  @include responsive1199 {
+    gap: 18px;
+  }
+
   @include responsive767 {
     gap: 15px;
   }
 
   .caption {
+    
+    @include responsive1199 {
+      display: none;
+    }
+
   }
 
   p {
     font-size: 16px;
     line-height: 26px;
+    
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
   }
 
   ul {
@@ -154,18 +173,18 @@
     justify-content: space-between;
     width: 100%;
 
-    @include responsive1549 {
+    @include responsive1199 {
       margin-top: 25px;
       margin-bottom: 25px;
     }
 
-    @include responsive1023 {
-      flex-direction: column;
-      gap: 20px;
-    }
-
     @include responsive767 {
       margin: 15px 0;
+    }
+
+    @include responsive479 {
+      flex-direction: column;
+      gap: 20px;
     }
 
     li {
@@ -186,16 +205,16 @@
       flex-direction: column;
       gap: 4px;
 
-      @include responsive1549 {
-        max-width: 565px;
-        padding: 35px;
+      @include responsive1199 {
+        max-width: 518px;
+        padding: 33px 180px 33px 57px;
         font-size: 14px;
         line-height: 20px;
       }
 
-      @include responsive1199 {
-        max-width: 485px;
-        padding: 25px;
+      @include responsive767 {
+        font-size: 9px;
+        padding: 22px 22px 4px 32px;
       }
 
       @include responsive1023 {
@@ -208,12 +227,9 @@
         line-height: 35px;
         max-width: 360px;
 
-        @include responsive1549 {
-          font-size: 20px;
-          line-height: 30px;
-        }
-
-        @include responsive1439 {
+        @include responsive1199 {
+          font-size: 19px;
+          line-height: 26px;
           max-width: 320px;
         }
 
@@ -222,8 +238,8 @@
         }
 
         @include responsive767 {
-          font-size: 15px;
-          line-height: 18px;
+          font-size: 13px;
+          line-height: 17px;
         }
       }
 
@@ -232,7 +248,9 @@
         max-width: 300px;
         text-transform: none;
 
-        @include responsive1549 {
+        @include responsive1199 {
+          font-size: 14px;
+          line-height: 19px;
           max-width: 270px;
         }
 

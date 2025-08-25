@@ -97,7 +97,7 @@
   flex-wrap: wrap;
   gap: 30px 16px;
 
-  @include responsive1549 {
+  @include responsive479 {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -107,7 +107,7 @@
 .consul-section__title {
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 18px;
 
   @include responsive1549 {
     gap: 10px;
@@ -178,14 +178,14 @@
       line-height: 20px;
     }
 
-    @include responsive1199 {
+    @mixin responsive479 {
       order: 3;
     }
   }
 
   @include responsive1549 {
     padding: 40px 20px;
-    gap: 30px;
+    gap: 34px;
     display: flex;
     justify-content: space-between;
   }
@@ -277,15 +277,16 @@
     flex-direction: column;
     background: transparent;
     align-items: flex-start;
-    max-width: 939px;
+    max-width: 950px;
     width: 100%;
-    padding: 62px 50px;
+    padding: 57px;
     border-radius: 0;
     backdrop-filter: blur(0);
     border: 0;
 
-    @include responsive1549 {
-      max-width: 589px;
+    @include responsive1199 {
+      max-width: 64%;
+      padding: 46px 46px 15px 46px;
     }
 
     @include responsive1023 {
@@ -307,6 +308,17 @@
 
   .caption {
     max-width: 345px;
+    line-height: 60px;
+
+    @include responsive1199 {
+      line-height: 45px;
+    }
+
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .consul-section__list {
@@ -331,7 +343,9 @@
     background-size: contain;
 
     @include responsive1199 {
-      right: 0px;
+      width: 374px;
+      height: 426px;
+      right: 47px;
     }
 
     @include responsive1023 {

@@ -4,14 +4,22 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
+  
   &:not(.index-page) .main {
     padding-top: 137px;
+    
     @include responsive1549 {
-      padding-top: 108px
+      padding-top: 108px;
     }
-    @include responsive1199 {
+
+    @include responsive767 {
+      padding-top: 70px;
+    }
+
+    @include responsive479 {
       padding-top: 75px;
     }
+
   }
 }
 
