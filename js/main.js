@@ -416,6 +416,104 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".vacancy-slider").length > 0) {
+    const sliders = document.querySelectorAll(".vacancy-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 19,
+            breakpoints: {
+              0: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 19,
+              },
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".vacancy-slider-grid").length > 0) {
+    const sliders = document.querySelectorAll(".vacancy-slider-grid");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            rows: 2,
+            fill: "row",
+            breakpoints: {
+              0: {
+                slidesPerView: 1.7,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+                grid: {
+                  rows: 2,
+                  fill: "row",
+                },
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                grid: {
+                  rows: 2,
+                  fill: "row",
+                },
+              },
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
   // if ($("[data-aos]").length > 0) {
   //   if ($(window).width() < 1280) {
   //     AOS.init({
