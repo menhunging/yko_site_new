@@ -51,7 +51,17 @@
       flex-direction: column;
       align-items: flex-start;
     }
-
+    @include responsive1023{
+      padding-left: 23px;
+      display: inline-block;
+      font-size: 9px;
+      line-height: 9px;
+    }
+    @include responsive639{
+      font-size: 12px;
+      line-height: 14px;
+      padding-left: 47px;
+    }
     @include before {
       top: 0;
       left: 0;
@@ -59,6 +69,14 @@
       height: 30px;
       border-radius: 50%;
       border: solid 1px $colorWhite;
+      @include responsive1023{
+        width: 15px;
+        height: 15px;
+      }
+      @include responsive639{
+        width: 30px;
+        height: 30px;
+      }
     }
 
     @include after {
@@ -69,6 +87,18 @@
       top: 10px;
       left: 10px;
       opacity: 0;
+      @include responsive1023{
+        width: 5px;
+        height: 5px;
+        top: 5px;
+        left: 5px;
+      }
+      @include responsive639{
+        width: 10px;
+        height: 10px;
+        top: 10px;
+        left: 10px;
+      }
     }
 
     a {
@@ -96,11 +126,14 @@
   grid-template-columns: 1fr 1fr 213px;
   flex-wrap: wrap;
   gap: 30px 16px;
-
-  @include responsive479 {
+@include responsive1023{
+  gap: 8px;
+  grid-template-columns: 144px 144px auto;
+}
+  @include responsive639 {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 13px;
   }
 }
 
@@ -152,9 +185,18 @@
         font-size: 18px;
         line-height: 20px;
       }
+      @include responsive1023{
+        height: 37px;
+        padding: 0 20px;
+        font-size: 10px;
+        line-height: 17px;
+      }
+      @include responsive639 {
+        padding: 0 30px 6px 41px;
+        height: 55px;
+        font-size: 16px;
+        line-height: 1;
 
-      @include responsive767 {
-        padding: 0 30px 6px;
       }
 
       &::placeholder {
@@ -177,9 +219,17 @@
       font-size: 18px;
       line-height: 20px;
     }
-
-    @mixin responsive479 {
+    @include responsive1023{
+      height: 37px;
+      font-size: 10px;
+      line-height: 10px;
+      padding-inline: 25px;
+      padding-bottom: 0;
+    }
+    @include responsive639 {
       order: 3;
+      height: 55px;
+      font-size: 16px;
     }
   }
 
@@ -293,6 +343,16 @@
       max-width: 449px;
       padding: 20px;
     }
+    @include responsive1023{
+      padding: 31px 0 6px 26px;
+      max-width: 475px;
+      gap: 24px;
+    }
+    @include responsive639 {
+      max-width: 100%;
+      padding: 18px 26px 6px 16px;
+      gap: 33px;
+    }
 
     .input-item {
       input {
@@ -313,12 +373,28 @@
     @include responsive1199 {
       line-height: 45px;
     }
-
+    @include responsive1023{
+      font-size: 28px;
+      line-height: 30px;
+      max-width: 64%;
+    }
+    @include responsive639{
+      font-size: 35px;
+      line-height: 40px;
+    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
+    @include responsive767{
+      font-size: 11px;
+      line-height: 7px;
+    }
+    @include responsive639{
+      font-size: 16px;
+      line-height: 1;
+    }
   }
 
   .consul-section__list {
@@ -342,19 +418,25 @@
     bottom: 0;
     background-size: contain;
 
-    @include responsive1199 {
+    @include responsive1549 {
       width: 374px;
       height: 426px;
+      right: -30px;
+    }
+    @include responsive1199{
       right: 47px;
     }
-
-    @include responsive1023 {
-      width: 363px;
-      height: 451px;
-      right: -20px;
+    //@include responsive1023 {
+    //  width: 363px;
+    //  height: 451px;
+    //  right: -20px;
+    //}
+    @include responsive1023{
+      width: 240px;
+      height: 272px;
+      right: 36px;
     }
-
-    @include responsive767 {
+    @media(max-width: 767px) {
       display: none;
     }
   }

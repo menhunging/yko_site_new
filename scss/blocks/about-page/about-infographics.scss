@@ -14,7 +14,13 @@
     padding: 200px 0 50px;
     min-height: auto;
   }
-
+  @include responsive767 {
+    padding: 122px 0 34px;
+    border-radius: 25px;
+  }
+  @include responsive639 {
+    padding: 116px 0 22px;
+  }
   picture {
     position: absolute;
     top: 0;
@@ -42,6 +48,14 @@
     @include responsive1199 {
       padding: 56px 89px 70px 78px;
     }
+    @include responsive767{
+      padding: 40px 36px 40px 46px;
+      border-radius: 33px;
+    }
+    @include responsive639 {
+      border-radius: 30px;
+      padding: 28px 18px 18px;
+    }
 
     @include before {
       content: "";
@@ -58,6 +72,12 @@
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask-composite: exclude;
       padding: 3.73px;
+      @include responsive767{
+        border-radius: 33px;
+      }
+      @include responsive639 {
+        border-radius: 40px;
+      }
     }
     .caption {
       margin-bottom: 33px;
@@ -66,10 +86,21 @@
       @include responsive1199 {
         margin-bottom: 18px;
       }
-
+      @include responsive767{
+        margin-bottom: 12px;
+      }
       i {
         font-size: 31px;
         line-height: 1;
+        @include responsive1199 {
+          font-size: 25px;
+        }
+        @include responsive767 {
+          font-size: 17px;
+        }
+        @include responsive639 {
+          font-size: 18px;
+        }
       }
     }
     p {
@@ -82,6 +113,16 @@
       @include responsive1199 {
         font-size: 18px;
         line-height: 26px;
+      }
+      @include responsive767{
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 25px;
+      }
+
+      @include responsive639 {
+        font-size: 16px;
+        line-height: 22px;
       }
 
     }
@@ -96,6 +137,14 @@
       padding: 187px 0 32px;
     }
 
+    @include responsive767 {
+      padding: 136px 0 16px;
+      border-radius: 25px;
+    }
+    @include responsive639 {
+      padding: 181px 0 15px;
+    }
+
     .about-infographics__inner {
       margin-top: 30px;
       margin-bottom: 48px;
@@ -105,9 +154,18 @@
         margin-bottom: 0;
         padding: 56px 89px 30px 76px;
       }
-
+      @include responsive767 {
+        padding: 47px 47px 24px;
+        margin-top: 0;
+      }
+      @include responsive639 {
+        padding: 28px 9px 20px 19px;
+      }
       .caption {
         margin-bottom: 24px;
+        @include responsive767{
+          margin-bottom: 8px;
+        }
       }
     }
   }

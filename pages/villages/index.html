@@ -222,9 +222,7 @@
 
                     <p class="rustic-item__text">от 25,80 млн руб</p>
 
-                    <a href="#" class="btn btn--orange btn-chat"
-                      >Связаться с нами</a
-                    >
+                    <a href="#" class="btn btn--orange">Подробнее</a>
                   </div>
                 </div>
 
@@ -238,7 +236,7 @@
                       тут будет какая-то небольшая анонс информация
                     </p>
 
-                    <a href="#" class="btn btn--orange">Узнать стоимость</a>
+                    <a href="#" class="btn btn--orange">Подробнее</a>
                   </div>
                 </div>
               </div>
@@ -348,7 +346,7 @@
           </div>
         </section>
 
-        <section class="our-villages-main">
+        <section class="our-villages-main our-villages-main--right">
             <div class="container">
               <div class="our-villages-main__head">
                 <h2 class="caption caption--h2">наши поселки</h2>
@@ -847,7 +845,7 @@
                       <ul class="primer-houses__data">
                         <li>
                           <span class="title">общая площадь</span>
-                          <p>120 м2</p>
+                          <p>120 м<sup>2</sup></p>
                         </li>
                         <li>
                           <span class="title">кол-во этажей</span>
@@ -877,7 +875,7 @@
                       <ul class="primer-houses__data">
                         <li>
                           <span class="title">общая площадь</span>
-                          <p>120 м2</p>
+                          <p>120 м<sup>2</sup></p>
                         </li>
                         <li>
                           <span class="title">кол-во этажей</span>
@@ -907,7 +905,7 @@
                       <ul class="primer-houses__data">
                         <li>
                           <span class="title">общая площадь</span>
-                          <p>120 м2</p>
+                          <p>120 м<sup>2</sup></p>
                         </li>
                         <li>
                           <span class="title">кол-во этажей</span>
@@ -937,7 +935,7 @@
                       <ul class="primer-houses__data">
                         <li>
                           <span class="title">общая площадь</span>
-                          <p>120 м2</p>
+                          <p>120 м<sup>2</sup></p>
                         </li>
                         <li>
                           <span class="title">кол-во этажей</span>
@@ -957,7 +955,7 @@
         </section>
 
         <section class="technologies-section">
-          <div class="technologies-section__head">
+          <div class="technologies-section__head technologies-section__head--mobhidden">
             <div class="container">
               <h2 class="caption caption--h2">технология строительства</h2>
               <p>
@@ -973,13 +971,21 @@
 
           <section class="technologies">
             <div class="technologies__content">
+              <div class="technologies-section__head technologies-section__head--mobvisible">
+                <div class="container">
+                  <h2 class="caption caption--h2">технология строительства</h2>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+                  </p>
+                </div>
+              </div>
               <div class="picture-block">
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="./../../img/bg-consul.webp"
+                    srcset="./../../img/tech.webp"
                   />
-                  <img src="./../../img/bg-consul.jpg" alt="" />
+                  <img src="./../../img/tech.png" alt="" />
                 </picture>
               </div>
 
@@ -987,8 +993,19 @@
                 <div class="technologies__item">
                   <div class="technologies__circle"></div>
                   <div class="technologies__info opened">
+                    <span class="technologies__title">Дверь</span>
+                    <p>
+                      4 слоя минерального утеплителя, 200мм. Мягкая кровля
+                      ТЕХНОНИКОЛЬ SHINGLAS.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="technologies__item">
+                  <div class="technologies__circle"></div>
+                  <div class="technologies__info">
                     <span class="technologies__title"
-                      >Тёплая вентилируемая кровля</span
+                      >Окна</span
                     >
                     <p>
                       4 слоя минерального утеплителя, 200мм. Мягкая кровля
@@ -1001,7 +1018,7 @@
                   <div class="technologies__circle"></div>
                   <div class="technologies__info">
                     <span class="technologies__title"
-                      >Тёплая вентилируемая кровля</span
+                      >Стены</span
                     >
                     <p>
                       4 слоя минерального утеплителя, 200мм. Мягкая кровля
@@ -1014,7 +1031,7 @@
                   <div class="technologies__circle"></div>
                   <div class="technologies__info">
                     <span class="technologies__title"
-                      >Тёплая вентилируемая кровля</span
+                      >ПОЛ</span
                     >
                     <p>
                       4 слоя минерального утеплителя, 200мм. Мягкая кровля
@@ -1027,20 +1044,7 @@
                   <div class="technologies__circle"></div>
                   <div class="technologies__info">
                     <span class="technologies__title"
-                      >Тёплая вентилируемая кровля</span
-                    >
-                    <p>
-                      4 слоя минерального утеплителя, 200мм. Мягкая кровля
-                      ТЕХНОНИКОЛЬ SHINGLAS.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="technologies__item">
-                  <div class="technologies__circle"></div>
-                  <div class="technologies__info">
-                    <span class="technologies__title"
-                      >Тёплая вентилируемая кровля</span
+                      >Фундамент</span
                     >
                     <p>
                       4 слоя минерального утеплителя, 200мм. Мягкая кровля
@@ -1074,52 +1078,30 @@
                 >
                   <div class="swiper-slide">
                     <div class="technologies__item">
-                      <div class="technologies__circle"></div>
                       <div class="technologies__info">
-                        <img src="./../../img/pic-grettings.jpg" alt="" />
                         <span class="technologies__title"
-                          >Тёплая вентилируемая кровля</span
+                          >фирменные окна завода кве</span
                         >
                         <p>
-                          4 слоя минерального утеплителя, 200мм. Мягкая кровля
-                          ТЕХНОНИКОЛЬ SHINGLAS.
+                          оконный профиль увеличенной толщины 70 мм
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="technologies__item">
-                      <div class="technologies__circle"></div>
                       <div class="technologies__info">
-                        <img src="./../../img/pic-grettings.jpg" alt="" />
                         <span class="technologies__title"
                           >Тёплая вентилируемая кровля</span
                         >
                         <p>
-                          4 слоя минерального утеплителя, 200мм. Мягкая кровля
-                          ТЕХНОНИКОЛЬ SHINGLAS.
+                          оконный профиль увеличенной толщины 70 мм
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="technologies__item">
-                      <div class="technologies__circle"></div>
-                      <div class="technologies__info">
-                        <img src="./../../img/pic-grettings.jpg" alt="" />
-                        <span class="technologies__title"
-                          >Тёплая вентилируемая кровля</span
-                        >
-                        <p>
-                          4 слоя минерального утеплителя, 200мм. Мягкая кровля
-                          ТЕХНОНИКОЛЬ SHINGLAS.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="technologies__item">
-                      <div class="technologies__circle"></div>
                       <div class="technologies__info">
                         <span class="technologies__title"
                           >Тёплая вентилируемая кровля</span
@@ -1133,9 +1115,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="technologies__item">
-                      <div class="technologies__circle"></div>
                       <div class="technologies__info">
-                        <img src="./../../img/pic-grettings.jpg" alt="" />
                         <span class="technologies__title"
                           >Тёплая вентилируемая кровля</span
                         >
@@ -1148,9 +1128,20 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="technologies__item">
-                      <div class="technologies__circle"></div>
                       <div class="technologies__info">
-                        <img src="./../../img/pic-grettings.jpg" alt="" />
+                        <span class="technologies__title"
+                          >Тёплая вентилируемая кровля</span
+                        >
+                        <p>
+                          4 слоя минерального утеплителя, 200мм. Мягкая кровля
+                          ТЕХНОНИКОЛЬ SHINGLAS.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="technologies__item">
+                      <div class="technologies__info">
                         <span class="technologies__title"
                           >Тёплая вентилируемая кровля</span
                         >
@@ -1414,135 +1405,7 @@
           </div>
         </section>
 
-        <section class="faq-section">
-          <div class="container">
-            <div class="section-title">
-              <h2 class="caption caption--h2">вопрос-ответ</h2>
-            </div>
 
-            <div class="faq-list">
-              <div class="faq-item">
-                <span class="faq-section__quest"
-                  >возможно ли строительство полностью под ключ?</span
-                >
-
-                <div class="faq-section__answer">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <span class="faq-section__quest"
-                  >возможно ли строительство полностью под ключ?</span
-                >
-
-                <div class="faq-section__answer">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <span class="faq-section__quest"
-                  >возможно ли строительство полностью под ключ?</span
-                >
-
-                <div class="faq-section__answer">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <span class="faq-section__quest"
-                  >возможно ли строительство полностью под ключ?</span
-                >
-
-                <div class="faq-section__answer">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <span class="faq-section__quest"
-                  >возможно ли строительство полностью под ключ?</span
-                >
-
-                <div class="faq-section__answer">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer class="footer">

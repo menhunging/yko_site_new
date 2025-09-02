@@ -1,6 +1,7 @@
 .press-page .page-content {
   position: relative;
   padding-top: 33px;
+  overflow-x: hidden;
 }
 .press-page .tabs-linkLink {
   margin: 0;

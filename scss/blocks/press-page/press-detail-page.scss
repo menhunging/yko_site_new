@@ -25,12 +25,20 @@
   }
   .detail-press-wrapper {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     grid-column-gap: 20px;
     grid-row-gap: 47px;
-
+    @include responsive1199{
+      grid-row-gap: 38px;
+    }
+    @include responsive1023{
+      grid-row-gap: 19px;
+    }
+    @media(max-width: 750px){
+      grid-row-gap: 0;
+    }
     .detail-press-page-picture {
       flex: none;
       max-width: calc((100% - 20px ) / 12 * 7 - 52px);
@@ -38,6 +46,18 @@
       border-radius: 40px;
       position: relative;
       overflow: hidden;
+      min-height: 606px;
+      @include responsive1199{
+        min-height: 427px;
+      }
+      @include responsive767{
+        min-height: 278px;
+        max-width: calc(50% - 10px);
+      }
+      @media(max-width: 750px){
+        min-height: 264px;
+        max-width: 100%;
+      }
       picture {
         width: 100%;
         height: 100%;
@@ -88,6 +108,17 @@
         .btn {
           margin-bottom: 0;
         }
+        .sale-schedule{
+          margin-bottom: 0;
+          &__icon{
+            svg{
+              @media(max-width: 1023px) and (min-width: 768px){
+                width: 43px;
+                height: 43px;
+              }
+            }
+          }
+        }
         .detail-press-page-published {
           .title {
             font-weight: 400;
@@ -104,6 +135,39 @@
           }
         }
       }
+      @include responsive1199{
+        .caption{
+          font-size: 28px;
+          line-height: 35px;
+        }
+      }
+      @include responsive1023{
+        &__head{
+          flex-direction: row;
+          .btn{
+            display: none;
+          }
+        }
+      }
+      @include responsive767{
+        max-width: calc(50% - 10px);
+        .caption{
+          font-size: 25px;
+          line-height: 35px;
+        }
+
+      }
+      @media(max-width: 750px){
+        gap: 10px;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 17px;
+      }
+      @include responsive639{
+        .caption{
+          font-size: 30px;
+        }
+      }
     }
 
     .detail-press-page-description, .detail-press-page-content {
@@ -115,6 +179,38 @@
       }
       & > :last-child {
         margin-bottom: 0;
+      }
+      @include responsive1199{
+        p{
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+      @include responsive767{
+        p{
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 20px;
+        }
+
+      }
+      @include responsive639{
+        p{
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+
+      }
+    }
+    @include responsive1023{
+      .detail-press-page-description{
+        p{
+          margin-bottom: 0;
+          &:last-child{
+            display: none;
+          }
+        }
       }
     }
 

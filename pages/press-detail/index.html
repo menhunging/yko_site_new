@@ -53,7 +53,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
 
-  <body class="detail-press-page">
+  <body class="detail-press-page press-page">
     <div class="site-wrapper">
       <header class="header">
         <div class="container">
@@ -197,7 +197,9 @@
 
         <section class="page-content">
             <div class="container">
-
+              <a class="btn btn--overDark btn--backspace btn--mob" onclick="window.history.back()">
+                вернуться назад
+              </a>
                 <div class="detail-press-wrapper">
 
                   <div class="detail-press-page-picture">
@@ -209,7 +211,7 @@
 
                   <div class="detail-press-info">
                     <div class="detail-press-info__head">
-                      <a class="btn btn--overDark btn--backspace" onclick="window.history.back()">
+                      <a class="btn btn--overDark btn--backspace btn--desktop" onclick="window.history.back()">
                         вернуться назад
                       </a>
                       <div class="detail-press-page-published">
@@ -246,14 +248,24 @@
               <h2 class="caption caption--h2">ДРУГИЕ НОВОСТИ</h2>
 
               <div class="tabs-linkLink">
-                <li><a href="#video-news" class="active">Видео-новости</a></li>
-                <li><a href="#text-news">Новости</a></li>
+                <li><a href="#video-news" data-controls="news-slider-detail-controls" class="active">Видео-новости</a></li>
+                <li><a href="#text-news" data-controls="news-slider-text-detail-controls">Новости</a></li>
+              </div>
+              <div class="controls">
+                <div class="swiper-controls visible" id="news-slider-detail-controls">
+                  <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                  <span class="swiperBtnNext swiperBtnNext--dark"></span>
+                </div>
+                <div class="swiper-controls" id="news-slider-text-detail-controls">
+                  <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
+                  <span class="swiperBtnNext swiperBtnNext--dark"></span>
+                </div>
               </div>
             </div>
 
-            <div class="news-slider swiper tabsSlider opened" id="video-news">
+            <div class="news-slider news-slider-detail swiper tabsSlider opened" id="video-news">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide press-list__item">
                   <a
                     href="./../../img/video/video.webm"
                     class="play"
@@ -270,7 +282,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide press-list__item">
                   <a
                     href="./../../img/video/video.webm"
                     class="play"
@@ -287,7 +299,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide press-list__item">
                   <a
                     href="./../../img/video/video.webm"
                     class="play"
@@ -304,7 +316,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide press-list__item">
                   <a
                     href="./../../img/video/video.webm"
                     class="play"
@@ -321,7 +333,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide press-list__item">
                   <a
                     href="./../../img/video/video.webm"
                     class="play"
@@ -338,15 +350,12 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-controls">
-                <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
-                <span class="swiperBtnNext swiperBtnNext--dark"></span>
-              </div>
+
             </div>
 
-            <div class="news-slider-text swiper tabsSlider" id="text-news">
+            <div class="news-slider news-slider-text-detail press-list-text swiper tabsSlider" id="text-news">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="press-list__item swiper-slide">
                   <div class="news-text">
                     <a href="#" class="news-text__link"
                       >очень длинная новость</a
@@ -368,7 +377,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="press-list__item swiper-slide">
                   <div class="news-text">
                     <a href="#" class="news-text__link"
                       >очень длинная новость</a
@@ -390,7 +399,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="press-list__item swiper-slide">
                   <div class="news-text">
                     <a href="#" class="news-text__link"
                       >очень длинная новость</a
@@ -412,7 +421,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="press-list__item swiper-slide">
                   <div class="news-text">
                     <a href="#" class="news-text__link"
                       >очень длинная новость</a
@@ -434,10 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-controls">
-                <span class="swiperBtnPrev swiperBtnPrev--dark"></span>
-                <span class="swiperBtnNext swiperBtnNext--dark"></span>
-              </div>
+
             </div>
           </div>
         </section>

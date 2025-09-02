@@ -1,7 +1,18 @@
 .our-villages-main {
   overflow: hidden;
   position: relative;
-
+  padding-top: 93px;
+  @include responsive1199{
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  @include responsive767{
+    padding-top: 33px;
+    padding-bottom: 30px;
+  }
+  @include responsive639{
+    padding-top: 24px;
+  }
   @include before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='405' height='397' viewBox='0 0 405 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M155.611 75.0967L154.571 76.8398L31.5508 3.4873L31.1611 3.25488L30.7744 3.49121L-90.3926 77.8076L-215.034 3.4873L-215.424 3.25488L-215.81 3.49121L-336.978 77.8076L-461.618 3.4873L-462.008 3.25488L-462.395 3.49121L-581.909 76.7842L-582.968 75.0654L-462.016 0.875977L-337.374 75.1973L-336.984 75.4297L-336.598 75.1924L-215.431 0.875977L-90.7891 75.1973L-90.3994 75.4297L-90.0127 75.1924L31.1533 0.875977L155.611 75.0967Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M155.611 138.924L154.571 140.667L31.5508 67.3145L31.1611 67.082L30.7744 67.3184L-90.3926 141.635L-215.034 67.3145L-215.424 67.082L-215.81 67.3184L-336.978 141.635L-461.618 67.3145L-462.008 67.082L-462.395 67.3184L-581.909 140.611L-582.968 138.893L-462.016 64.7031L-337.374 139.024L-336.984 139.257L-336.598 139.02L-215.431 64.7031L-90.7891 139.024L-90.3994 139.257L-90.0127 139.02L31.1533 64.7031L155.611 138.924Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.971 266.577L402.931 268.32L279.91 194.968L279.521 194.735L279.134 194.972L157.967 269.288L33.3252 194.968L32.9355 194.735L32.5488 194.972L-89.4873 269.82L-215.033 194.968L-215.423 194.735L-215.81 194.972L-335.324 268.265L-336.383 266.546L-215.431 192.357L-89.9014 267.21L-89.5117 267.443L-89.125 267.205L32.9277 192.357L157.57 266.678L157.96 266.91L158.347 266.673L279.513 192.357L403.971 266.577Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M155.611 202.75L154.571 204.493L31.5508 131.141L31.1611 130.908L30.7754 131.145L-90.3926 205.461L-215.033 131.141L-215.423 130.908L-215.81 131.145L-335.324 204.438L-336.383 202.719L-215.431 128.529L-90.7891 202.851L-90.3994 203.083L-90.0127 202.846L31.1543 128.529L155.611 202.75Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.969 330.404L402.929 332.148L279.909 258.795L279.519 258.563L279.134 258.799L157.966 333.115L33.325 258.795L32.9353 258.563L32.5486 258.799L-86.9661 332.092L-88.0247 330.373L32.9275 256.184L157.569 330.505L157.959 330.737L158.345 330.5L279.512 256.184L403.969 330.404Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M403.97 394.231L402.93 395.975L279.91 322.621L279.52 322.389L279.134 322.625L159.619 395.918L158.56 394.199L279.512 320.01L403.97 394.231Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
     background-position: center;
@@ -12,11 +23,21 @@
     top: 0;
     z-index: -1;
   }
+  &.our-villages-main--right{
+    &:before{
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%22661%22%20height%3D%22456%22%20viewBox%3D%220%200%20661%20456%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M849.682%2086.2178L848.372%2088.4121L706.973%204.10059L706.584%203.86816L706.197%204.10547L566.965%2089.501L423.742%204.10059L423.353%203.86816L422.966%204.10547L283.734%2089.501L140.512%204.10059L140.122%203.86816L139.735%204.10547L2.36426%2088.3477L1.03223%2086.1846L140.112%200.875977L283.336%2086.2773L283.726%2086.5098L284.111%2086.2725L423.343%200.875977L566.566%2086.2773L566.956%2086.5098L567.343%2086.2725L706.573%200.875977L849.682%2086.2178Z%22%20fill%3D%22%23A9A9A9%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M849.682%20159.531L848.372%20161.725L706.973%2077.4133L706.584%2077.1809L706.197%2077.4182L566.965%20162.814L423.742%2077.4133L423.353%2077.1809L422.966%2077.4182L283.734%20162.814L140.512%2077.4133L140.122%2077.1809L139.735%2077.4182L2.36426%20161.66L1.03223%20159.497L140.112%2074.1887L283.336%20159.59L283.726%20159.823L284.111%20159.585L423.343%2074.1887L566.566%20159.59L566.956%20159.823L567.343%20159.585L706.573%2074.1887L849.682%20159.531Z%22%20fill%3D%22%23A9A9A9%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M1134.95%20306.155L1133.64%20308.349L992.242%20224.038L991.852%20223.805L991.465%20224.042L852.234%20309.438L709.011%20224.038L708.622%20223.805L708.235%20224.042L568.004%20310.049L423.743%20224.038L423.353%20223.805L422.966%20224.042L285.595%20308.285L284.263%20306.122L423.343%20220.813L567.585%20306.825L567.975%20307.057L568.362%20306.82L708.611%20220.813L851.834%20306.214L852.224%20306.447L852.611%20306.209L991.841%20220.813L1134.95%20306.155Z%22%20fill%3D%22%23A9A9A9%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M849.682%20232.842L848.373%20235.036L706.973%20150.725L706.583%20150.492L706.197%20150.73L566.965%20236.125L423.743%20150.725L423.353%20150.492L422.966%20150.73L285.595%20234.972L284.263%20232.809L423.343%20147.5L566.567%20232.902L566.956%20233.134L567.342%20232.897L706.574%20147.5L849.682%20232.842Z%22%20fill%3D%22%23A9A9A9%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M1134.95%20379.468L1133.64%20381.662L992.241%20297.35L991.851%20297.118L991.464%20297.355L852.233%20382.751L709.01%20297.35L708.621%20297.118L708.234%20297.355L570.864%20381.598L569.531%20379.434L708.611%20294.126L851.834%20379.527L852.223%20379.76L852.61%20379.522L991.841%20294.126L1134.95%20379.468Z%22%20fill%3D%22%23A9A9A9%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3C%2Fsvg%3E");
+      left: unset;
+      right: -162px;
+      top: 35px;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  }
 }
 
 .our-villages-main__head {
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
   gap: 44px;
 
@@ -25,10 +46,12 @@
   }
 
   @include responsive1023 {
-    flex-wrap: wrap;
     gap: 25px;
   }
 
+  @include responsive639{
+    flex-direction: column;
+  }
   .caption {
     @include responsive1023 {
       width: 100%;
@@ -37,10 +60,15 @@
 }
 
 .our-villages-main__body {
-  margin-top: 32px;
-
+  margin-top: 28px;
+  @include responsive1199{
+    margin-top: 23px;
+  }
   @include responsive767 {
-    margin-top: 24px;
+    margin-top: 14px;
+  }
+  @include responsive639 {
+    margin-top: 12px;
   }
 }
 
@@ -50,32 +78,32 @@
 
   .swiper-slide {
     position: relative;
-    border-radius: 50px;
-    overflow: hidden;
-    padding: 13px;
+    //border-radius: 50px;
+    //overflow: hidden;
+    //padding: 13px;
     opacity: 0.15;
     backdrop-filter: blur(16px);
-    transition: all 0.3s;
+    //transition: all 0.3s;
 
     @include responsive1549 {
       border: solid 1px $colorBlack;
       background-color: $colorWhite;
     }
 
-    @include before {
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='738' height='699' viewBox='0 0 738 699' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cforeignObject x='-16.8568' y='-16.8568' width='771.714' height='732.714'%3e%3cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(8.43px);clip-path:url(%23bgblur_0_124_651_clip_path);height:100%25;width:100%25'%3e%3c/div%3e%3c/foreignObject%3e%3crect data-figma-bg-blur-radius='16.8568' x='0.5' y='0.5' width='737' height='698' rx='49.5' fill='white' stroke='url(%23paint0_linear_124_651)'/%3e%3cdefs%3e%3cclipPath id='bgblur_0_124_651_clip_path' transform='translate(16.8568 16.8568)'%3e%3crect x='0.5' y='0.5' width='737' height='698' rx='49.5'/%3e%3c/clipPath%3e%3clinearGradient id='paint0_linear_124_651' x1='311.396' y1='-23.8296' x2='266.473' y2='696.197' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23212121'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-      top: -13px;
-      left: 0;
-      z-index: -1;
-
-      @include responsive1549 {
-        display: none;
-      }
-    }
+    //@include before {
+    //  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='738' height='699' viewBox='0 0 738 699' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cforeignObject x='-16.8568' y='-16.8568' width='771.714' height='732.714'%3e%3cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(8.43px);clip-path:url(%23bgblur_0_124_651_clip_path);height:100%25;width:100%25'%3e%3c/div%3e%3c/foreignObject%3e%3crect data-figma-bg-blur-radius='16.8568' x='0.5' y='0.5' width='737' height='698' rx='49.5' fill='white' stroke='url(%23paint0_linear_124_651)'/%3e%3cdefs%3e%3cclipPath id='bgblur_0_124_651_clip_path' transform='translate(16.8568 16.8568)'%3e%3crect x='0.5' y='0.5' width='737' height='698' rx='49.5'/%3e%3c/clipPath%3e%3clinearGradient id='paint0_linear_124_651' x1='311.396' y1='-23.8296' x2='266.473' y2='696.197' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23212121'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+    //  background-position: center;
+    //  background-repeat: no-repeat;
+    //  width: 100%;
+    //  height: 100%;
+    //  top: -13px;
+    //  left: 0;
+    //  z-index: -1;
+    //
+    //  @include responsive1549 {
+    //    display: none;
+    //  }
+    //}
 
     &.swiper-slide-next,
     &.swiper-slide-active {
@@ -203,7 +231,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
-  padding: 26px 23px 26px 80px;
+  padding: 21px 23px 26px 80px;
   position: relative;
   min-width: 285px;
   width: auto;
@@ -213,21 +241,33 @@
   @include responsive1549 {
     padding: 12px 13px 16px 70px;
   }
-
+  @include responsive1199{
+    padding: 16px 30px 20px 60px;
+    min-width: unset;
+    border-radius: 23px;
+  }
   @include responsive1023 {
+    min-width: 280px;
     margin-left: 0;
   }
 
   @include responsive767 {
-    min-width: 235px;
+    padding: 9px 14px 10px 40px;
+    border-radius: 15px;
+    min-width: 140px;
   }
-
+  @include responsive639{
+    padding: 14px 43px 10px 61px;
+    border-radius: 20px;
+    width: max-content;
+  }
   .our-villages-count__icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='36' viewBox='0 0 37 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.0149287 22.1932C0.0149287 20.1965 0.0261777 18.1998 0.011554 16.2031C-0.00644445 13.6046 0.971096 11.4931 2.98917 9.83953C6.13215 7.26463 9.25151 4.66273 12.3844 2.07657C15.7343 -0.688439 20.2643 -0.694063 23.621 2.07095C26.8225 4.70772 30.0206 7.34675 33.2086 9.99927C34.9803 11.474 35.9533 13.3864 35.9758 15.689C36.0186 20.1178 36.0355 24.5476 35.9635 28.9753C35.9106 32.2442 33.4662 35.1184 30.2883 35.8304C29.772 35.9463 29.2309 35.9778 28.7 35.989C27.5897 36.0127 26.4783 36.0014 25.368 35.9947C23.1227 35.9823 21.6221 34.4794 21.6142 32.2296C21.6074 30.4016 21.6119 28.5737 21.6131 26.7457C21.6142 25.749 21.3948 24.8165 20.7626 24.0234C19.8965 22.9357 18.7626 22.4058 17.3823 22.6837C15.8772 22.9863 14.9626 23.9908 14.5599 25.4453C14.4384 25.8852 14.4092 26.361 14.4047 26.8211C14.3878 28.6063 14.4013 30.3926 14.3968 32.1779C14.3912 34.5019 12.8973 35.989 10.5654 35.9947C9.48324 35.9969 8.39996 35.98 7.3178 35.998C3.30077 36.0644 0.189289 32.7471 0.0430513 28.9415C-0.0435663 26.6951 0.0273026 24.443 0.0273026 22.1932C0.0239279 22.1932 0.0194283 22.1932 0.0149287 22.1932Z' fill='black'/%3e%3c/svg%3e ");
     width: 36px;
     height: 36px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 50%;
     left: 23px;
@@ -236,16 +276,35 @@
     @include responsive1549 {
       left: 20px;
     }
+    @include responsive1199{
+      width: 27px;
+      height: 27px;
+    }
+    @include responsive767{
+      width: 18px;
+      height: 18px;
+      left: 11px;
+    }
+    @include responsive639{
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .our-villages-count__title {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-
+    @include responsive1199{
+      font-size: 12px;
+      line-height: 12px;
+    }
     @include responsive767 {
+      font-size: 8px;
+      line-height: 1;
+    }
+    @include responsive639{
       font-size: 11px;
-      line-height: 14px;
     }
   }
 
@@ -258,10 +317,15 @@
       font-size: 24px;
       line-height: 22px;
     }
-
-    @include responsive767 {
+    @include responsive1199{
+      font-size: 23px;
+    }
+    @include responsive767{
+      font-size: 15px;
+      line-height: 1;
+    }
+    @include responsive639 {
       font-size: 20px;
-      line-height: 25px;
     }
   }
 }
@@ -304,6 +368,7 @@
   align-items: center;
   padding: 10px 10px 15px;
   height: 45px;
+  margin-top: 10px;
 
   @include responsive1199 {
     order: -1;
@@ -362,5 +427,200 @@
   }
   li.price {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='25' cy='25' r='24.3056' stroke='%23212121' stroke-width='1.38889'/%3e%3cg clip-path='url(%23clip0_124_668)'%3e%3cpath d='M27.2684 20.508C27.1288 20.4377 26.9596 20.397 26.8034 20.3952C25.6757 20.3857 24.548 20.39 23.4211 20.3909C23.3335 20.3909 23.245 20.3996 23.147 20.4048C23.147 21.8752 23.147 23.3265 23.147 24.8099C24.4439 24.8099 25.7078 24.8186 26.9709 24.8004C27.1556 24.7977 27.3682 24.7041 27.5191 24.5887C29.0702 23.4002 28.7796 21.2688 27.2684 20.508Z' fill='black'/%3e%3cpath d='M25 13C18.3724 13 13 18.3724 13 25C13 31.6276 18.3724 37 25 37C31.6276 37 37 31.6276 37 25C37 18.3724 31.6276 13 25 13ZM27.5409 26.0939C27.3839 26.1538 27.206 26.1824 27.0377 26.1841C25.8458 26.1919 24.6539 26.1885 23.4628 26.1885C23.3648 26.1885 23.2668 26.1885 23.1505 26.1885C23.1505 26.5528 23.1505 26.8929 23.1505 27.2702C23.2589 27.2702 23.3561 27.2702 23.4524 27.2702C24.6443 27.2746 25.8363 27.278 27.0273 27.285C27.4836 27.2876 27.7838 27.5296 27.8167 27.9104C27.8566 28.3624 27.5391 28.6782 27.0325 28.6764C26.4409 28.6747 25.8501 28.6617 25.2585 28.6591C24.5602 28.6556 23.8627 28.6582 23.1306 28.6582C23.1306 28.9636 23.1306 29.2516 23.1306 29.5404C23.1306 29.7859 23.1349 30.0323 23.1288 30.2778C23.1175 30.7133 22.8417 31.0004 22.4426 31.0004C22.0471 31.0004 21.7591 30.7055 21.7538 30.2778C21.7478 29.8319 21.7521 29.386 21.7521 28.9401C21.7521 28.8508 21.7521 28.7623 21.7521 28.6391C21.4693 28.6391 21.2082 28.6435 20.9471 28.6383C20.5029 28.6296 20.1924 28.3433 20.188 27.9469C20.1846 27.5504 20.4943 27.2615 20.9393 27.2537C21.2004 27.2485 21.4624 27.2529 21.7374 27.2529C21.7374 26.8955 21.7374 26.5624 21.7374 26.1893C21.5665 26.1893 21.3973 26.1893 21.229 26.1893C20.3876 26.1893 20.0657 26.002 20.0605 25.5075C20.0553 25.0061 20.3849 24.8126 21.242 24.8126C21.3964 24.8126 21.5509 24.8126 21.7521 24.8126C21.7521 24.6964 21.7521 24.5931 21.7521 24.489C21.7521 22.9414 21.7512 21.3947 21.7521 19.8471C21.7521 19.2503 21.9959 19.0056 22.6005 19.0048C24.0744 19.003 25.5483 19.0004 27.0221 19.0082C27.1991 19.0091 27.3865 19.0421 27.5522 19.1054C28.987 19.6589 29.9412 21.0642 29.9404 22.604C29.9386 24.1394 28.9783 25.5448 27.5409 26.0939Z' fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_124_668'%3e%3crect width='24' height='24' fill='white' transform='translate(13 13)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  }
+}
+
+.village-item.village-item--horizontal{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 17px 17px 21px;
+  @include responsive1549{
+    padding: 12px 14px 15px 17px;
+  }
+  @media(max-width: 1100px){
+    padding: 8px 10px 14px 17px;
+  }
+  @media(max-width: 767px){
+    flex-wrap: wrap;
+    padding: 11px 12px;
+  }
+  .our-villages-item-content{
+    padding: 36px 43px 18px 17px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @include responsive1549{
+      padding: 27px 29px 6px 8px;
+    }
+    @media(max-width: 1199px){
+      padding: 12px 29px 0 0;
+    }
+    @media(max-width: 767px){
+      width: 100%;
+      padding-top: 16px;
+      padding-right: 0;
+    }
+
+    &__head{
+      .caption{
+        width: 100%;
+        display: -webkit-box;
+        line-clamp: 2;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      p{
+        display: -webkit-box;
+        line-clamp: 2;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        @include responsive1023{
+          line-clamp: 3;
+          -webkit-line-clamp: 3;
+        }
+      }
+    }
+    &__duration{
+      margin-top: auto;
+      @media(max-width: 767px){
+        margin-top: 26px;
+      }
+      .btn{
+        margin: 0;
+        width: max-content;
+        font-size: 16px;
+        height: 50px;
+        padding-inline: 28px;
+        @include responsive1199{
+          height: 45px;
+
+        }
+        @media(max-width: 1100px){
+          height: 35px;
+          font-size: 14px;
+          padding-inline: 18px;
+        }
+        @include responsive639{
+          width: 100%;
+          font-size: 17px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .picture-block{
+    height: 368px;
+    min-width: 320px;
+    @include responsive1549{
+      min-width: 242px;
+    }
+    @include responsive1199{
+      height: 278px;
+    }
+    @include responsive1023{
+      min-width: 147px;
+    }
+    @include responsive767{
+      height: 190px;
+    }
+    @media(max-width: 767px){
+      min-width: unset;
+      width: 100%;
+    }
+    @include responsive639{
+      height: 176px;
+    }
+  }
+}
+.sales-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 23px;
+  grid-row-gap: 25px;
+  margin-top: 39px;
+  @include responsive1199{
+    grid-column-gap: 19px;
+    grid-row-gap: 28px;
+  }
+  @include responsive1023{
+    margin-top: 20px;
+    gap: 10px;
+  }
+  @include responsive639{
+    grid-template-columns: 100%;
+    gap: 15px;
+    margin-top: 22px;
+  }
+}
+.sale-schedule{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  align-items: flex-start;
+  margin-top: auto;
+  @include responsive1199{
+    margin-bottom: 16px;
+  }
+  @include responsive1023{
+
+  }
+  @include responsive767{
+    margin-bottom: 10px;
+  }
+  @include responsive639{
+    margin-bottom: 26px;
+    gap: 9px;
+  }
+  &__icon{
+    svg{
+      @include responsive1199{
+        width: 37px;
+        height: 37px;
+      }
+      @include responsive1023{
+        width: 25px;
+        height: 25px;
+      }
+      @include responsive639{
+        width: 49px;
+        height: 49px;
+      }
+    }
+
+  }
+  &__info{
+
+  }
+  &__name{
+    color: $colorGray;
+    font-size: 14px;
+    line-height: 10px;
+    @include responsive1199{
+      font-size: 12px;
+    }
+    @include responsive767{
+      font-size: 10px;
+    }
+    @include responsive639{
+      font-size: 14px;
+    }
+  }
+  &__duration{
+    font-size: 30px;
+    line-height: 30px;
+    @include responsive1199{
+      font-size: 23px;
+      line-height: 23px;
+    }
+    @include responsive767{
+      font-size: 16px;
+      line-height: 16px;
+    }
+    @include responsive639{
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }

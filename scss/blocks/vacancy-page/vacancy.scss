@@ -1,9 +1,45 @@
 .vacancy-about {
+  margin-top: 51px;
   .caption {
     margin-bottom: 16px;
     display: block;
     width: 100%;
     color: $colorBlack;
+  }
+  @include responsive1199{
+    margin-top: 10px;
+    .social-block-ru .social-block-ru__link{
+      width: 70px;
+      height: 70px;
+      background-size: 44px;
+    }
+  }
+  @include responsive1023{
+    margin-top: 16px;
+    .caption{
+      margin-bottom: 0;
+    }
+    .social-block-ru {
+      gap: 14px;
+      .social-block-ru__link{
+        width: 58px;
+        height: 58px;
+        background-size: 37px;
+        border-radius: 17px;
+      }
+    }
+  }
+  @include responsive639{
+    margin-top: 14px;
+    .social-block-ru{
+      gap: 11px;
+      .social-block-ru__link{
+        width: 53px;
+        height: 53px;
+        background-size: 35px;
+        border-radius: 13px;
+      }
+    }
   }
 }
 
@@ -11,6 +47,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @include responsive1023{
+    align-items: center;
+  }
 }
 
 .vacancy-about__text {
@@ -22,10 +61,18 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-
+  @include responsive1199{
+    font-size: 18px;
+    line-height: 24px;
+  }
   @include responsive767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @include responsive639 {
     font-size: 16px;
     line-height: 24px;
+    gap: 13px;
   }
 }
 
@@ -65,15 +112,21 @@
 }
 
 .vacancy-about-up {
-  padding: 80px 0;
+  padding: 80px 0 50px;
   position: relative;
-  margin-top: 80px;
+  margin-top: 93px;
 
   @include responsive1199 {
     padding: 30px 0;
-    margin-top: 30px;
+    margin-top: 60px;
   }
-
+  @include responsive1023{
+    margin-top: 16px;
+  }
+  @include responsive639{
+    margin-top: 53px;
+    padding-top: 20px
+  }
   @include before {
     border-radius: 60px;
     overflow: hidden;
@@ -108,7 +161,9 @@
     margin-bottom: 50px;
     display: block;
     color: $colorWhite;
-
+@include responsive1199{
+  margin-bottom: 30px;
+}
     @include responsive1023 {
       margin-bottom: 24px;
     }
@@ -132,16 +187,24 @@
 .vacancy-about-up__info {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-
-  @include responsive1023 {
+  margin-top: 70px;
+@include responsive1549{
+  gap: 100px;
+  margin-top: 35px;
+}
+  @media(max-width: 1199px){
+    gap: 20px;
+  }
+  @media(max-width: 767px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-top: 24px;
   }
-
+  @include responsive639{
+    gap: 36px;
+  }
   .vacancy-about-up__left {
     display: flex;
     flex-direction: column;
@@ -150,15 +213,27 @@
     width: 536px;
 
     @include responsive1549 {
-      width: 422px;
+      width: 100%;
+      max-width: 34.3%;
       justify-content: center;
       align-items: center;
     }
+    @include responsive1199{
 
+
+    }
+    @media(max-width: 1199px){
+      max-width: 39.58%;
+      align-items: flex-start;
+    }
     @include responsive1023 {
       width: 100%;
     }
-  }
+    @media(max-width: 767px) {
+      max-width: 100%;
+      align-items: center;
+    }
+    }
 
   .vacancy-about-up__title {
     font-weight: 400;
@@ -168,39 +243,40 @@
 
     @include responsive1549 {
       font-size: 44px;
-      line-height: 60px;
+      line-height: 70px;
     }
 
-    @include responsive767 {
-      font-size: 34px;
-      line-height: 40px;
+    @include responsive1023 {
+      font-size: 32px;
+      line-height: 35px;
+    }
+    @include responsive639{
+      font-size: 41px;
+      line-height: 45px;
     }
 
-    @include responsive389 {
-      font-size: 31px;
-      line-height: 38px;
-    }
   }
 
   .vacancy-about-up__desc {
     font-weight: 400;
     font-size: 20px;
-    line-height: 65px;
+    line-height: 36px;
     text-transform: uppercase;
-
+    margin-top: 26px;
     @include responsive1549 {
       font-size: 15px;
-      line-height: 40px;
-    }
-
-    @include responsive767 {
-      font-size: 12px;
-      line-height: 30px;
-    }
-
-    @include responsive389 {
-      font-size: 11px;
       line-height: 27px;
+      margin-top: 6px;
+    }
+
+    @include  responsive1023  {
+      font-size: 11px;
+      line-height: 19px;
+    }
+
+    @include responsive639 {
+      font-size: 13px;
+      line-height: 24px;
     }
   }
 
@@ -209,19 +285,20 @@
     font-size: 38px;
     line-height: 50px;
     text-transform: uppercase;
-
+    margin-top: 40px;
     @include responsive1549 {
       font-size: 27px;
       line-height: 40px;
+      margin-top: 10px;
     }
 
-    @include responsive767 {
+    @include  responsive1023 {
       font-size: 22px;
       line-height: 30px;
     }
 
-    @include responsive389 {
-      font-size: 20px;
+    @include responsive639 {
+      font-size: 27px;
       line-height: 30px;
     }
   }
@@ -239,13 +316,13 @@
       line-height: 60px;
     }
 
-    @include responsive767 {
-      font-size: 40px;
-      line-height: 50px;
+    @include  responsive1023  {
+      font-size: 37px;
+      line-height: 36px;
     }
 
-    @include responsive389 {
-      font-size: 37px;
+    @include responsive639{
+      font-size: 42px;
       line-height: 45px;
     }
   }
@@ -257,7 +334,7 @@
     width: calc(100% - 536px - 120px);
 
     @include responsive1549 {
-      width: calc(100% - 366px - 120px);
+      width: 100%;
     }
 
     @include responsive1023 {
@@ -271,6 +348,9 @@
     picture {
       border-radius: 20px;
       overflow: hidden;
+      @include responsive639{
+        border-radius: 11px;
+      }
     }
   }
 
@@ -279,7 +359,7 @@
     color: $colorWhite;
     border-radius: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 10px;
     padding: 5px 5px 10px;
     display: flex;
@@ -288,12 +368,28 @@
     width: 150px;
     position: absolute;
     left: -10px;
-    top: 30px;
+    top: 50px;
     z-index: 3;
+    &--second{
+      left: unset;
+      right: -10px;
+    }
+    @include responsive1549{
+      top: 40px;
+      width: 129px;
+      font-size: 16px;
+    }
+    @include responsive1023{
+      top: 20px;
+      width: 86px;
+      font-size: 11px;
+      padding: 3px 6px 5px;
+    }
   }
 }
 
 .vacancy-about-content {
+  padding-top: 10px;
   .vacancy-about__text {
   }
 
@@ -303,10 +399,16 @@
   .caption {
     color: $colorBlack;
   }
+  @include responsive1199{
+    padding-top: 40px;
+    .vacancy-about__text {
+      gap: 23px;
+    }
+  }
 }
 
 .vacancy-slider {
-  margin-top: 30px;
+  margin-top: 44px;
 
   @include responsive767 {
     left: -15px;
@@ -329,9 +431,16 @@
       padding-top: calc(80 / 290 * 100%);
     }
 
-    @include responsive767 {
-      padding-top: calc(285 / 390 * 100%);
+    @include responsive1023 {
+      //padding-top: calc(80 / 290 * 100%);
       border-radius: 20px;
+    }
+    @include responsive767 {
+      //padding-top: calc(238 / 200 * 100%);
+
+    }
+    @include responsive639{
+      padding-top: 79%;
     }
   }
 
@@ -343,6 +452,12 @@
     width: 100%;
     height: 100%;
     border-radius: 40px;
+    @include responsive1549{
+      border-radius: 30px;
+    }
+    @include responsive1023{
+      border-radius: 25px;
+    }
   }
 
   .swiper-controls {
@@ -358,8 +473,10 @@
     left: -15px;
     width: calc(100% + 30px);
     padding: 0 15px;
+    .swiper-controls{
+      display: none;
+    }
   }
-
   .swiper-slide {
     height: 268px;
     position: relative;
@@ -370,12 +487,12 @@
       height: 200px;
     }
 
-    @include responsive1199 {
+    @include responsive1023 {
       height: 130px;
       border-radius: 20px;
     }
 
-    @include responsive767 {
+    @include responsive639 {
       padding-top: calc(210 / 390 * 100%);
     }
   }
@@ -398,83 +515,259 @@
 
 .vacancy-about-content--gray {
   background-color: #f8f8f8;
-  border-radius: 60px;
+  @include bigradius;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='491' height='463' viewBox='0 0 491 463' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M862.734 87.5371L861.393 89.7842L717.814 4.17383L717.425 3.94141L717.038 4.17871L575.664 90.8877L430.238 4.17383L429.849 3.94141L429.462 4.17871L288.088 90.8877L142.662 4.17383L142.272 3.94141L141.886 4.17871L2.39746 89.7207L1.03223 87.5029L142.262 0.875977L287.688 87.5908L288.078 87.8232L288.465 87.5859L429.838 0.875977L575.265 87.5908L575.654 87.8232L576.041 87.5859L717.414 0.875977L862.734 87.5371Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M862.734 161.976L861.393 164.223L717.814 78.6125L717.425 78.3801L717.038 78.6174L575.664 165.326L430.238 78.6125L429.849 78.3801L429.462 78.6174L288.088 165.326L142.662 78.6125L142.272 78.3801L141.886 78.6174L2.39746 164.159L1.03223 161.942L142.262 75.3147L287.688 162.03L288.078 162.262L288.465 162.025L429.838 75.3147L575.265 162.03L575.654 162.262L576.041 162.025L717.414 75.3147L862.734 161.976Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M1152.38 310.85L1151.04 313.097L1007.46 227.487L1007.07 227.254L1006.69 227.491L865.312 314.2L719.886 227.487L719.496 227.254L719.109 227.491L576.722 314.821L430.24 227.487L429.851 227.254L429.464 227.491L289.976 313.033L288.61 310.816L429.84 224.189L576.302 311.524L576.691 311.756L577.077 311.519L719.485 224.189L864.912 310.904L865.302 311.136L865.688 310.899L1007.06 224.189L1152.38 310.85Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3cpath d='M862.736 236.411L861.395 238.658L717.816 153.048L717.427 152.816L717.04 153.053L575.666 239.762L430.24 153.048L429.851 152.816L429.464 153.053L289.976 238.595L288.61 236.377L429.84 149.75L575.267 236.465L575.656 236.698L576.043 236.46L717.416 149.75L862.736 236.411Z' fill='%23A9A9A9' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
   background-position: right 10px;
   background-repeat: no-repeat;
+  padding: 70px 0 60px;
+  &+.vacancy-about-content{
+    padding-top: 70px;
+  }
+  .swiper-controls{
+    display: none;
+  }
+  @include responsive1023{
+    padding: 60px 0 40px;
+    &+.vacancy-about-content{
+      padding-top: 20px;
+    }
+  }
+  @media(max-width: 767px){
+    margin-top: 40px;
+  }
 }
-
+.about-information__wrapper--right-img{
+  &>.about-information__item-info{
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    @include responsive1549{
+      padding-left: 0 !important;
+      padding-top: 5px !important;
+      padding-right: 0 !important;
+      justify-content: flex-start;
+    }
+    @include responsive767{
+      padding-top: 0 !important;
+      padding-right: 0!important;
+      padding-left: 0 !important;
+      align-self: center !important;
+      width: calc(100% + 50px);
+    }
+    @include responsive639{
+      padding: 0!important;
+      width: 100%;
+    }
+  }
+}
 .about-information__slider {
   width: calc(100% + 175px);
-  height: calc(100% + 175px);
-  transform: translateX(-221px) translateY(-80px);
-
-  @include responsive1549 {
-    width: calc(100% + 115px);
-    height: calc(100% + 175px);
-    transform: translateX(-179px) translateY(-80px);
+  //height: calc(100% + 175px);
+  //transform: translateX(-221px) translateY(-80px);
+  transform:  translateX(-261px);;
+  height: 541px;
+  &+.about-information__item-info{
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    @include responsive1549{
+      padding-right: 0 !important;
+      padding-top: 5px !important;
+      padding-left: 62px !important;
+      justify-content: flex-start;
+    }
+    @include responsive767{
+      padding-top: 0 !important;
+      padding-left: 32px !important;
+      padding-right: 10px !important;
+      align-self: center !important;
+    }
+    @include responsive639{
+      padding: 0!important;
+    }
   }
-
+  @include responsive1549 {
+    width: calc(100% + 219px);
+    height: 395px;
+    transform:  translateX(-199px) translateY(-29px);;
+  }
+  @include responsive767{
+    height: 237px;
+    transform: translateY(31px) translateX(-20px);
+    width: calc(100% + 10px);
+  }
+  @media(max-width: 767px){
+    transform: translateY(0) translateX(-20px);
+  }
+  @include responsive639{
+    height: 277px;
+    width: calc(100% + 20px);
+    margin-bottom: -10px;
+  }
   .detail-home-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 60px;
-
+    border-radius: 60px;
+    @include responsive1439{
+      border-radius: 0 45px 45px 0;
+    }
+    @include responsive1023{
+      border-radius: 0 30px 30px 0;
+    }
+    @include responsive639{
+      border-radius: 0 25px 25px 0;
+    }
+    .swiper-counter{
+      width: 88px;
+      height: 88px;
+      font-size: 13px;
+      border-radius: 28px 0 0 0;
+      .curent-slide{
+        font-size: 27px;
+      }
+      @include responsive1439{
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+        border-radius: 28px 0 0 0;
+        .curent-slide{
+          font-size: 27px;
+        }
+      }
+      @include responsive1023{
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+        border-radius: 16px 0 0 0;
+        .curent-slide{
+          font-size: 17px;
+        }
+      }
+    }
     .swiper-slide {
       overflow: hidden;
     }
 
     picture {
-      border-top-right-radius: 60px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 200px;
+      min-height: unset;
+      left: unset!important;
+      border-radius: 0;
+      right: unset !important;
+      @include responsive1549 {
+
+        min-height: 395px;
+      }
+      @include responsive767{
+        min-height: 237px;
+      }
+      @include responsive639{
+        min-height: 277px;
+      }
     }
 
     .swiper-controls {
       transform: translate(-30%, -50%);
       max-width: 70%;
+      @include responsive1023{
+      transform: translate(-28%, -50%)
+      }
+      @include responsive767{
+        transform: translate(-48%, -50%);
+        max-width: 100%;
+      }
+      @include responsive639{
+        transform: translate(-42%, 25%);
+      }
     }
   }
 }
 
 .about-information__wrapper--right-img {
   .about-information__slider {
-    transform: translateX(67px) translateY(-80px);
+    transform: translateX(67px) translateY(-10px);
 
     @include responsive1549 {
-      width: calc(100% + 115px);
-      height: calc(100% + 175px);
-      transform: translateX(40px) translateY(-80px);
+      width: calc(100% + 109px);
+      height: 395px;
+      transform: translateX(109px) translateY(-49px);
+    }
+    @include responsive1023{
+      width: calc(100% + 129px);
+      transform: translateX(44px) translateY(-49px);
+    }
+    @include responsive767{
+      height: 237px;
+      transform: translateY(1px) translateX(87px);
+      width: calc(100% + 87px);
+    }
+
+
+    @include responsive639{
+      height: 277px;
+      width: calc(100% + 20px);
+      margin-bottom: -10px;
+      transform: translateX(0);
     }
   }
 
   .detail-home-slider {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 60px;
-
+    border-radius: 60px;
+    @include responsive1439{
+      border-radius: 45px 0 0 45px;
+    }
+    @include responsive1023{
+      border-radius: 30px 0 0 30px;
+    }
+    @include responsive639{
+      border-radius: 25px 0 0 25px;
+    }
     .swiper-controls {
       transform: translate(-70%, -50%);
       max-width: 70%;
+      @include responsive1023{
+        transform: translate(-72%, -50%)
+      }
+      @include responsive767{
+        transform: translate(-88%, -50%);
+        max-width: 100%;
+      }
+      @include responsive639{
+        transform: translate(-56%, 25%);
+      }
     }
 
     picture {
-      border-top-left-radius: 60px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 100px;
+      left: unset !important;
+      top: unset !important;
+      @include responsive1549 {
+
+        min-height: 395px;
+      }
+      @include responsive767{
+        min-height: 237px;
+      }
+      @include responsive639{
+        min-height: 277px;
+      }
     }
 
     .swiper-counter {
       right: auto;
       left: 0;
-      border-radius: 0 40px 0 33.7px;
+      border-radius: 0 28px 0 0;
+      @include responsive1439{
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+        border-radius: 0 28px 0 0;
+      }
+      @include responsive1023{
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+        border-radius: 0 16px 0 0;
+      }
     }
   }
 }
@@ -485,6 +778,7 @@
   background-repeat: no-repeat;
 
   .caption {
+    color: $colorBlack;
     &--h2 {
       margin: 39px 0 73px;
     }
@@ -498,14 +792,25 @@
       border-radius: 60px;
       position: relative;
       z-index: 1;
+      @include responsive767{
+        padding-bottom: 30px;
+      }
     }
     &__wrapper {
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 1fr;
       gap: 86px;
-
-      @include responsive1023 {
+      @include responsive1549{
+        gap: 60px 83px;
+      }
+      @include responsive1023{
+        gap: 30px 0;
+      }
+      @media(max-width: 767px){
+        gap: 30px 20px;
+      }
+      @include responsive639 {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -517,11 +822,17 @@
         height: 100%;
         left: 0;
         border-radius: 60px;
+
         overflow: hidden;
         padding-top: calc(649 / 1500 * 100%);
-
+        @include responsive1549{
+          border-radius: 45px;
+        }
         @include responsive767 {
           border-radius: 30px;
+        }
+        @include responsive639{
+          border-radius: 25px;
         }
 
         img {
@@ -537,6 +848,11 @@
 
       & > :first-child {
         grid-column: 1/3;
+        picture{
+          @include responsive639{
+            padding-top: 348px;
+          }
+        }
       }
     }
     &__item {
@@ -545,22 +861,69 @@
       font-size: 20px;
       line-height: 32px;
       color: #8e8e8e;
+      @include responsive1199{
+        font-size: 18px;
+        line-height: 1;
+      }
 
       @include responsive767 {
+        font-size: 12px;
+      }
+      @include responsive639 {
         font-size: 16px;
-        line-height: 20px;
+        line-height: 24px;
       }
 
       .caption {
         margin-bottom: 20px;
+        margin-top: 27px;
+        @include responsive1549{
+          margin-top: 0;
+        }
       }
 
       p + p {
         margin-top: 20px;
+        @include responsive1549{
+          margin-top: 35px;
+        }
+        @include responsive639{
+          margin-top: 22px;
+        }
       }
 
       .social-block-ru {
         margin-top: 20px;
+        @include responsive1199{
+          margin-top: 47px;
+          .social-block-ru__link{
+            width: 70px;
+            height: 70px;
+            background-size: 44px;
+          }
+        }
+        @include responsive1023{
+          margin-top: 27px;
+          gap: 14px;
+          .social-block-ru__link{
+            width: 58px;
+            height: 58px;
+            background-size: 37px;
+            border-radius: 17px;
+          }
+        }
+        @include responsive639{
+          gap: 11px;
+          position: absolute;
+          right: 0;
+          top: -35px;
+          .social-block-ru__link{
+            width: 53px;
+            height: 53px;
+            background-size: 35px;
+            border-radius: 13px;
+          }
+        }
       }
     }
     &-data {
@@ -570,6 +933,7 @@
       padding: 20px 20px 40px;
       position: relative;
       height: 100%;
+      margin-left: 20px;
       @include before {
         transition: all 0.3s;
         content: "";
@@ -578,17 +942,22 @@
         left: 0px;
         right: 0px;
         bottom: 0px;
-        background: linear-gradient(
-          to bottom,
-          #000000 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
+        background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
         border-radius: 50px;
         user-select: none;
         pointer-events: none;
         mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
         mask-composite: exclude;
         padding: 1px;
+      }
+      @include responsive1549{
+        margin-left: 0;
+      }
+      @include responsive767{
+        margin-left: -10px;
+      }
+      @media(max-width: 767px){
+        margin-left: 0;
       }
     }
     &__head {
@@ -597,13 +966,30 @@
       padding-right: 24px;
       margin-bottom: 17px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      //align-items: center;
+      justify-content: center;
       .logo {
-        width: 114px;
-        min-width: 114px;
-        height: 114px;
-        margin: 0 auto;
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+        @include responsive1199{
+          width: 115px;
+          min-width: 115px;
+          height: 115px;
+        }
+        @include responsive767{
+          width: 83px;
+          height: 83px;
+          min-width: 83px;
+        }
+        @include responsive639{
+          width: 77px;
+          min-width: 77px;
+          height: 77px;
+        }
+      }
+      .social{
+        margin-top: 21px;
       }
     }
     &__basic {
@@ -613,28 +999,17 @@
       display: flex;
       flex-direction: column;
       gap: 50px;
-      padding: 57px 24px 38px;
+      padding: 42px 24px 38px;
       border-radius: 50px;
-      background-color: #f8f8f8;
-      margin-bottom: 30px;
-
-      @include responsive767 {
-        gap: 20px;
-      }
-
+      background-color: #F8F8F8;
+      margin-bottom: 15px;
       a {
         font-size: 45px;
         line-height: 1;
         white-space: pre;
         color: #000000;
-
-        @include responsive1023 {
-          font-size: 25px;
-          line-height: 30px;
-        }
-
         &:hover {
-          color: #f59e11;
+          color: #F59E11;
         }
       }
     }
@@ -644,11 +1019,6 @@
       grid-template-columns: repeat(2, calc(50% - 10px));
       grid-column-gap: 20px;
       width: 100%;
-
-      @include responsive767 {
-        display: flex;
-        flex-direction: column;
-      }
       &-item {
         box-sizing: border-box;
         display: flex;
@@ -658,43 +1028,23 @@
       }
       & > :first-child {
         padding-left: 35px;
-
-        @include responsive767 {
-          padding-left: 0;
-        }
       }
       & > :last-child {
-        padding-left: 42px;
-
-        @include responsive767 {
-          padding-left: 0;
-        }
+        padding-left: 72px;
       }
       &-title {
         font-size: 25px;
         font-weight: 400;
         color: #000;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 32px;
-
-        @include responsive767 {
-          font-size: 16px;
-          line-height: 18px;
-          margin-bottom: 10px;
-        }
       }
       &-location {
         font-size: 18px;
         font-weight: 400;
         line-height: 25px;
-        color: #8e8e8e;
-        margin-bottom: 30px;
-
-        @include responsive767 {
-          font-size: 14px;
-          line-height: 18px;
-          margin-bottom: 10px;
-        }
+        color: #8E8E8E;
+        margin-bottom: 20px;
       }
     }
     &__location-schedule {
@@ -704,7 +1054,129 @@
       line-height: 25px;
       color: #000;
       span {
-        color: #8e8e8e;
+        color: #8E8E8E;
+      }
+    }
+    @include responsive1199 {
+      &-data{
+        padding: 16px 15px 30px;
+        border-radius: 39px;
+        &:before{
+          border-radius: 37px;
+        }
+      }
+      &__information{
+        border-radius: 45px;
+      }
+      &__head{
+        justify-content: center;
+        margin-bottom: 7px;
+        .social{
+          display: none;
+        }
+      }
+      &__location-schedule{
+        display: none;
+      }
+      &__basic{
+        gap: 35px;
+        padding: 40px 25px 30px;
+        border-radius: 39px;
+        margin-bottom: 19px;
+        a{
+          font-size: 35px;
+        }
+      }
+      &__info{
+        &>:last-child{
+          padding-left: 23%;
+        }
+        &-title{
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 10px;
+        }
+        &-location{
+          margin-bottom: 0;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+    @include responsive767 {
+      &-data{
+        padding: 9px 11px 20px;
+        border-radius: 25px;
+        &:before{
+          border-radius: 23px;
+        }
+      }
+      &__basic{
+        gap: 24px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        padding: 19px 25px 12px;
+        a{
+          font-size: 25px;
+        }
+      }
+      &__info{
+        grid-template-columns: 166px calc(50% - 10px);
+        & > :first-child{
+          padding-left: 7px;
+        }
+        & > :last-child{
+          padding-left: 12%;
+        }
+        &-title{
+          font-size: 13px;
+          line-height: 16px;
+          margin-bottom: 5px;
+        }
+        &-location{
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+      &__information{
+        border-radius: 30px;
+      }
+    }
+    @media(max-width: 750px) {
+
+      &-data{
+        padding: 10px 10px 20px;
+      }
+      &__information{
+        border-radius: 30px 30px 0 0;
+        padding-top: 0;
+        padding-bottom: 34px;
+      }
+      &__basic{
+        padding: 20px 25px;
+        gap: 13px;
+        a{
+          font-size: 25px;
+        }
+      }
+      &__info{
+        grid-template-columns: 100%;
+        gap: 21px;
+        & > :first-child{
+          padding-left: 14px;
+        }
+        & > :last-child{
+          padding-left: 14px;
+        }
+        &-title{
+          font-size: 14px;
+          line-height: 16px;
+        }
+        &-location{
+          font-size: 16px;
+          line-height: 20px;
+          padding-right: 20px;
+        }
       }
     }
   }
@@ -726,6 +1198,13 @@
     }
     .container {
       position: relative;
+    }
+  }
+}
+.vacancy-page{
+  @include responsive639{
+    .about-information+.about-information{
+      padding-top: 0;
     }
   }
 }

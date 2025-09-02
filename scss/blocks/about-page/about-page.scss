@@ -15,7 +15,9 @@
     @include responsive1199 {
       padding-top: 99px;
     }
-
+    @include responsive767{
+      padding-top: 69px;
+    }
     @include before {
       top: 36px;
       right: 38px;

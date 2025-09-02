@@ -41,6 +41,9 @@
 
   .container {
     position: relative;
+    @include responsive639{
+      padding-bottom: 80px;
+    }
   }
 
   .linksSoc {
@@ -52,9 +55,19 @@
   }
 
   .section-title {
-    @include responsive1199 {
+    justify-content: unset;
+    .controls{
+      margin-left: auto;
+    }
+    @include responsive639 {
       flex-direction: column;
       align-items: flex-start;
+      .controls{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) ;
+      }
     }
   }
 
@@ -89,7 +102,17 @@
       background-repeat: no-repeat;
       border-radius: 50%;
 
+      @include responsive1199{
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+      }
       @include responsive767 {
+        width: 29px;
+        height: 29px;
+        min-width: 29px;
+      }
+      @include responsive639{
         width: 49px;
         height: 49px;
         min-width: 49px;
@@ -103,8 +126,17 @@
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 50%;
-
+      @include responsive1199{
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+      }
       @include responsive767 {
+        width: 29px;
+        height: 29px;
+        min-width: 29px;
+      }
+      @include responsive639{
         width: 49px;
         height: 49px;
         min-width: 49px;
@@ -115,7 +147,7 @@
   .news-slider {
     // width: 688px;
     width: 100%;
-    height: 602px;
+    //height: 602px;
     margin: 0;
     margin-top: 50px;
     overflow: visible;
@@ -123,14 +155,46 @@
 
     @include responsive767 {
       width: 100%;
-      height: 440px;
+      //height: 440px;
       margin-top: 30px;
     }
 
     @include responsive389 {
       width: 280px;
     }
-
+    &#sales-news{
+      .swiper-slide{
+        height: 406px;
+        @include responsive1199{
+          height: 307px;
+        }
+        @include responsive767{
+          height: 212px;
+        }
+        @media(max-width: 767px){
+          //min-height: 475px;
+          height: auto;
+        }
+        &-active, &-next{
+          opacity: 1;
+        }
+        &-next + .swiper-slide{
+          opacity: .33;
+        }
+        .picture-block img{
+          border-radius: 35px;
+          @include responsive1549{
+            border-radius: 28px;
+          }
+          @include responsive1023{
+            border-radius: 20px;
+          }
+          @media(max-width: 767px){
+            border-radius: 25px;
+          }
+        }
+      }
+    }
     .swiper-slide {
       width: 100%;
       height: 602px;
@@ -214,7 +278,12 @@
       // @include responsive389 {
       //   width: 280px;
       // }
-
+&.relative{
+  position: relative;
+  @media(max-width: 767px){
+    height: 176px;
+  }
+}
       img {
         object-fit: cover;
         object-position: center;
@@ -243,7 +312,7 @@
 }
 
 .news-text {
-  background-color: $colorWhite;
+  //background-color: $colorWhite;
   padding: 60px 48px;
   font-weight: 400;
   font-size: 16px;
@@ -255,18 +324,24 @@
   border-radius: 40px;
   // height: 100%;
   height: 602px;
+  max-width: 100%;
   
   @include responsive1199 {
     padding: 30px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   @include responsive767 {
     padding: 20px;
     gap: 20px;
+    font-size: 10px;
+    line-height: 12px;
   }
-
+  @include responsive639{
+    font-size: 14px;
+    line-height: 17px;
+  }
   &__footer {
     display: flex;
     align-items: center;
@@ -279,6 +354,29 @@
       height: 50px;
       padding-right: 30px;
       padding-left: 30px;
+    }
+    @include responsive1549{
+      .btn{
+        height: 40px;
+        font-size: 14px;
+        white-space: nowrap;
+        padding-inline: 23px;
+      }
+    }
+    @include responsive1199{
+      .btn{
+        height: 26px;
+        font-size: 10px;
+        white-space: nowrap;
+        padding-inline: 13px;
+      }
+    }
+    @include responsive639{
+      .btn{
+        height: 36px;
+        font-size: 12px;
+        padding-inline: 30px;
+      }
     }
   }
 
@@ -294,12 +392,18 @@
     min-height: 84px;
 
     @include responsive1199 {
-      font-size: 30px;
-      line-height: 35px;
-      min-height: 78px;
+      //font-size: 30px;
+      //line-height: 35px;
+      font-size: 25px;
+      line-height: 32px;
+      min-height: 64px;
     }
-
-    @include responsive767 {
+    @include responsive767{
+      font-size: 16px;
+      line-height: 20px;
+      min-height: unset;
+    }
+    @include responsive639 {
       font-size: 24px;
       line-height: 30px;
     }
@@ -330,6 +434,9 @@
       border: solid 1px $colorBlack;
       border-radius: 50%;
     }
+    @include responsive639{
+      margin-top: 0;
+    }
   }
 
   .news-text__title {
@@ -337,6 +444,18 @@
     font-size: 14px;
     line-height: 16px;
     color: #8e8e8e;
+    @include responsive1549{
+      font-size: 12px;
+      line-height: 12px;
+    }
+    @include responsive1023{
+      font-size: 9px;
+      line-height: 9px;
+    }
+    @include responsive639{
+      font-size: 12px;
+      line-height: 1;
+    }
   }
 
   .news-text__date {
@@ -345,9 +464,16 @@
     line-height: 32px;
     color: $colorBlack;
 
-    @include responsive1199 {
-      font-size: 24px;
-      line-height: 30px;
+    @include responsive1549 {
+      font-size: 22px;
+      line-height: 22px;
+    }
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @include responsive639{
+      font-size: 22px;
     }
   }
 }

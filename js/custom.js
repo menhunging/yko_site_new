@@ -73,7 +73,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".news-slider").length > 0) {
+  if ($(".news-slider:not(.news-slider-detail):not(.news-slider-text-detail):not(#sales-news)").length > 0) {
     const sliders = document.querySelectorAll(".news-slider");
     let mySwipers = [];
 
@@ -94,6 +94,142 @@ $(document).ready(function () {
                 slidesPerView: 3,
                 spaceBetween: 20,
               },
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+  if ($(".news-slider-detail").length > 0) {
+    const sliders = document.querySelectorAll(".news-slider-detail");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find("#news-slider-detail-controls .swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find("#news-slider-detail-controls .swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            breakpoints: {
+              0: {
+                      slidesPerView: 1.1,
+                      spaceBetween: 10,
+                    },
+                    550: {
+                      slidesPerView: 3,
+                      spaceBetween: 15,
+                    },
+                    769: {
+                      spaceBetween: 16,
+                    },
+                    1201: {
+                      spaceBetween: 24
+                    }
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+  if ($(".news-slider-text-detail").length > 0) {
+    const sliders = document.querySelectorAll(".news-slider-text-detail");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find("#news-slider-text-detail-controls .swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find("#news-slider-text-detail-controls .swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            breakpoints: {
+              0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+              },
+              550: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+              769: {
+                spaceBetween: 16,
+              },
+              1201: {
+                spaceBetween: 24
+              }
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($("#sales-news").length > 0) {
+    const sliders = document.querySelectorAll("#sales-news");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find("#sales-slider-detail-controls .swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find("#sales-slider-detail-controls .swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              769: {
+                spaceBetween: 20,
+              },
+              1201: {
+                spaceBetween: 24
+              }
             },
             navigation: {
               nextEl: navNext && navNext,
@@ -149,7 +285,7 @@ $(document).ready(function () {
     sliders.length && sliderinit();
   }
 
-  if ($(".news-slider-text").length > 0) {
+    if ($(".news-slider-text").length > 0) {
     const sliders = document.querySelectorAll(".news-slider-text");
     let mySwipers = [];
 
@@ -196,6 +332,8 @@ $(document).ready(function () {
 
     sliders.length && sliderinit();
   }
+
+
 
   if ($(".leisure-slider").length > 0) {
     const sliders = document.querySelectorAll(".leisure-slider");

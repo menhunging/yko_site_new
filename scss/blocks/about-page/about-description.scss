@@ -6,15 +6,28 @@
 
   @include responsive1199 {
     padding: 189px 0 52px;
+    border-radius: 45px;
   }
-
+  @include responsive767{
+    padding-top: 159px;
+    border-radius: 28px;
+  }
+  @include responsive639{
+    padding-top: 152px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+  }
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-
-    @include responsive1199 {
-      grid-template-columns: 0.9fr 1.1fr;
+    display: flex;
+    gap: 86px;
+    @include responsive1439 {
+      gap: 25px;
+    }
+    @media(max-width: 1199px) {
+      gap: 18px;
+    }
+    @media(max-width:767px) {
+      flex-wrap: wrap;
     }
 
     & > :first-child {
@@ -29,6 +42,15 @@
           line-height: 49px;
         }
 
+        @include responsive1023 {
+          font-size: 28px;
+          line-height: 33px;
+        }
+        @include responsive639 {
+          font-size: 35px;
+          line-height: 42px;
+          margin-bottom: 0;
+        }
       }
       p {
         font-size: 24px;
@@ -41,7 +63,16 @@
           font-size: 18px;
           line-height: 22px;
         }
-
+        @include responsive767{
+          font-size: 12px;
+          line-height: 15px;
+          margin-bottom: 15px;
+        }
+        @include responsive639{
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 25px;
+        }
       }
       & > :last-child {
         margin-bottom: 0;
@@ -58,8 +89,18 @@
         background-color: #FFFFFF;
 
         @include responsive1199 {
-          grid-row-gap: 53px;
+          grid-row-gap: 75px;
           padding: 35px 54px 50px;
+        }
+
+        @include responsive1023 {
+          padding: 30px 25px 24px 31px;
+          grid-row-gap: 45px;
+        }
+        @include responsive639{
+          padding: 40px 25px 24px 31px;
+          grid-row-gap: 25px;
+          border-radius: 30px;
         }
 
       }
@@ -67,6 +108,20 @@
         display: flex;
         align-items: center;
         column-gap: 34px;
+        @include responsive1439 {
+          column-gap: 28px;
+        }
+        @media(max-width: 1199px) {
+          column-gap: 19px;
+        }
+        @media(max-width:767px) {
+          gap: 18px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        @media(max-width:767px) {
+          gap: 9px;
+        }
         img {
           flex: none;
           margin: 0;
@@ -77,6 +132,14 @@
             width: 62px;
             height: 62px;
           }
+          @include responsive767{
+            width: 42px;
+            height: 42px;
+          }
+          @include responsive639{
+            width: 60px;
+            height: 60px;
+          }
         }
         p {
           font-weight: 400;
@@ -84,24 +147,49 @@
           line-height: 45px;
           color: $colorBlack;
           margin: 0;
-
-          @include responsive1199 {
+          @include responsive1439 {
             font-size: 30px;
-            line-height: 38px;
+            line-height: 30px;
           }
-
+          @media(max-width: 1199px) {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          @media(max-width:767px) {
+            font-size: 20px;
+            line-height: 22px;
+          }
+          @include responsive639{
+            line-height: 30px;
+          }
         }
       }
     }
   }
   &__item {
+    width: 100%;
+    max-width: 673px;
+    @include responsive1439 {
+      max-width: calc(48% + 12px);
+    }
+    @media(max-width: 1199px) {
+      max-width: calc(50% + 8px);
+    }
+    @media(max-width:767px){
+      max-width: 100%;
+    }
     &:nth-child(2) {
-      padding: 13px 0 0;
-
-      @include responsive1199 {
-        padding: 0;
+      max-width: 50%;
+      flex-shrink: 0;
+      @include responsive1439 {
+        max-width: calc(52% + 17px);
       }
-
+      @media(max-width: 1199px) {
+        max-width: calc(52% + 8px);
+      }
+      @media(max-width:767px){
+        max-width: 100%;
+      }
     }
   }
 }
