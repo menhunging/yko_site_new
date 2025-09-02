@@ -45,6 +45,19 @@
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 30px;
+
+    @include responsive767 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swiper-controls {
+      display: flex !important;
+
+      @include responsive767 {
+        display: none !important;
+      }
+    }
   }
 
   .container {
@@ -71,6 +84,7 @@
 
   .swiper-controls {
     // position: absolute;
+    display: none;
     position: relative;
     top: 16px;
     right: 0;
@@ -87,7 +101,13 @@
     }
 
     @include responsive767 {
-      top: -2px;
+      top: 0;
+      right: auto;
+      position: relative;
+      display: flex;
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
     }
 
     .swiperBtnPrev {
@@ -133,6 +153,7 @@
       width: 335px;
       height: 330px;
       margin-top: 30px;
+      margin-bottom: 80px;
     }
 
     @include responsive389 {
@@ -145,7 +166,7 @@
       position: relative;
       transition: all 0.3s;
       opacity: 0.15;
-    backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
 
       @include responsive767 {
         height: 330px;
@@ -183,9 +204,10 @@
         opacity: 0;
       }
 
-      &.swiper-slide-active, &.swiper-slide-next {
+      &.swiper-slide-active,
+      &.swiper-slide-next {
         opacity: 1;
-    backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
         .picture-block {
           width: 100%;
         }
@@ -195,7 +217,6 @@
           pointer-events: initial;
         }
       }
-      
 
       // &.swiper-slide-next {
       //   & + .swiper-slide {

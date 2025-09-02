@@ -11,7 +11,6 @@
 
   @include responsive1549 {
     padding: 50px 0;
-
   }
 
   @include responsive767 {
@@ -109,7 +108,6 @@
     //   }
     // }
   }
-
 }
 
 .contruction-item {
@@ -209,6 +207,13 @@
       column-gap: 20px;
       justify-content: flex-start;
       flex: 1;
+
+      br{
+        @include responsive767{
+          display: none
+        }
+      }
+
       p {
         color: white;
         font-size: 35px;
@@ -216,15 +221,27 @@
         font-weight: 400;
         line-height: 1;
         flex: 1;
+
+        @include responsive767{
+          font-size: 25px;
+        }
+
         span {
           color: white;
           font-size: 14px;
           line-height: 1;
           &.contruction-item__data-item-title {
             font-size: 14px;
-            color: #8E8E8E;
+            color: #8e8e8e;
             line-height: 1;
             white-space: nowrap;
+
+            @include responsive767{
+              white-space: normal;
+              line-height: 18px;
+              margin-bottom: 5px;
+              display: block;
+            }
           }
         }
       }
@@ -246,5 +263,13 @@
     min-width: 194px;
     margin: 0;
     // margin: 8px 0 0;
+
+    @include responsive767 {
+      font-size: 15px;
+      width: 100%;
+      line-height: 20px;
+      height: 50px;
+      margin-top: 10px;
+    }
   }
 }

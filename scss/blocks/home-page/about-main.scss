@@ -15,6 +15,16 @@
     padding: 52px 0 30px;
   }
 
+  .title {
+    color: $colorWhite;
+    margin-bottom: 100px;
+    position: relative;
+
+    @include responsive767 {
+      margin-bottom: 50px;
+    }
+  }
+
   .about-main__numbers {
     border-top: solid 1px $colorWhite;
     border-radius: 40px;
@@ -54,6 +64,7 @@
     ul {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       @include responsive1199 {
         gap: 20px;
@@ -148,22 +159,19 @@
   }
 
   .caption {
-    
     @include responsive1199 {
       display: none;
     }
-
   }
 
   p {
     font-size: 16px;
     line-height: 26px;
-    
+
     @include responsive1199 {
       font-size: 14px;
       line-height: 22px;
     }
-
   }
 
   ul {

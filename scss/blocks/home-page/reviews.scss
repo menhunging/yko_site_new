@@ -365,3 +365,66 @@
     min-height: initial;
   }
 }
+
+.adv-houses .reviews-slider {
+  @include responsive767 {
+    margin-bottom: 60px;
+  }
+}
+
+.reviews {
+  .adv-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: $colorWhite;
+    border-radius: 50px;
+    border: solid 1px $colorBlack;
+    gap: 12px;
+
+    .adv-content__text {
+      padding: 0 20px;
+    }
+
+    .picture-block {
+      width: 100%;
+      height: 518px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        border-radius: 40px;
+      }
+    }
+
+    .icon {
+      width: 82px;
+      height: 82px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background-color: $colorWhite;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .caption {
+      text-transform: uppercase;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #8e8e8e;
+    }
+  }
+}

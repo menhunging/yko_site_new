@@ -338,52 +338,81 @@ $(document).ready(function () {
   }
 
   if ($(".projects-slider").length > 0) {
-    const sliders = document.querySelectorAll(".projects-slider");
-    let mySwipers = [];
-
-    function sliderinit() {
-      sliders.forEach((slider, index) => {
-        let navNext = undefined;
-        let navPrev = undefined;
-
-        if (!slider.swiper) {
-          navNext = $(".projects").find(".swiperBtnNext")[0];
-          navPrev = $(".projects").find(".swiperBtnPrev")[0];
-
-          mySwipers[index] = new Swiper(slider, {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            breakpoints: {
-              0: {
-                slidesPerView: 1.15,
-                spaceBetween: 16,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1200: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-            },
-            navigation: {
-              nextEl: navNext && navNext,
-              prevEl: navPrev && navPrev,
-            },
-          });
-        } else {
-          return;
-        }
-      });
-    }
-
-    sliders.length && sliderinit();
+    const swiper = new Swiper(".projects-slider", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".projects .swiperBtnPrev",
+        nextEl: ".projects .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.15,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
   }
+
+  // if ($(".projects-slider").length > 0) {
+  //   const sliders = document.querySelectorAll(".projects-slider");
+  //   let mySwipers = [];
+
+  //   function sliderinit() {
+  //     sliders.forEach((slider, index) => {
+  //       let navNext = undefined;
+  //       let navPrev = undefined;
+
+  //       if (!slider.swiper) {
+  //         navNext = $(".projects").find(".swiperBtnNext")[0];
+  //         navPrev = $(".projects").find(".swiperBtnPrev")[0];
+
+  //         mySwipers[index] = new Swiper(slider, {
+  //           slidesPerView: 3,
+  //           spaceBetween: 20,
+  //           breakpoints: {
+  //             0: {
+  //               slidesPerView: 1.15,
+  //               spaceBetween: 16,
+  //             },
+  //             640: {
+  //               slidesPerView: 2,
+  //               spaceBetween: 20,
+  //             },
+  //             768: {
+  //               slidesPerView: 2,
+  //               spaceBetween: 20,
+  //             },
+  //             1200: {
+  //               slidesPerView: 3,
+  //               spaceBetween: 20,
+  //             },
+  //           },
+  //           navigation: {
+  //             nextEl: navNext && navNext,
+  //             prevEl: navPrev && navPrev,
+  //           },
+  //         });
+  //       } else {
+  //         return;
+  //       }
+  //     });
+  //   }
+
+  //   sliders.length && sliderinit();
+  // }
 
   // КАСТОМНЫЙ SELECT - DROPDOWN
   const customSelects = document.querySelectorAll(
