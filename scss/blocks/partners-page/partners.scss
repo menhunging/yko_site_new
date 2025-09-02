@@ -7,14 +7,34 @@
 
   .about-information {
     background-color: #f8f8f8;
-    border-radius: 60px;
+    @include bigradius;
     overflow: hidden;
+    @include responsive1199{
+      padding-top: 0;
+    }
+    @include responsive767{
+      margin-top: 60px;
+      &__wrapper--right-img > :first-child{
+        padding-top: 20px;
+      }
+    }
+    @include responsive639{
+      margin-top: 30px;
+      padding-block: 20px;
+      margin-bottom: 40px;
+      &__wrapper--right-img > :first-child{
+        padding-top: 0;
+      }
+    }
   }
 
   .call-form {
     padding: 125px 0 75px 0;
     margin: 0;
+@include responsive767 {
 
+  padding-top: 85px;
+}
     &::before {
       left: -140px;
       right: auto;
@@ -40,10 +60,45 @@
       bottom: 50px;
       z-index: -2;
     }
+    &.call-form--house{
+      .consul-section__form{
+        backdrop-filter: none;
+      }
+      @include responsive1199{
+        .picture-block.mobvisible{
+          top: -265px;
+          scale: .8;
+        }
+      }
+      @include responsive767{
+        .picture-block.mobvisible{
+          scale: .5;
+        }
+      }
+      @include responsive639{
+        .picture-block.mobvisible{
+          right: -269px;
+          top: -325px;
+        }
+      }
+    }
   }
 }
 
 .target-section {
+  margin-top: 47px;
+  @include responsive1199{
+    margin-top: 10px;
+  }
+  @include responsive767{
+    margin-top: 30px;
+  }
+  @include responsive639{
+
+  }
+  .caption{
+    font-weight: 400;
+  }
   .target-section__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -83,22 +138,23 @@
 
     @include responsive1549 {
       padding: 26px;
-      border-radius: 24px;
+      border-radius: 30px;
     }
 
     @include responsive1199 {
       padding: 16px;
       font-size: 14px;
     }
-
+    @include responsive767{
+      border-radius: 20px;
+    }
     @include responsive639 {
       padding: 32px;
       gap: 18px;
+      border-radius: 25px;
+
     }
 
-    @include responsive389 {
-      padding: 24px;
-    }
 
     &:nth-child(2) {
       background-color: $colorBlack;
@@ -128,7 +184,21 @@
       // backdrop-filter: blur(3px);
       background-color: $colorWhite;
       z-index: -1;
-      border-radius: 28px;
+      border-radius: 50px;
+      @include responsive1549 {
+        border-radius: 30px;
+      }
+
+
+      @include responsive767 {
+        border-radius: 20px;
+
+      }
+
+      @include responsive639 {
+        border-radius: 25px;
+
+      }
     }
 
     &:before {
@@ -148,7 +218,21 @@
         rgba(0, 0, 0, 0.07) 75%,
         rgba(0, 0, 0, 0.05) 100%
       );
-      border-radius: 30px;
+      border-radius: 50px;
+      @include responsive1549 {
+        border-radius: 30px;
+      }
+
+
+      @include responsive767 {
+        border-radius: 20px;
+
+      }
+
+      @include responsive639 {
+        border-radius: 25px;
+
+      }
     }
   }
 
@@ -162,6 +246,10 @@
     @include responsive1549 {
       font-size: 24px;
       line-height: 32px;
+    }
+    @include responsive639{
+      font-size: 30px;
+      line-height: 39px;
     }
   }
 }
@@ -180,10 +268,26 @@
   border-bottom-right-radius: 60px;
   border-bottom-left-radius: 60px;
   overflow: hidden;
+  padding-top: 96px;
+  padding-bottom: 114px;
+
+  @include responsive1199{
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    padding-top: 55px;
+    padding-bottom: 53px;
+  }
 
   @include responsive767 {
+    padding-top: 35px;
+    padding-bottom: 33px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+  }
+  @include responsive639{
+    border-radius: 25px;
+    padding-top: 34px;
+    padding-bottom: 24px;
   }
 
   @include before {
@@ -197,15 +301,21 @@
   .caption {
     position: relative;
     z-index: 3;
+    font-weight: 400;
   }
 
   .adv-partner__slider {
-    margin-top: 75px;
+    margin-top: 65px;
 
     @include responsive1549 {
       margin-top: 50px;
     }
-
+    @include responsive767{
+      margin-top: 30px;
+    }
+    @include responsive639{
+      margin-top: 45px;
+    }
     .swiper-controls {
       display: flex;
       justify-content: center;
@@ -229,12 +339,16 @@
 
     @include responsive1549 {
       padding: 40px 35px;
-      min-height: 377px;
+      min-height: 340px;
     }
 
     @include responsive767 {
+      min-height: 217px;
+      padding: 20px;
+    }
+    @include responsive639{
       min-height: 325px;
-      padding: 30px;
+      padding: 40px 45px;
     }
 
     @include after {
@@ -246,9 +360,14 @@
       background-color: $colorBlack-a8;
       z-index: -1;
       border-radius: 65px;
-
+      @include responsive1199{
+        border-radius: 30px;
+      }
       @include responsive767 {
-        border-radius: 35px;
+        border-radius: 19px;
+      }
+      @include responsive639 {
+        border-radius: 47px;
       }
     }
 
@@ -270,9 +389,14 @@
         rgba(255, 255, 255, 0.05) 100%
       );
       border-radius: 65px;
-
+      @include responsive1199{
+        border-radius: 30px;
+      }
       @include responsive767 {
-        border-radius: 35px;
+        border-radius: 19px;
+      }
+      @include responsive639 {
+        border-radius: 47px;
       }
     }
   }
@@ -287,12 +411,23 @@
       font-size: 28px;
       line-height: 32px;
     }
+    @include responsive1199{
+
+    }
+    @include responsive767{
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include responsive639{
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   .adv-partner__text {
     border: 1px solid;
     background-color: rgba(248, 248, 248, 0.2);
-    border-radius: 40px;
+    @include radius;
     backdrop-filter: blur(16px);
     min-height: 173px;
     display: flex;
@@ -308,12 +443,25 @@
       line-height: 22px;
       padding: 16px;
     }
-
+    @include responsive1199{
+      font-size: 13px;
+      line-height: 18px;
+      min-height: 130px;
+      border-radius: 30px;
+    }
     @include responsive767 {
       font-size: 12px;
-      line-height: 16px;
-      min-height: 125px;
+      line-height: 13px;
+      min-height: 106px;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+    @include responsive639{
+      font-size: 11px;
+      line-height: 18px;
       border-radius: 30px;
+      min-height: 124px;
     }
   }
 }

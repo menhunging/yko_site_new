@@ -6,17 +6,216 @@
 @import "geoplan";
 
 .village-page {
-
+  .projects{
+    .swiper-slide,
+    .picture-block{
+      border-radius: 40px;
+    }
+    &__wrapper{
+      padding-top: 60px;
+    }
+    &-section__head{
+      display: grid;
+      p{
+        max-width: 930px  ;
+        margin-top: 20px;
+        @include responsive767{
+          font-size: 12px;
+          line-height: 16px;
+          max-width: 100%;
+          grid-column: 1 / 3;
+        }
+        @include responsive639{
+          grid-column: 1;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+    .slide{
+      &__content{
+        padding: 21px 35px 17px 36px;
+        .caption{
+          font-size: 35px;
+          line-height: 42px;
+          margin-bottom: 16px;
+          @include responsive1199{
+            font-size: 25px;
+            line-height: 30px;
+          }
+          @include responsive1023{
+            font-size: 16px;
+            line-height: 21px;
+          }
+          @include responsive639{
+            font-size: 25px;
+            line-height: 28px;
+          }
+        }
+      }
+      &__data{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+      }
+    }
+    @include responsive1199{
+      .swiper-slide,
+      .picture-block{
+        border-radius: 30px;
+      }
+      &__wrapper{
+        padding-top: 30px;
+      }
+      .projects-navigation{
+        gap: 7px;
+      }
+      .slide{
+        &__content{
+          padding: 21px 35px 17px 26px;
+        }
+      }
+      .picture-block{
+        &:before{
+          padding-top: 77.86%;
+        }
+      }
+    }
+    @media(max-width: 1199px){
+      .projects-navigation{
+        gap: 25px;
+        flex-wrap: wrap;
+        grid-column: 1 / 3;
+      }
+      .slide{
+        &__content{
+          padding: 10px;
+          .btn{
+            height: 40px;
+          }
+        }
+        &__data{
+          p{
+            font-size: 16px;
+            line-height: 1;
+          }
+        }
+        &__info{
+          li{
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    @include responsive767{
+      .swiper-controls{
+        display: flex;
+        top: unset;
+        right: unset;
+      }
+      .swiper-slide,
+      .picture-block{
+        border-radius: 20px;
+      }
+    }
+    @include responsive639{
+      &__wrapper{
+        padding-bottom: 30px;
+      }
+      .swiper-slide,
+      .picture-block{
+        border-radius: 25px;
+      }
+      .container{
+        padding-bottom: 70px;
+      }
+      .projects-navigation{
+        flex-direction: column;
+        gap: 10px;
+        &__item{
+          height: auto;
+          min-height: 52px;
+          padding-block: 5px;
+        }
+        .price{
+          max-width: 100%;
+        }
+        .style{
+          &-label{
+            font-size: 12px;
+          }
+          &-options{
+            flex-wrap: wrap;
+          }
+        }
+      }
+      .slide{
+        &__content{
+          padding-left: 20px;
+        }
+        &__info{
+          gap: 10px;
+          li{
+            padding-left: 39px;
+            p{
+              font-size: 19px;
+            }
+          }
+          .title{
+            font-size: 10px;
+            line-height: 10px;
+          }
+          li.count,
+          li.price{
+            &:before{
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+      .picture-block{
+        &:before{
+          padding-top: 68.86%;
+        }
+      }
+    }
+  }
   .reviews {
-    border-radius: 60px;
+    @include bigradius;
+    .caption{
+      @media(min-width: 1201px) and (max-width: 1549px){
+        font-size: 45px;
+        line-height: 55px;
+      }
+    }
   }
   .news {
-    background-color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    .caption{
+      @media(min-width: 1201px) and (max-width: 1549px){
+        font-size: 45px;
+        line-height: 55px;
+      }
+    }
+    @include responsive1549{
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    @include responsive767{
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+    @include responsive639{
+
+    }
   }
   .adv-main {
     overflow: hidden;
     background-color: #f8f8f8;
-    border-radius: 0 0 60px 60px;
   }
   .call-form {
     margin-top: 0;
@@ -31,7 +230,7 @@
     }
 
     &.call-question-form {
-      padding-top: 135px;
+      padding-top: 149px;
       @include before {
         top: auto;
         bottom: 75px;
@@ -45,6 +244,81 @@
         right: -629px;
         z-index: -1;
       }
+      @include responsive767{
+        padding-top: 111px;
+      }
+    }
+    &.call-form--house{
+      .consul-section__form{
+        backdrop-filter: none;
+      }
+      @include responsive1199{
+        .picture-block.mobvisible{
+          top: -265px;
+          scale: .8;
+        }
+      }
+      @include responsive767{
+        .picture-block.mobvisible{
+          scale: .5;
+        }
+      }
+      @include responsive639{
+        .picture-block.mobvisible{
+          right: -689px;
+          top: -325px;
+        }
+      }
+    }
+  }
+  .about-information{
+    &__wrapper{
+      h3.caption{
+        font-size: 35px;
+        line-height: 42px;
+        text-transform: uppercase;
+        @include responsive1023{
+          font-size: 35px;
+        }
+        @include responsive767{
+          font-size: 28px;
+        }
+        @include responsive639{
+          font-size: 30px;
+          line-height: 42px;
+        }
+      }
+      h2.caption{
+        font-size: 60px;
+        line-height: 60px;
+        @media(max-width: 1199px) and (min-width: 768px){
+          font-size: 28px;
+          line-height: 37px;
+          margin-bottom: 5px;
+        }
+        @include responsive639{
+          font-size: 35px;
+          line-height: 35px;
+        }
+      }
+      @include responsive767{
+        &--left-img{
+          & >:first-child{
+            align-self: flex-start;
+          }
+          & >:last-child{
+            padding: 20px 0 0 21px ;
+          }
+        }
+      }
+      @include responsive639{
+        &--left-img{
+          & >:last-child{
+            padding: 0;
+            margin-top: -20px;
+          }
+        }
+      }
     }
   }
   .map {
@@ -52,7 +326,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 60px;
-    margin-top: -120px;
+    margin-top: -196px;
     height: 907px;
     #yandex-map {
       position: absolute;
@@ -60,6 +334,92 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+    @include responsive1199 {
+      margin-top: -122px;
+      height: 566px;
+    }
+    @include responsive767{
+      margin-top: -88px;
+      height: 362px;
+
+    }
+    @include responsive639{
+      margin-top: -56px;
+      height: 521px;
+    }
+    .route-block {
+      top: 353px;
+      left: -20px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      position: absolute;
+      max-width: 333px;
+      width: 100%;
+      padding: 22px 32px 20px 37px;
+      background-color: white;
+      box-sizing: border-box;
+      border-radius: 40px;
+      p{
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      @include responsive1199 {
+        left: 104px;
+        top: 227px;
+        max-width: 280px;
+        padding: 19px 24px 20px 31px;
+        p{
+          line-height: 21px;
+        }
+        a{
+          font-size: 16px;
+          line-height: 21px;
+          white-space: nowrap;
+          height: 44px;
+          margin-top: 10px;
+        }
+      }
+      @include responsive767{
+        left: 60px;
+        top: 130px;
+        max-width: 201px;
+        border-radius: 22px;
+        padding: 10px 13px 6px 22px;
+        p{
+          font-size: 13px;
+          line-height: 15px;
+          br{
+            display: none;
+          }
+        }
+        a{
+          font-size: 12px;
+          line-height: 8px;
+          height: 33px;
+        }
+      }
+      @include responsive639 {
+        left: 10px;
+        top: 170px;
+        max-width: 355px;
+        border-radius: 42px;
+        padding: 27px 40px;
+        p{
+          font-size: 17px;
+          line-height: 26px;
+          br{
+            display: block;
+          }
+        }
+        a{
+          font-size: 20px;
+          height: 55px;
+        }
+      }
+    }
+    .container {
+      position: relative;
     }
   }
 }

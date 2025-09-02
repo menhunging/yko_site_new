@@ -13,15 +13,30 @@
     // z-index: -1;
     pointer-events: none;
     left: -468px;
-    bottom: -197px;
+    bottom: 0;
+  }
+  @include responsive767{
+    margin-top: -30px;
+  }
+  @include responsive639{
+    margin-top: 10px;
   }
   .container {
     position: relative;
+    @include responsive639{
+      padding-bottom: 80px;
+    }
   }
   &-slider {
     overflow: visible;
     position: static;
     margin-top: 45px;
+    @include responsive767{
+      margin-top: 25px;
+    }
+    @include responsive639{
+      margin-top: 30px;
+    }
     .swiper {
       &-wrapper {
         align-items: stretch;
@@ -30,7 +45,7 @@
         height: initial;
         transition: all 0.3s;
         overflow: hidden;
-        border-radius: 40px;
+        @include radius;
         background-color: white;
         opacity: .33;
         display: flex;
@@ -41,6 +56,20 @@
         &-active, &-next, &-next + .swiper-slide {
           opacity: 1;
         }
+        .caption{
+          @include responsive1199{
+            font-size: 25px;
+            line-height: 30px;
+          }
+          @include responsive767{
+            font-size: 16px;
+            line-height: 21px;
+          }
+          @include responsive639{
+            font-size: 23px;
+            line-height: 28px;
+          }
+        }
       }
 
     }
@@ -50,6 +79,7 @@
       position: relative;
       border-radius: 40px;
       flex: none;
+      @include radius;
       @include before {
         content: '';
         position: relative;
@@ -65,6 +95,12 @@
       padding: 26px 36px 42px;
       line-height: 42px;
       text-transform: uppercase;
+      @include responsive767{
+        padding: 13px 30px 20px 17px;
+      }
+      @include responsive639{
+        padding: 17px 40px 27px 24px;
+      }
     }
   }
   &__wrapper {
@@ -72,28 +108,44 @@
     padding-bottom: 121px;
     background-color: #f8f8f8;
     overflow: hidden;
-    border-radius: 60px;
+    @include bigradius;
+    @include responsive1199{
+      padding-top: 47px;
+      padding-bottom: 51px;
+    }
+    @include responsive767{
+      padding-top: 36px;
+      padding-bottom: 41px;
+    }
+    @include responsive639{
+      padding-top: 46px;
+    }
   }
 
   .swiper-controls {
     // position: absolute;
     position: relative;
-    top: 16px;
-    right: 0;
-    gap: 10px;
+    //right: 0;
+    gap: 16px;
 
-    @include responsive1549 {
-      top: 20px;
-      right: 20px;
-    }
-
-    @include responsive1199 {
-      top: 10px;
-      right: 20px;
-    }
-
+    //@include responsive1549 {
+    //  top: 20px;
+    //  right: 20px;
+    //}
+    //
+    //@include responsive1199 {
+    //  top: 10px;
+    //  right: 20px;
+    //}
+    //
     @include responsive767 {
-      top: -2px;
+      gap: 10px;
+    }
+    @include responsive639{
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -104,15 +156,23 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: transparent;
-    &:hover {
-      background-color: white;
-    }
 
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+    }
     @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
       width: 49px;
       height: 49px;
       min-width: 49px;
+      background-size: unset;
     }
   }
 
@@ -123,15 +183,22 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: transparent;
-    &:hover {
-      background-color: white;
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
     }
-
     @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
       width: 49px;
       height: 49px;
       min-width: 49px;
+      background-size: unset;
     }
   }
 }
