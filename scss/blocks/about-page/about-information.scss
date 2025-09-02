@@ -4,6 +4,12 @@
   @include responsive1199 {
     padding: 62px 0 57px;
   }
+  @include responsive767{
+    padding-top: 42px;
+  }
+  @include responsive639{
+    padding-bottom: 40px;
+  }
 
   &__wrapper {
     display: grid;
@@ -13,6 +19,11 @@
 
     @include responsive1199 {
       grid-template-columns: calc(45% - 10px) calc(55% - 10px);
+    }
+
+    @include responsive639{
+      grid-template-columns: 100%;
+      gap: 35px;
     }
 
     @include before {
@@ -33,6 +44,10 @@
         align-items: flex-end;
         picture {
           right: -20px;
+          @include responsive639{
+            right: 0;
+            width: calc(100% + 40px);
+          }
         }
       }
       & > :last-child {
@@ -46,7 +61,16 @@
           padding-top: 20px;
           padding-right: 50px;
         }
-        
+        @include responsive767{
+          padding: 50px 40px 0;
+          align-self: flex-start;
+        }
+        @include responsive639 {
+          padding-right: 0;
+          padding-top: 0;
+          padding-left: 0;
+        }
+
         & > :last-child {
           margin-bottom: 0;
         }
@@ -68,8 +92,14 @@
         padding-right: 80px;
         padding-left: 0;
         padding-top: 58px;
+        @include responsive767{
+          padding-right: 70px;
+        }
         & > :last-child {
           margin-bottom: 0;
+        }
+        @include responsive639 {
+          padding: 0;
         }
       }
       & > :last-child {
@@ -77,16 +107,28 @@
         picture {
           left: -20px;
           top: 20px;
+          @include responsive639 {
+            top: unset;
+            left: 0;
+            width: calc(100% + 40px);
+          }
+        }
+        @include responsive639{
+          order: -1;
         }
       }
     }
     .caption {
       margin-bottom: 30px;
 
-      @include responsive1199 {
-        margin-bottom: 8px;
+      @media(max-width: 1199px) and (min-width: 768px){
+        font-size: 28px;
+        line-height: 37px;
+        margin-bottom: 5px;
       }
-
+      @include responsive639{
+        margin-bottom: 20px;
+      }
     }
     p {
       font-size: 24px;
@@ -100,6 +142,16 @@
         line-height: 22px;
       }
 
+      @include responsive767{
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 15px;
+      }
+      @include responsive639{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
     }
     
     picture {
@@ -117,6 +169,22 @@
         border-radius: 43px;
         min-height: 395px;
         max-height: 395px;
+      }
+      @include responsive1199 {
+        min-height: 253px;
+        max-height: 253px;
+        border-radius: 28px;
+      }
+      @include responsive639(){
+        border-radius: 29px;
+        min-height: unset;
+        max-height: unset;
+      }
+
+      @include responsive479(){
+        border-radius: 29px;
+        min-height: 240px;
+        max-height: 240px;
       }
 
       img {
@@ -137,13 +205,22 @@
     @include responsive1199 {
       padding: 68px 0 94px;
     }
-
+    @include responsive767{
+      padding: 15px 0 71px;
+    }
+    @include responsive639{
+      padding-top: 25px;
+      padding-bottom: 44px;
+    }
     .about-information__wrapper {
 
       @include responsive1199 {
         grid-template-columns: calc(56% - 10px) calc(44% - 10px);
       }
 
+      @include responsive639 {
+        grid-template-columns: 100%;
+      }
     }
 
   }

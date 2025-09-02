@@ -31,6 +31,14 @@
     z-index: 1;
     justify-content: space-between;
     width: 100%;
+
+    @media(max-width: 767px){
+      width: auto;
+      gap: 6px;
+      bottom: 21px;
+      top: unset;
+      transform: translateX(-50%);
+    }
   }
   .swiper-counter {
     background-color: white;
@@ -40,7 +48,7 @@
     color: black;
     width: 107px;
     height: 107px;
-    font-size: 23px;
+    font-size: 33px;
     font-weight: 400;
     position: absolute;
     bottom: 0;
@@ -48,7 +56,19 @@
     right: 0;
     border-radius: 40px 0 33.7px 0;
     .total-slide {
-      font-size: 14px;
+      font-size: 16px;
+    }
+    @include responsive1199{
+      border-radius: 24px 0 28px 0;
+      width: 76px;
+      height: 76px;
+      font-size: 24px;
+      .total-slide {
+        font-size: 12px;
+      }
+    }
+    @media(max-width: 767px){
+      display: none;
     }
   }
 }

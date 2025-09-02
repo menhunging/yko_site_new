@@ -11,14 +11,60 @@
 
   @include responsive1549 {
     padding: 50px 0;
-
+    margin-top: 37px;
+    height: 480px;
+    .swiperBtn{
+      width: 53px;
+      height: 53px;
+      min-width: 53px;
+    }
   }
 
+@include responsive1023{
+  margin-top: 23px;
+  .swiperBtnPrev{
+    left: 0;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiperBtnNext{
+    right: 0;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
   @include responsive767 {
-    height: 552px;
+    height: 324px;
     padding: 40px 0;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    .swiperBtn{
+      width: 35px;
+      height: 35px;
+      min-width: 35px;
+    }
+  }
+
+  @include responsive639{
+    height: 552px;
+    .swiperBtn{
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+    }
+    .swiperBtnPrev{
+      left: calc(50% - 53px);
+      bottom: -7px;
+      top: unset;
+      transform: initial;
+    }
+    .swiperBtnNext{
+      right: calc(50% - 53px);
+      bottom: -7px;
+      top: unset;
+      transform: initial;
+    }
   }
 
   .rustic-main__media {
@@ -30,6 +76,18 @@
     overflow: hidden;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    @include responsive1199{
+      border-bottom-left-radius: 45px;
+      border-bottom-right-radius: 45px;
+    }
+    @include responsive767{
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    @include responsive639{
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
   }
 }
 
@@ -71,7 +129,9 @@
     &.swiper-slide-next {
       opacity: 1;
     }
-
+    @include responsive639{
+      justify-content: flex-start;
+    }
     // &:nth-child(2n) {
     //   margin-top: auto;
 
@@ -118,18 +178,34 @@
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: column;
-  gap: 11px;
-  border-radius: 50px;
+  gap: 0;
   position: relative;
   z-index: 2;
-  width: 50%;
+  width: 51%;
+  border-radius: 57px;
 
   @include responsive1199 {
-    width: 100%;
+    border-radius: 38px;
+    margin-left: 9%;
+    padding: 20px 27px 16px;
+    width: 53%;
+    gap: 9px;
   }
 
   @include responsive767 {
-    padding: 20px;
+    padding: 14px 19px;
+    border-radius: 28px;
+    margin-top: 6%;
+    margin-left: 13%;
+    width: 50%;
+  }
+
+  @include responsive639{
+    border-radius: 26px;
+    width: 100%;
+    margin: 0;
+    padding: 23px 29px 20px 22px;
+    gap: 0;
   }
 
   @include after {
@@ -141,7 +217,16 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 50px;
+    border-radius: 57px;
+    @include responsive1199{
+      border-radius: 38px;
+    }
+    @include responsive767{
+      border-radius: 28px;
+    }
+    @include responsive639{
+      border-radius: 26px;
+    }
   }
 
   @include before {
@@ -154,30 +239,52 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-
+    @include responsive1199{
+      min-width: 43px;
+      width: 43px;
+      height: 43px;
+    }
     @include responsive767 {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='17.5022' cy='17.5022' r='17.5022' fill='%23F59E11'/%3e%3ccircle cx='17.5019' cy='17.5022' r='3.75046' fill='white'/%3e%3c/svg%3e ");
-      width: 32px;
-      height: 32px;
-      min-width: 32px;
+      min-width: 30px;
+      width: 30px;
+      height: 30px;
+      //width: 32px;
+      //height: 32px;
+      //min-width: 32px;
       right: 0px;
       top: -5px;
+    }
+    @include responsive639{
+      width: 35px;
+      height: 35px;
+      min-width: 35px;
     }
   }
 
   .rustic-item__title {
     font-weight: 400;
-    font-size: 39px;
-    line-height: 42px;
+    //font-size: 39px;
+    //line-height: 42px;
     text-transform: uppercase;
     color: $colorWhite;
-
-    @include responsive1549 {
-      font-size: 30px;
-      line-height: 35px;
+    font-size: 50px;
+    line-height: 60px;
+    //@include responsive1549 {
+    //  font-size: 30px;
+    //  line-height: 35px;
+    //}
+    @include responsive1199{
+      font-size: 29px;
+      line-height: 32px;
     }
-
     @include responsive767 {
+      //font-size: 25px;
+      //line-height: 30px;
+      font-size: 21px;
+      line-height: 23px;
+    }
+    @include responsive639{
       font-size: 25px;
       line-height: 30px;
     }
@@ -185,19 +292,55 @@
 
   .rustic-item__text {
     font-weight: 400;
-    font-size: 17px;
-    line-height: 28px;
+    //font-size: 17px;
+    //line-height: 28px;
     color: $colorWhite;
-
-    @include responsive1549 {
+    font-size: 19px;
+    line-height: 31px;
+    //@include responsive1549 {
+    //  font-size: 15px;
+    //  line-height: 20px;
+    //}
+    @include responsive1199{
       font-size: 15px;
-      line-height: 20px;
+      line-height: 22px;
+
+    }
+    @include responsive767{
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 0;
+    }
+    @include responsive639{
+      margin-top: 6px;
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 
   .btn {
     width: auto;
-    min-width: 194px;
-    margin: 8px 0 0;
+    padding-inline: 56px;
+    margin: 13px 0 0;
+    height: 52px;
+    font-size: 19px;
+    @include responsive1199{
+      padding-inline: 45px;
+      height: 40px;
+      margin-top: 0;
+      font-size: 13px;
+      min-width: unset;
+    }
+    @include responsive767{
+      padding-inline: 35px;
+      height: 30px;
+      font-size: 12px;
+    }
+    @include responsive639{
+      padding-inline: 65px;
+      font-size: 18px;
+      margin-top: 18px;
+      height: 50px;
+    }
   }
 }

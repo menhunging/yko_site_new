@@ -55,14 +55,16 @@ h2,
   }
 
   @include responsive1023 {
+    font-size: 28px;
+    line-height: 32px;
   }
 
   @include responsive767 {
-    font-size: 35px;
-    line-height: 40px;
   }
 
   @include responsive479 {
+    font-size: 35px;
+    line-height: 40px;
   }
 }
 

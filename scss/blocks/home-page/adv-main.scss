@@ -1,6 +1,15 @@
 .adv-main {
   position: relative;
-
+  padding-top: 99px;
+  padding-bottom: 110px;
+  @include responsive1199{
+    padding-top: 52px;
+    padding-bottom: 70px;
+  }
+  @include responsive1023{
+    padding-top: 31px;
+    padding-bottom: 40px;
+  }
   @include before {
     background-color: $colorGrayLight;
     top: -50px;
@@ -11,17 +20,25 @@
   }
 
   .adv-main__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+    //display: grid;
+    //grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    gap: 87px;
 
     @include responsive1549 {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      //grid-template-columns: repeat(2, 1fr);
+      gap: 66px;
     }
 
+    @include responsive1023{
+      gap: 30px;
+    }
     @include responsive767 {
-      grid-template-columns: 1fr;
+      //grid-template-columns: 1fr;
+      //gap: 50px;
+    }
+    @include responsive639{
+      flex-wrap: wrap;
       gap: 50px;
     }
   }
@@ -37,12 +54,28 @@
 
     @include responsive1199 {
       font-size: 14px;
-      line-height: 20px;
+      line-height: 16px;
+      gap: unset;
+      svg{
+        width: 24px;
+        height: 24px;
+      }
     }
-
-    @include responsive767 {
-      gap: 20px;
+    @include responsive1023{
+      font-size: 10px;
+      line-height: 11px;
+      svg{
+        width: 16px;
+        height: 16px;
+      }
+    }
+    @include responsive639 {
       font-size: 16px;
+      line-height: 18px;
+      svg{
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -59,28 +92,37 @@
     }
 
     @include responsive1199 {
-      font-size: 25px;
-      line-height: 30px;
-      margin-top: 0;
-      max-width: 50%;
+      font-size: 26px;
+      line-height: 25px;
+      margin-top: 24px;
     }
 
     @include responsive1023 {
-      max-width: 75%;
+      font-size: 18px;
+      line-height: 16px;
+      margin-top: 18px;
     }
 
-    @include responsive767 {
+    @include responsive639 {
       font-size: 20px;
-      line-height: 25px;
-      max-width: 100%;
+      line-height: 20px;
+      margin-top: 20px;
+      padding-right: 50px;
     }
   }
 
   p {
     margin-top: -10px;
+    @include responsive1199{
+      margin-top: 20px;
+    }
+    @include responsive1023{
 
-    @include responsive767 {
-      margin: 0;
+      margin-top: 10px;
+    }
+    @include responsive639 {
+      margin-top: 20px;
+      padding-right: 20px;
     }
   }
 }
@@ -128,15 +170,21 @@
     gap: 30px;
     max-width: 1176px;
     margin: 0 auto;
-
+    @include responsive1199{
+      display: flex;
+      justify-content: center;
+    }
     @include responsive1023 {
       gap: 20px;
     }
 
     @include responsive767 {
       display: flex;
-      flex-direction: column;
       gap: 15px;
+    }
+    @include responsive639{
+      gap: 11px;
+      flex-direction: column;
     }
   }
 
@@ -158,12 +206,22 @@
       font-size: 30px;
       line-height: 35px;
       min-height: 180px;
-      padding-left: 150px;
+      //padding-left: 150px;
+      border-radius: 30px;
     }
 
     @include responsive1199 {
       font-size: 24px;
       line-height: 30px;
+      max-width: 435px;
+      width: 100%;
+      padding-left: 165px;
+      min-height: 167px;
+      padding-block: 5px;
+      p{
+        font-size: 26px;
+        line-height: 26px;
+      }
     }
 
     @include responsive1023 {
@@ -177,8 +235,24 @@
       font-size: 18px;
       line-height: 20px;
       gap: 5px;
+      border-radius: 20px;
+      min-height: 107px;
+      max-width: 278px;
+      p{
+        font-size: 17px;
+        line-height: 17px;
+      }
     }
-
+    @include responsive639{
+      border-radius: 25px;
+      max-width: 100%;
+      min-height: 136px;
+      padding-left: 115px;
+      p{
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
     img {
       position: absolute;
       top: 50%;
@@ -186,12 +260,22 @@
       transform: translateY(-50%);
 
       @include responsive1549 {
-        left: 50px;
-      }
 
+      }
+      @include responsive1199{
+        width: 53px;
+        height: 53px;
+        left: 86px;
+      }
       @include responsive1023 {
+        width: 34px;
+        height: 34px;
+        left: 59px;
+      }
+      @include responsive639{
         width: 50px;
-        left: 25px;
+        height: 50px;
+        left: 29px;
       }
     }
 
@@ -202,8 +286,13 @@
       color: $colorGray;
 
       @include responsive767 {
+        font-size: 10px;
+        line-height: 10px;
+      }
+      @include responsive639{
         font-size: 14px;
-        line-height: 18px;
+        line-height: 12px;
+        margin-top: 10px;
       }
     }
   }

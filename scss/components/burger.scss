@@ -13,7 +13,7 @@
   border-radius: 50%;
   border: solid 1px $colorBlack;
 
-  @include responsive479 {
+  @include responsive639 {
     position: relative;
     display: flex;
     flex-direction: column;

@@ -13,6 +13,9 @@ body {
   }
 
   &.index-page {
+    .faq-section{
+      padding-bottom: 160px;
+    }
   }
 }
 
@@ -35,6 +38,10 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     max-width: 100%;
+  }
+  @include responsive639{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -140,6 +147,7 @@ div {
   display: flex;
   flex-direction: column;
   padding-top: 136px;
+  overflow-x: hidden;
 }
 
 picture {
@@ -949,15 +957,23 @@ section {
     padding: 22px 60px;
     border-radius: 50px;
     background-color: $colorWhite;
-
-    @include responsive767 {
-      padding: 10px 30px 14px;
+    font-size: 16px;
+    line-height: 12px;
+    white-space: nowrap;
+    @include responsive1199{
+      padding: 16px 39px;
       font-size: 14px;
-      line-height: 30px;
+      line-height: 10px;
     }
-
-    @include responsive389 {
-      font-size: 12px;
+    @include responsive767 {
+      padding: 8px 24px;
+      font-size: 9px;
+      line-height: 14px;
+    }
+    @include responsive639{
+      font-size: 16px;
+      line-height: 11px;
+      padding: 23px 39px;
     }
 
     &.active {

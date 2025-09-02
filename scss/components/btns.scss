@@ -52,7 +52,11 @@
     border: solid 1px $colorBlack;
     color: $colorBlack;
   }
-
+  &--black {
+    color: $colorWhite;
+    border: solid 1px $colorBlack;
+    background-color: $colorBlack;
+  }
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -113,5 +117,18 @@
     border-radius: 50%;
     background-color: $colorWhite;
     position: relative;
+
+    @include responsive1199{
+      width: 31px;
+      height: 31px;
+    }
+    @include responsive767{
+      width: 21px;
+      height: 21px;
+    }
+    @include responsive639{
+      width: 41px;
+      height: 41px;
+    }
   }
 }

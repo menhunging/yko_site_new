@@ -33,7 +33,7 @@ $responsive1799: "1799px";
 $responsive1699: "1699px";
 $responsive1549: "1549px";
 $responsive1439: "1439px";
-$responsive1199: "1199px";
+$responsive1199: "1200px";
 $responsive1023: "1023px";
 $responsive767: "768px";
 $responsive639: "639px";
@@ -139,5 +139,86 @@ $responsive389: "389px";
 @mixin responsive389 {
   @media (max-width: $responsive389) {
     @content;
+  }
+}
+@mixin title {
+  font-size: 35px;
+  line-height: 42px;
+  @media(max-width: 1200px){
+    font-size: 25px;
+    line-height: 32px;
+  }
+  @media(max-width: 768px){
+    font-size: 16px;
+    line-height: 21px;
+  }
+  @media(max-width: 639px){
+    font-size: 25px;
+    line-height: 31px;
+  }
+}
+@mixin desc {
+  font-size: 16px;
+  line-height: 24px;
+  @media(max-width: 1200px){
+    font-size: 12px;
+    line-height: 18px;
+  }
+  @media(max-width: 768px){
+    font-size: 10px;
+    line-height: 12px;
+  }
+  @media(max-width: 639px){
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@mixin radius{
+  border-radius: 40px;
+  @media(max-width: 1200px){
+    border-radius: 30px;
+  }
+  @media(max-width: 768px){
+    border-radius: 20px;
+  }
+  @media(max-width: 639px){
+    border-radius: 25px;
+  }
+}
+@mixin bigradius{
+  border-radius: 60px;
+  @include responsive1199{
+    border-radius: 45px;
+  }
+  @include responsive767{
+    border-radius: 30px;
+  }
+}
+@mixin innerradius{
+  border-radius: 40px;
+  @media(max-width: 1200px){
+    border-radius: 25px;
+  }
+  @media(max-width: 768px){
+    border-radius: 15px;
+  }
+  @media(max-width: 639px){
+    border-radius: 25px;
+  }
+}
+@mixin textsmall{
+  font-size: 14px;
+  line-height: 18px;
+  @include responsive1199{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  @include responsive767{
+    font-size: 9px;
+    line-height: 13px;
+  }
+  @include responsive639{
+    font-size: 14px;
+    line-height: 18px;
   }
 }

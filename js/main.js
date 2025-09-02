@@ -114,12 +114,12 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1.15,
+          slidesPerView: 1.08,
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 2,
-          spaceBetween: 12,
+          slidesPerView: 3,
+          spaceBetween: 14,
         },
         1440: {
           slidesPerView: 3,
@@ -408,11 +408,18 @@ $(document).ready(function () {
       event.preventDefault();
       let parents = $(this).parents(".tabsSection");
       let href = $(this).attr("href");
+      var controlsId = $(this).data("controls");
 
       parents.find(".tabs-linkLink a").removeClass("active");
       $(this).toggleClass("active");
       parents.find(".tabsSlider").removeClass("opened");
       $(href).addClass("opened");
+
+      parents.find(".swiper-controls").removeClass("visible");
+
+      if (controlsId) {
+        $("#" + controlsId).addClass("visible");
+      }
     });
   }
 
@@ -483,7 +490,7 @@ $(document).ready(function () {
                 slidesPerView: 1.7,
                 spaceBetween: 10,
               },
-              768: {
+              638: {
                 slidesPerView: 4,
                 spaceBetween: 15,
                 grid: {

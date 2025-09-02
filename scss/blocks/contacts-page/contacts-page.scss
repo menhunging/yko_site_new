@@ -1,7 +1,23 @@
 .contacts-page {
+  @include responsive639{
+    .mobile-fix-bg{
+      margin-top: 16px;
+      background: #f8f8f8;
+      border-radius: 30px 30px 0 0;
+    }
+  }
   .caption {
     &--h2 {
-      margin: 39px 0 73px;
+      margin: 21px 0 67px;
+      @include responsive1199{
+        margin: 28px 0 33px;
+      }
+      @include responsive767{
+        margin: 21px 0 27px;
+      }
+      @include responsive639{
+        margin: 25px 0 21px;
+      }
     }
   }
   .page-content {
@@ -14,7 +30,9 @@
       border-radius: 60px;
       position: relative;
       z-index: 1;
-      
+      @include responsive1199{
+        padding-top: 63px;
+      }
     }
     &__wrapper {
       display: grid;
@@ -40,6 +58,33 @@
             height: 100%;
             object-position: center;
             object-fit: cover;
+          }
+          @include responsive767{
+            border-radius: 27px 0 0 27px;
+          }
+        }
+      }
+      @include responsive1199 {
+        grid-template-columns: calc((100% - 8px) / 12 * 6) calc(50dvw + 20px);
+        & > :first-child{
+          padding-right: 30px;
+        }
+      }
+      @include responsive767 {
+        & > :first-child{
+          padding-right: 25px;
+        }
+      }
+      @include responsive639 {
+        grid-template-columns: 100%;
+        gap: 17px;
+        & > :first-child{
+          order: 2;
+          padding-right: 0;
+        }
+        & > :last-child {
+          picture{
+            border-radius: 25px;
           }
         }
       }
@@ -77,12 +122,20 @@
       padding-right: 24px;
       margin-bottom: 17px;
       display: flex;
-      align-items: center;
+      //align-items: center;
       justify-content: space-between;
       .logo {
         width: 114px;
         min-width: 114px;
         height: 114px;
+        @include responsive767{
+          width: 75px;
+          height: 75px;
+          min-width: 75px;
+        }
+      }
+      .social{
+        margin-top: 21px;
       }
     }
     &__basic {
@@ -92,10 +145,10 @@
       display: flex;
       flex-direction: column;
       gap: 50px;
-      padding: 57px 24px 38px;
+      padding: 42px 24px 38px;
       border-radius: 50px;
       background-color: #F8F8F8;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       a {
         font-size: 45px;
         line-height: 1;
@@ -123,13 +176,13 @@
         padding-left: 35px;
       }
       & > :last-child {
-        padding-left: 42px;
+        padding-left: 72px;
       }
       &-title {
         font-size: 25px;
         font-weight: 400;
         color: #000;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 32px;
       }
       &-location {
@@ -137,7 +190,7 @@
         font-weight: 400;
         line-height: 25px;
         color: #8E8E8E;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
     &__location-schedule {
@@ -150,7 +203,130 @@
         color: #8E8E8E;
       }
     }
-    
+    @include responsive1199 {
+      &-data{
+        padding: 16px 15px 30px;
+        border-radius: 39px;
+        &:before{
+          border-radius: 37px;
+        }
+      }
+      &__information{
+        border-radius: 45px;
+      }
+      &__head{
+        justify-content: center;
+        margin-bottom: 7px;
+        .social{
+          display: none;
+        }
+      }
+      &__location-schedule{
+        display: none;
+      }
+      &__basic{
+        gap: 35px;
+        padding: 40px 25px 30px;
+        border-radius: 39px;
+        margin-bottom: 19px;
+        a{
+          font-size: 35px;
+        }
+      }
+      &__info{
+        &>:last-child{
+          padding-left: 23%;
+        }
+        &-title{
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 10px;
+        }
+        &-location{
+          margin-bottom: 0;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+    @include responsive767 {
+      &-data{
+        padding: 9px 11px 20px;
+        border-radius: 25px;
+        &:before{
+          border-radius: 23px;
+        }
+      }
+      &__basic{
+        gap: 24px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        padding: 19px 25px 12px;
+        a{
+          font-size: 23px;
+        }
+      }
+      &__info{
+        grid-template-columns: 166px calc(50% - 10px);
+       & > :first-child{
+         padding-left: 7px;
+       }
+       & > :last-child{
+         padding-left: 12%;
+       }
+        &-title{
+          font-size: 13px;
+          line-height: 16px;
+          margin-bottom: 5px;
+        }
+        &-location{
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+      &__information{
+        border-radius: 30px;
+      }
+    }
+    @media(max-width: 750px) {
+      &__item{
+        min-height: 348px;
+      }
+      &-data{
+        padding: 10px 10px 20px;
+      }
+      &__information{
+        border-radius: 30px 30px 0 0;
+        padding-top: 0;
+        padding-bottom: 34px;
+      }
+      &__basic{
+        padding: 20px 25px;
+        gap: 13px;
+        a{
+          font-size: 25px;
+        }
+      }
+      &__info{
+        grid-template-columns: 100%;
+        gap: 21px;
+        & > :first-child{
+          padding-left: 14px;
+        }
+        & > :last-child{
+          padding-left: 14px;
+        }
+        &-title{
+          font-size: 14px;
+          line-height: 16px;
+        }
+        &-location{
+          font-size: 16px;
+          line-height: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
   }
 
   .map {
@@ -161,6 +337,14 @@
     margin-top: -120px;
     padding: 0;
     height: 716px;
+    margin-bottom: 73px;
+    @include responsive1199{
+      margin-top: -60px;
+    }
+    @include responsive767{
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 33px;
+    }
     #yandex-map {
       position: absolute;
       top: 0;
@@ -168,8 +352,89 @@
       width: 100%;
       height: 100%;
     }
+    .route-block {
+      top: 184px;
+      //left: 0;
+      left: 76px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      position: absolute;
+      max-width: 333px;
+      width: 100%;
+      padding: 22px 32px 20px 37px;
+      background-color: white;
+      box-sizing: border-box;
+      border-radius: 40px;
+      p{
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      @include responsive1199 {
+        left: 104px;
+        top: 187px;
+        max-width: 280px;
+        padding: 19px 24px 20px 31px;
+        p{
+          line-height: 21px;
+        }
+        a{
+          font-size: 16px;
+          line-height: 21px;
+          white-space: nowrap;
+          height: 44px;
+          margin-top: 10px;
+        }
+      }
+      @include responsive767{
+        left: 60px;
+        top: 137px;
+        max-width: 201px;
+        border-radius: 22px;
+        padding: 10px 13px 6px 22px;
+        p{
+          font-size: 13px;
+          line-height: 15px;
+          br{
+            display: none;
+          }
+        }
+        a{
+          font-size: 12px;
+          line-height: 8px;
+          height: 33px;
+        }
+      }
+      @include responsive639 {
+        left: 10px;
+        top: 130px;
+        max-width: 355px;
+        border-radius: 42px;
+        padding: 27px 40px;
+        p{
+          font-size: 17px;
+          line-height: 26px;
+          br{
+            display: block;
+          }
+        }
+        a{
+          font-size: 20px;
+          height: 55px;
+        }
+      }
+    }
     .container {
       position: relative;
+    }
+    @include responsive1199{
+      height: 566px;
+    }
+    @include responsive767{
+      height: 363px;
+    }
+    @include responsive639{
+      height: 521px;
+      margin-top: 5px;
     }
   }
 }
