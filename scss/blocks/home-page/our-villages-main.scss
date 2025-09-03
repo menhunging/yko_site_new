@@ -57,6 +57,58 @@
       width: 100%;
     }
   }
+  .swiperBtnPrev {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+    }
+    @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+      background-size: unset;
+    }
+  }
+
+  .swiperBtnNext {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+    }
+    @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+      background-size: unset;
+    }
+  }
 }
 
 .our-villages-main__body {

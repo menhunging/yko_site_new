@@ -19,17 +19,26 @@ body {
         margin-top: -30px;
       }
       @include responsive767{
-        margin-top: -5px;
+        margin-top: 0;
       }
     }
     .faq-section{
       padding-bottom: 210px;
       &+.call-form{
         margin-bottom: 0;
-        overflow: visible;
+        padding-top: 60px;
+        overflow: hidden;
         &:before{
           top: unset;
           bottom: 0;
+        }
+      }
+      @include responsive1199{
+        padding-bottom: 170px;
+        &+.call-form{
+          &:before{
+            display: none;
+          }
         }
       }
       @include responsive639{
@@ -38,6 +47,12 @@ body {
           margin-top: 0px;
         }
       }
+    }
+    @include responsive639{
+      .our-villages-main__head{
+      flex-wrap: wrap;
+        flex-direction: row;
+    }
     }
   }
 }

@@ -243,7 +243,7 @@ body.index-page .footer {
 }
 @media (max-width: 768px) {
   body.index-page .footer {
-    margin-top: -5px;
+    margin-top: 0;
   }
 }
 body.index-page .faq-section {
@@ -251,11 +251,20 @@ body.index-page .faq-section {
 }
 body.index-page .faq-section + .call-form {
   margin-bottom: 0;
-  overflow: visible;
+  padding-top: 60px;
+  overflow: hidden;
 }
 body.index-page .faq-section + .call-form:before {
   top: unset;
   bottom: 0;
+}
+@media (max-width: 1200px) {
+  body.index-page .faq-section {
+    padding-bottom: 170px;
+  }
+  body.index-page .faq-section + .call-form:before {
+    display: none;
+  }
 }
 @media (max-width: 639px) {
   body.index-page .faq-section {
@@ -263,6 +272,12 @@ body.index-page .faq-section + .call-form:before {
   }
   body.index-page .faq-section + .call-form {
     margin-top: 0px;
+  }
+}
+@media (max-width: 639px) {
+  body.index-page .our-villages-main__head {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
@@ -1452,7 +1467,7 @@ section {
 }
 
 .btn-download {
-  display: flex;
+  display: inline-flex;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -3280,6 +3295,68 @@ h4,
     width: 100%;
   }
 }
+.our-villages-main__head .swiperBtnPrev {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .our-villages-main__head .swiperBtnPrev {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .our-villages-main__head .swiperBtnPrev {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    background-size: 6px;
+  }
+}
+@media (max-width: 639px) {
+  .our-villages-main__head .swiperBtnPrev {
+    width: 49px;
+    height: 49px;
+    min-width: 49px;
+    background-size: unset;
+  }
+}
+.our-villages-main__head .swiperBtnNext {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .our-villages-main__head .swiperBtnNext {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .our-villages-main__head .swiperBtnNext {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    background-size: 6px;
+  }
+}
+@media (max-width: 639px) {
+  .our-villages-main__head .swiperBtnNext {
+    width: 49px;
+    height: 49px;
+    min-width: 49px;
+    background-size: unset;
+  }
+}
 
 .our-villages-main__body {
   margin-top: 28px;
@@ -4293,22 +4370,99 @@ h4,
 .completed-villages {
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .completed-villages {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 .completed-villages .completed-villages__head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
 }
+@media (max-width: 1200px) {
+  .completed-villages .completed-villages__head {
+    gap: 30px;
+  }
+}
 @media (max-width: 1023px) {
   .completed-villages .completed-villages__head {
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .completed-villages .completed-villages__head {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1023px) {
   .completed-villages .completed-villages__head .caption {
     width: 100%;
+  }
+}
+.completed-villages .completed-villages__head .swiper-controls .swiperBtnPrev {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnPrev {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnPrev {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    background-size: 6px;
+  }
+}
+@media (max-width: 639px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnPrev {
+    width: 49px;
+    height: 49px;
+    min-width: 49px;
+    background-size: unset;
+  }
+}
+.completed-villages .completed-villages__head .swiper-controls .swiperBtnNext {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnNext {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnNext {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    background-size: 6px;
+  }
+}
+@media (max-width: 639px) {
+  .completed-villages .completed-villages__head .swiper-controls .swiperBtnNext {
+    width: 49px;
+    height: 49px;
+    min-width: 49px;
+    background-size: unset;
   }
 }
 .completed-villages .completed-villages__head p {
@@ -4318,6 +4472,15 @@ h4,
 @media (max-width: 1023px) {
   .completed-villages .completed-villages__head p {
     max-width: 230px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .completed-villages .completed-villages__head p {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 220px;
   }
 }
 .completed-villages .completed-villages__body {
@@ -4357,8 +4520,9 @@ h4,
 }
 @media (max-width: 1200px) {
   .completed-villages .completed-villages__body .picture-block {
-    width: 430px;
+    width: 590px;
     height: 415px;
+    left: -60px;
   }
 }
 @media (max-width: 1023px) {
@@ -4366,7 +4530,7 @@ h4,
     width: 370px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .completed-villages .completed-villages__body .picture-block {
     position: relative;
     height: auto;
@@ -4401,16 +4565,18 @@ h4,
   .completed-villages .completed-villages__content {
     width: 355px;
     min-height: 420px;
-    transform: translateX(-171px);
+    transform: translateX(-221px);
     font-size: 14px;
   }
 }
 @media (max-width: 1023px) {
   .completed-villages .completed-villages__content {
     transform: translateX(0);
+    margin-right: 80px;
+    width: 300px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .completed-villages .completed-villages__content {
     width: 100%;
     min-height: initial;
@@ -4511,10 +4677,21 @@ h4,
     min-height: 600px;
   }
 }
+@media (max-width: 1200px) {
+  .consul-section {
+    padding-bottom: 110px;
+  }
+}
 @media (max-width: 768px) {
   .consul-section {
     min-height: 616px;
     border-radius: 30px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 639px) {
+  .consul-section {
+    padding-bottom: 50px;
   }
 }
 
@@ -6597,7 +6774,7 @@ h4,
 }
 @media (max-width: 1200px) {
   .partners-section {
-    padding-top: 0;
+    padding-top: 40px;
     padding-bottom: 62px;
   }
 }
@@ -8670,6 +8847,9 @@ h4,
     border-radius: 30px;
   }
 }
+.partners-page .about-information__wrapper--right-img > :last-child picture {
+  left: unset;
+}
 @media (max-width: 1200px) {
   .partners-page .about-information {
     padding-top: 0;
@@ -9082,7 +9262,7 @@ h4,
     line-height: 32px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .adv-partner .adv-partner__title {
     font-size: 18px;
     line-height: 25px;
@@ -9138,7 +9318,7 @@ h4,
     border-radius: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .adv-partner .adv-partner__text {
     font-size: 12px;
     line-height: 13px;

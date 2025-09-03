@@ -20,10 +20,16 @@
   @include responsive1549 {
     min-height: 600px;
   }
-
+  @include responsive1199{
+    padding-bottom: 110px;
+  }
   @include responsive767 {
     min-height: 616px;
     border-radius: 30px;
+    padding-bottom: 70px;
+  }
+  @include responsive639{
+    padding-bottom: 50px;
   }
 }
 

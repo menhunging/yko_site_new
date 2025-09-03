@@ -9,6 +9,9 @@
     background-color: #f8f8f8;
     @include bigradius;
     overflow: hidden;
+    &__wrapper--right-img > :last-child picture{
+      left: unset;
+    }
     @include responsive1199{
       padding-top: 0;
     }
@@ -414,7 +417,7 @@
     @include responsive1199{
 
     }
-    @include responsive767{
+    @include responsive1023{
       font-size: 18px;
       line-height: 25px;
     }
@@ -449,7 +452,7 @@
       min-height: 130px;
       border-radius: 30px;
     }
-    @include responsive767 {
+    @include responsive1023{
       font-size: 12px;
       line-height: 13px;
       min-height: 106px;
