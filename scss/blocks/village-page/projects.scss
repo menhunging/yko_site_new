@@ -353,6 +353,7 @@
     // overflow: hidden;
     border-radius: 60px;
     background-color: #f8f8f8;
+    @include bigradius;
   }
 
   &-slider {
@@ -541,23 +542,18 @@
   .swiper-controls {
     // position: absolute;
     position: relative;
-    top: 16px;
-    right: 0;
-    gap: 10px;
     grid-column-start: 2;
-
-    @include responsive1549 {
-      top: 20px;
-      right: 20px;
+    //top: 16px;
+    //right: 0;
+    gap: 16px;
+    @include responsive767{
+      gap: 10px;
     }
-
-    @include responsive1199 {
-      top: 10px;
-      right: 20px;
-    }
-
-    @include responsive767 {
-      top: -2px;
+    @include responsive639{
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -568,15 +564,23 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: transparent;
-    &:hover {
-      background-color: white;
-    }
 
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+    }
     @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
       width: 49px;
       height: 49px;
       min-width: 49px;
+      background-size: unset;
     }
   }
 
@@ -587,15 +591,22 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: transparent;
-    &:hover {
-      background-color: white;
+    @include responsive1199{
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
     }
-
     @include responsive767 {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      background-size: 6px;
+    }
+    @include responsive639{
       width: 49px;
       height: 49px;
       min-width: 49px;
+      background-size: unset;
     }
   }
 }

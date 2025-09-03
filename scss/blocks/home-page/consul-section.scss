@@ -20,10 +20,16 @@
   @include responsive1549 {
     min-height: 600px;
   }
-
+  @include responsive1199{
+    padding-bottom: 110px;
+  }
   @include responsive767 {
     min-height: 616px;
     border-radius: 30px;
+    padding-bottom: 70px;
+  }
+  @include responsive639{
+    padding-bottom: 50px;
   }
 }
 
@@ -50,6 +56,7 @@
     @include responsive1549 {
       flex-direction: column;
       align-items: flex-start;
+      padding-left: 30px;
     }
     @include responsive1023{
       padding-left: 23px;
@@ -69,6 +76,10 @@
       height: 30px;
       border-radius: 50%;
       border: solid 1px $colorWhite;
+      @include responsive1199{
+        width: 24px;
+        height: 24px;
+      }
       @include responsive1023{
         width: 15px;
         height: 15px;
@@ -87,6 +98,10 @@
       top: 10px;
       left: 10px;
       opacity: 0;
+      @include responsive1199{
+        top: 7px;
+        left: 7px;
+      }
       @include responsive1023{
         width: 5px;
         height: 5px;
@@ -437,11 +452,24 @@
       right: 36px;
     }
     @media(max-width: 767px) {
-      display: none;
+      &:not(.mobvisible){
+        display: none;
+      }
     }
   }
 
   .consul-section__check label a {
     color: $colorBlack;
+  }
+}
+
+.call-form{
+  &.call-form--house{
+    @include responsive1199{
+      .picture-block.mobvisible{
+        top: -265px;
+        scale: .8;
+      }
+    }
   }
 }

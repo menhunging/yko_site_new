@@ -82,6 +82,7 @@
       top: -2px;
     }
 
+
     .swiperBtnPrev {
       cursor: pointer;
       width: 60px;
@@ -90,10 +91,22 @@
       background-repeat: no-repeat;
       border-radius: 50%;
 
+      @include responsive1199{
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+      }
       @include responsive767 {
+        width: 29px;
+        height: 29px;
+        min-width: 29px;
+        background-size: 6px;
+      }
+      @include responsive639{
         width: 49px;
         height: 49px;
         min-width: 49px;
+        background-size: unset;
       }
     }
 
@@ -104,11 +117,22 @@
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 50%;
-
+      @include responsive1199{
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+      }
       @include responsive767 {
+        width: 29px;
+        height: 29px;
+        min-width: 29px;
+        background-size: 6px;
+      }
+      @include responsive639{
         width: 49px;
         height: 49px;
         min-width: 49px;
+        background-size: unset;
       }
     }
   }
@@ -233,6 +257,22 @@
     }
 
     @include responsive389 {
+    }
+  }
+  @include responsive767{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include responsive639{
+    .container{
+      padding-bottom: 70px;
+    }
+    .swiper-controls{
+      left: 50%;
+      transform: translateX(-50%);
+      top: unset;
+      bottom: 0;
+      right: unset;
     }
   }
 }

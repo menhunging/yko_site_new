@@ -245,12 +245,9 @@
 
     li {
       @include responsive639 {
-        width: 40%;
-      }
-
-      @include responsive389 {
         width: 100%;
       }
+
     }
 
     a {

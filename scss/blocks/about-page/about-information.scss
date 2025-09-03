@@ -170,7 +170,7 @@
         min-height: 395px;
         max-height: 395px;
       }
-      @include responsive1199 {
+      @include responsive767 {
         min-height: 253px;
         max-height: 253px;
         border-radius: 28px;

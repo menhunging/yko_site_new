@@ -174,7 +174,7 @@ $(document).ready(function () {
                 slidesPerView: 1.1,
                 spaceBetween: 10,
               },
-              550: {
+              650: {
                 slidesPerView: 3,
                 spaceBetween: 15,
               },
@@ -353,18 +353,10 @@ $(document).ready(function () {
             spaceBetween: 20,
             breakpoints: {
               0: {
-                slidesPerView: 1.15,
-                spaceBetween: 16,
+                slidesPerView: 1.1,
+                spaceBetween: 11,
               },
               640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1550: {
                 slidesPerView: 3,
                 spaceBetween: 20,
               },
@@ -401,7 +393,7 @@ $(document).ready(function () {
             spaceBetween: 20,
             breakpoints: {
               0: {
-                slidesPerView: 1.15,
+                slidesPerView: 1,
                 spaceBetween: 16,
               },
               640: {
@@ -485,21 +477,21 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1.15,
+          slidesPerView: 1.1,
           spaceBetween: 16,
         },
         640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1200: {
           slidesPerView: 3,
           spaceBetween: 20,
         },
+        // 768: {
+        //   slidesPerView: 2,
+        //   spaceBetween: 20,
+        // },
+        // 1200: {
+        //   slidesPerView: 3,
+        //   spaceBetween: 20,
+        // },
       },
     });
   }

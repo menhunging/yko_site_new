@@ -1,7 +1,7 @@
 .about-main {
   position: relative;
   z-index: 3;
-  border-radius: 60px;
+  @include bigradius;
   overflow: hidden;
   padding: 145px 0 75px;
 
@@ -109,16 +109,15 @@
 
       @include responsive767 {
         gap: 25px;
+        &:last-child {
+          max-width: calc(50% - 12px);
+        }
       }
       @include responsive639 {
         gap: 18px;
         max-width: calc(50% - 6px);
       }
-      @media (max-width: 767px) {
-        &:last-child {
-          max-width: calc(50% - 12px);
-        }
-      }
+
     }
 
     .num {

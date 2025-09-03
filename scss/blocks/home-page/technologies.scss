@@ -59,6 +59,7 @@
       top: 0;
     }
     @include responsive639 {
+      padding-bottom: 15px;
       &:before,
       &:after {
         display: none;

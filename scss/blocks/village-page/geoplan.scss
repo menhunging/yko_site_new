@@ -1,38 +1,96 @@
 .geoplan {
   &-section {
-    padding: 76px 0 36px;
+    padding: 46px 0 36px;
+    @include responsive1199{
+      padding-top: 16px;
+    }
+    @include responsive767{
+      padding-top: 36px;
+    }
+    @include responsive639{
+      padding-top: 48px;
+    }
     &__head {
       margin-bottom: 52px;
+      @include responsive1199 {
+        margin-bottom: 36px;
+      }
+      @include responsive767 {
+        margin-bottom: 16px;
+      }
+      @include responsive639 {
+        margin-bottom: 24x;
+      }
       .container {
         display: flex;
-        align-items: center;
+        //align-items: center;
         justify-content: space-between;
         gap: 20px;
     
         @include responsive1199 {
-          flex-direction: column;
+          //flex-direction: column;
           align-items: flex-start;
+        }
+        @include responsive767{
+          gap: 34px;
+        }
+        @include responsive639{
+          flex-direction: column;
+          gap: 15px;
         }
       }
     
       p {
+        padding-top: 15px;
         max-width: 904px;
         color: $colorGray;
+        font-size: 16px;
+        line-height: 23px;
+        @include responsive1199{
+          font-size: 14px;
+          line-height: 18px;
+          max-width: 686px;
+        }
+        @include responsive767{
+          font-size: 12px;
+          line-height: 16px;
+          max-width: 568px;
+          padding-top: 0;
+        }
+        @include responsive639{
+          font-size: 16px;
+          line-height: 22px;
+          max-width: 100%;
+        }
       }
     }
     &__body {
+      @include bigradius;
+      @include responsive639{
+        border-radius: 0;
+      }
       &-item {
         position: relative;
+        .container {
+          position: absolute;
+          bottom: 78px;
+          left:50%;
+          transform: translateX(-50%);
+          display: flex;
+          justify-content: flex-end;
+          z-index: 1;
+          @include responsive1199{
+            bottom: 48px;
+          }
+          @include responsive767{
+            bottom: 19px;
+          }
+          @include responsive639{
+            bottom: -50px;
+          }
+        }
       }
-      .container {
-        position: absolute;
-        bottom: 71px;
-        left:50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: flex-end;
-        z-index: 1;
-      }
+
       .geoplan-info {
         position: relative;
         box-sizing: border-box;
@@ -42,12 +100,28 @@
         align-items: stretch;
         column-gap: 54px;
         padding: 29px 44px;
-        &__item {
-          display: flex;
+        @include responsive1199{
+          padding: 18px 26px;
+          border-radius: 25px;
+          gap: 28px;
+        }
+        @include responsive767{
+          border-radius: 16px;
+          padding: 11px 10px;
+        }
+        @include responsive639{
+          padding: 29px 24px;
+          border-radius: 25px;
+          flex-direction: column;
+          gap: 29px;
+          width: 100%;
           align-items: center;
+        }
+        &__item {
+
+          display: flex;
           // column-gap: 18px;
           position: relative;
-          display: flex;
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
@@ -56,6 +130,15 @@
 
           &.sale, &.sold {
             padding-left: 74px;
+            @include responsive1199{
+              padding-left: 46px;
+            }
+            @include responsive767{
+              padding-left: 29px;
+            }
+            @include responsive639{
+              padding-left: 74px;
+            }
             @include before {
               left: 0;
               top: 50%;
@@ -66,6 +149,18 @@
               background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDUiIGhlaWdodD0iNDUiIHZpZXdCb3g9IjAgMCA0NSA0NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjIuMDgwNyIgY3k9IjIyLjA4MTIiIHI9IjIxLjQ2NzMiIHN0cm9rZT0iIzIxMjEyMSIgc3Ryb2tlLXdpZHRoPSIxLjIyNjciLz4KPHBhdGggZD0iTTI5LjcyMzEgMTguNzA1OEMyNy43MDQ0IDE3LjAxNDMgMjUuNjQ2NCAxNS4zNzA2IDIzLjU5NTYgMTMuNzE5NkMyMi40MzE4IDEyLjc4MyAyMC42MTM2IDEyLjc1MjYgMTkuNDYyNSAxMy42NzU3QzE3LjM2NDYgMTUuMzU3MSAxNS4yNjczIDE3LjA0MTMgMTMuMjExNiAxOC43NzVDMTIuMjQ2IDE5LjU4OTYgMTEuODU1MSAyMC43MTggMTIuMDQ3OCAyMS45ODY1QzEyLjQwMTUgMjQuMzEzNyAxMi44MjI5IDI2LjYzMDEgMTMuMTcyOCAyOC45NTg0QzEzLjQ0OCAzMC43OTExIDE1LjA2NTIgMzIuMDQyOCAxNi42OTY0IDMxLjk5ODlDMTguMjkwOSAzMS45NTYxIDE5Ljg4NzIgMzEuOTg5OSAyMS40ODI4IDMxLjk4OTNDMjMuMTQwNSAzMS45ODkzIDI0Ljc5ODIgMzEuOTk0OSAyNi40NTU5IDMxLjk4NzZDMjguMDU5MyAzMS45ODAzIDI5LjUzMSAzMC43MDg0IDI5Ljc5NjcgMjkuMTEwM0MzMC4xODE1IDI2Ljc5NSAzMC41NzE5IDI0LjQ4MDcgMzAuOTQxMiAyMi4xNjMxQzMxLjE1ODggMjAuNzkyOCAzMC43NzczIDE5LjU4OTYgMjkuNzIzMSAxOC43MDU4Wk0yMy41NDAzIDI3LjI0NjdDMjMuNTQwMyAyOC4zODY5IDIyLjYyMjMgMjkuMzE5NiAyMS41IDI5LjMxOTZDMjAuMzc3NyAyOS4zMTk2IDE5LjQ1OTcgMjguMzg2OSAxOS40NTk3IDI3LjI0NjdWMjUuNTY3NUMxOS40NTk3IDI0LjQyNzMgMjAuMzc3NyAyMy40OTQ2IDIxLjUgMjMuNDk0NkMyMi42MjIzIDIzLjQ5NDYgMjMuNTQwMyAyNC40MjczIDIzLjU0MDMgMjUuNTY3NVYyNy4yNDY3WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==);
               height: 56px;
               width: 56px;
+              @include responsive1199{
+                width: 35px;
+                height: 35px;
+              }
+              @include responsive767{
+                width: 22px;
+                height: 22px;
+              }
+              @include responsive639{
+                width: 56px;
+                height: 56px;
+              }
             }
           }
           &.sale {
@@ -82,17 +177,35 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 1;
+               @include responsive1199{
+                 font-size: 11px;
+              }
+              @include responsive767{
+                font-size: 8px;
+              }
+              @include responsive639{
+                font-size: 16px;
+              }
           }
           &-count {
             font-size: 34px;
             line-height: 1;
             font-weight: 400;
+               @include responsive1199{
+                 font-size: 22px;
+              }
+              @include responsive767{
+                font-size: 16px;
+              }
+              @include responsive639{
+                font-size: 34px;
+              }
           }
         }
       }
       .picture-block {
+        @include bigradius;
         padding: 71px 0;
-        border-radius: 60px;
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -100,9 +213,18 @@
           position: relative;
           top: 0;
           left: 0;
-          padding-top: 39.64%;
+          padding-top: 32.34%;
           width: 100%;
           display: block;
+          @include responsive1199{
+            padding-top: 28.34%;
+          }
+          @include responsive767{
+            padding-top: 25.34%;
+          }
+          @include responsive639{
+            padding-top: 106.34%;
+          }
         }
         picture {
           position: absolute;
@@ -110,6 +232,9 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
+        }
+        @include responsive639{
+          border-radius: 0;
         }
       }
     }

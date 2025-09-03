@@ -875,6 +875,7 @@
       }
 
       .caption {
+        font-weight: 400;
         margin-bottom: 20px;
         margin-top: 27px;
         @include responsive1549{
@@ -1205,6 +1206,290 @@
   @include responsive639{
     .about-information+.about-information{
       padding-top: 0;
+    }
+  }
+}
+
+.hr{
+  padding: 0;
+  @include bigradius;
+  background-color: $colorGrayLight;
+  .caption{
+    font-weight: 400;
+  }
+  .container{
+    position: relative;
+  }
+  &__wrapper{
+    display: flex;
+    padding-top: 69px;
+    padding-bottom: 82px;
+    position: relative;
+    &::before{
+      content: '';
+      background-image: url('./../img/svg/lines.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 1153px;
+      height: 463px;
+      top: 127px;
+      right: -701px;
+      pointer-events: none;
+      position: absolute;
+    }
+  }
+  &__info{
+    max-width: 546px;
+  }
+  &__image{
+    position: absolute;
+    right: -180px;
+    bottom: 0;
+    z-index: 2;
+    img{
+      &.mobile-show{
+        display: none;
+      }
+    }
+  }
+  &__desc{
+    margin-top: 13px;
+    color: $colorGray;
+    font-size: 24px;
+    line-height: 35px;
+  }
+  .btn{
+    width: max-content;
+    margin-inline: 0;
+    margin-top: 31px;
+  }
+  &__label{
+    font-size: 25px;
+    line-height: 31px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+  @include responsive1549{
+    &__image{
+      right: -400px;
+      scale: .8;
+      bottom: -80px;
+    }
+    &__desc{
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+  @include responsive1199{
+    &__wrapper{
+      padding-top: 64px;
+      padding-bottom: 52px;
+      &:before{
+        top: 0;
+      }
+    }
+    &__info{
+      max-width: 444px;
+    }
+    &__desc{
+      margin-top: 12px;
+    }
+    &__image{
+      right: -340px;
+      bottom: -83px;
+    }
+    .caption{
+      svg{
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+  @media(max-width: 1100px){
+    &__image{
+      right: -440px;
+    }
+  }
+  @include responsive1023{
+    .caption{
+      svg{
+        width: 28px;
+        height: 28px;
+      }
+    }
+    &__image{
+      right: -180px;
+      bottom: 0;
+    }
+    &__desc{
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 12px;
+      max-width: 254px;
+    }
+    &__info{
+      max-width: 303px;
+    }
+    &__label{
+      font-size: 14px;
+      line-height: 14px;
+      margin-top: 18px;
+    }
+    .btn{
+      margin-top: 24px;
+    }
+    &__image {
+      right: -320px;
+      bottom: -65px;
+      img{
+        height: 670px;
+      }
+    }
+  }
+  @include responsive767{
+    &__wrapper{
+      padding-top: 26px;
+      padding-bottom: 20px;
+    }
+    &__image{
+      right: -210px;
+      bottom: -50px;
+      img {
+        height: 525px;
+      }
+    }
+  }
+  @media(max-width: 767px){
+    &__image{
+      right: -280px;
+    }
+  }
+  @include responsive639{
+    border-radius: 25px;
+    .caption{
+      svg{
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &__wrapper{
+      flex-direction: column;
+      &:before{
+        display: none;
+      }
+    }
+    &__info{
+      max-width: 100%;
+    }
+    &__desc{
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 100%;
+    }
+    &__image{
+      position: relative;
+      scale: 1;
+      right: -20px;
+      width: 100%;
+      bottom: -19px;
+      img{
+        height: auto;
+        margin-left: auto;
+        &.desktop-show{
+          display: none;
+        }
+        &.mobile-show{
+          display: block;
+        }
+      }
+    }
+    &__label{
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 27px;
+    }
+    margin-bottom: 40px;
+  }
+  @include responsive479{
+    .btn{
+      width: 100%;
+    }
+  }
+}
+.attention{
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 73px;
+  padding: 13px 35px 13px 23px;
+  background-color: $colorWhite;
+  gap: 10px;
+  align-self: center;
+  &>div{
+    display: flex;
+    flex-direction: column;
+  }
+  &+.attention{
+    margin-top: 11px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 18px;
+    color: $colorGray;
+    max-width: 200px;
+  }
+  &__link{
+    color: $colorBlack;
+    font-size: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  @include responsive1199{
+    border-radius: 20px;
+    min-height: 59px;
+    padding: 10px 27px 10px 16px;
+    &+.attention{
+      margin-top: 9px;
+    }
+    &__text{
+      font-size: 15px;
+      line-height: 15px;
+    }
+    &__link{
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  @include responsive767{
+    border-radius: 12px;
+    min-height: 40px;
+    padding: 8px 18px 8px 10px;
+    &+.attention{
+      margin-top: 7px;
+    }
+    &__text{
+      font-size: 11px;
+      line-height: 11px;
+    }
+    &__link{
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  @include responsive639{
+    border-radius: 16px;
+    min-height: 57px;
+    padding: 12px 17px 12px 15px;
+    &__text{
+      font-size: 14px;
+      line-height: 12px;
+    }
+    &__link{
+      font-size: 16px;
+      line-height: 16px;
     }
   }
 }
