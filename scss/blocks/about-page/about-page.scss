@@ -21,6 +21,11 @@
     @include before {
       top: 36px;
       right: 38px;
+      @include responsive639{
+        right: -665px;
+        top: -112px;
+        scale: .5;
+      }
     }
   }
 }

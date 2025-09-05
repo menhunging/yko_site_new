@@ -226,6 +226,7 @@
     }
     @include responsive639{
       border-radius: 26px;
+      backdrop-filter: blur(5px);
     }
   }
 

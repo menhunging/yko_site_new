@@ -4,7 +4,9 @@
   padding: 150px 0;
   box-sizing: border-box;
   background-color: #f8f8f8;
-
+  @include responsive1023 {
+    margin-top: 23px;
+  }
   .container {
     height: 100%;
   }
@@ -29,6 +31,18 @@
     overflow: hidden;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    @include responsive1199{
+      border-bottom-left-radius: 45px;
+      border-bottom-right-radius: 45px;
+    }
+    @include responsive767{
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    @include responsive639{
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
   }
 }
 

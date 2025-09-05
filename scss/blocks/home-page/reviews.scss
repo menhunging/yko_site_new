@@ -39,7 +39,31 @@
       display: none;
     }
   }
-
+  &.nobg{
+    background-color: transparent;
+    &:after{
+      display:none;
+    }
+    &:before{
+      opacity: 0;
+    }
+    @include responsive639{
+      &:before{
+        display: block;
+        opacity: 1;
+        background-image: url('./../img/svg/lines.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 1135px;
+        height: 460px;
+        pointer-events: none;
+        right: -615px;
+        bottom: -189px;
+        scale: 0.5;
+        left: unset;
+      }
+    }
+  }
   .container {
     position: relative;
   }

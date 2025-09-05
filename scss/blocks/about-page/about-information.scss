@@ -39,6 +39,11 @@
       @include before {
         right: -685px;
         top: -42px;
+        @include responsive639{
+          right: -665px;
+          top: 128px;
+          scale: .5;
+        }
       }
       & > :first-child {
         align-items: flex-end;
@@ -84,6 +89,12 @@
         @include responsive1199 {
           left: -837px;
           bottom: 190px;
+        }
+        @include responsive639{
+          right: -665px;
+          top: 128px;
+          scale: .5;
+          left: unset;
         }
 
       }

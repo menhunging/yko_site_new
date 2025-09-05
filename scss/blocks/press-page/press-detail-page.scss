@@ -7,6 +7,9 @@
     @include before {
       top: 37px;
     }
+    @include responsive639{
+      padding-top: 40px;
+    }
   }
   .page-content {
     position: relative;
