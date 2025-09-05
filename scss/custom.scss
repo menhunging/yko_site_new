@@ -44,9 +44,9 @@ body {
 
 .call-form .call-form__inner {
   border: none;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .08);
   //filter: blur(15);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(7px);
   @include after {
     display: none;
   }
@@ -88,11 +88,17 @@ body {
 }
 
 .btn {
+  transition: .3s all;
   &--overDark {
     color: $colorWhite;
     border: solid 1px $colorBlack;
     background-color: $colorBlack;
     padding-bottom: 5px;
+    &:hover,
+    &:active{
+      background-color: #f59e11;;
+      border-color: transparent;
+    }
   }
   &--backspace {
     height: 50px;
@@ -157,6 +163,10 @@ body {
       height: 15px;
       flex: none;
       top: 3px;
+    }
+    &:hover,
+    &:active{
+      background-color: #f59e11;;
     }
   }
 }

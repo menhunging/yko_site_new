@@ -315,6 +315,51 @@ $(document).ready(function () {
     sliders.length && sliderinit();
   }
 
+  if ($(".advantages-slider").length > 0) {
+    const sliders = document.querySelectorAll(".advantages-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 19,
+            centeredSlides: false,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              769: {
+                slidesPerView: 1,
+                spaceBetween: 19,
+              },
+            },
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
   if ($("[data-fancybox]").length > 0) {
     Fancybox.bind("[data-fancybox]", {
       speedIn: 600,
@@ -542,6 +587,29 @@ $(document).ready(function () {
     });
   }
 
+  $('input[name="name"]').on('input', function() {
+    $(this).val($(this).val().replace(/[0-9]/g, ''));
+  });
+
+  let lastScrollTop = 0;
+  const $header = $('header');
+  const hideOffset = 5; // минимальное движение, чтобы сработало скрытие/появление
+
+  $(window).on('scroll', function () {
+    const currentScroll = $(this).scrollTop();
+
+    if (currentScroll === 0) {
+      $header.removeClass('fixed hidden');
+    }
+    else if (currentScroll > lastScrollTop && currentScroll > 50) {
+      $header.removeClass('hidden').addClass('fixed hidden');
+    }
+    else if (currentScroll < lastScrollTop) {
+      $header.addClass('fixed').removeClass('hidden');
+    }
+
+    lastScrollTop = currentScroll;
+  });
   // if ($("[data-aos]").length > 0) {
   //   if ($(window).width() < 1280) {
   //     AOS.init({

@@ -51,6 +51,12 @@
     background-color: $colorWhite;
     border: solid 1px $colorBlack;
     color: $colorBlack;
+    &:hover,
+    &:active{
+      border-color: transparent;
+      background-color: $colorBlack;
+      color: $colorWhite;
+    }
   }
   &--black {
     color: $colorWhite;

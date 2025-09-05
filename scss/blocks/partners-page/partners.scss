@@ -1,6 +1,14 @@
+.partners{
+  @include responsive639{
+    .rustic-slider{
+      .swiper-slide{
+        justify-content: center;
+      }
+    }
+  }
+}
 .partners-page {
   padding: 0;
-
   .faq-section {
     padding-bottom: 100px;
   }

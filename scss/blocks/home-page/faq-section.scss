@@ -4,6 +4,7 @@
   overflow: hidden;
   padding-bottom: 110px;
   padding-top: 90px;
+  position: relative;
   @include responsive1199{
     border-radius: 45px;
     padding-top: 40px;
@@ -17,6 +18,17 @@
   @include responsive639{
     padding-top: 50px;
     padding-bottom: 70px;
+    @include before{
+      background-image: url('./../img/svg/lines.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 1135px;
+      height: 460px;
+      pointer-events: none;
+      right: -275px;
+      bottom: -172px;
+      scale: 0.5;
+    }
   }
   &:last-of-type{
     margin-bottom: 60px;
@@ -28,6 +40,7 @@
     }
     @include responsive639{
       margin-bottom: 63px;
+      overflow: visible;
     }
   }
   .faq-list {

@@ -13,6 +13,14 @@ body {
   }
 
   &.index-page {
+    .main{
+      @include responsive1549{
+        padding-top: 87px;
+      }
+      @include responsive767{
+        padding-top: 70px;
+      }
+    }
     .footer{
       margin-top: -50px;
       @include responsive1199{
@@ -26,11 +34,16 @@ body {
       padding-bottom: 210px;
       &+.call-form{
         margin-bottom: 0;
-        padding-top: 60px;
+        padding-top: 100px;
         overflow: hidden;
         &:before{
           top: unset;
           bottom: 0;
+        }
+      }
+      @include responsive1549{
+        &+.call-form{
+          padding-top: 60px;
         }
       }
       @include responsive1199{
@@ -1089,7 +1102,9 @@ section {
   align-items: flex-start;
   gap: 24px;
   min-height: 492px;
-
+  &.success{
+    align-items: center;
+  }
   @include responsive767 {
     width: 95%;
     padding: 20px;

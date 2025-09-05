@@ -1207,6 +1207,17 @@
     .about-information+.about-information{
       padding-top: 0;
     }
+    .rustic-slider{
+      .swiper-slide{
+        justify-content: center;
+      }
+
+    }
+    .rustic-main{
+      .picture-block picture img{
+        object-position: -240px;
+      }
+    }
   }
 }
 

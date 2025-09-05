@@ -628,7 +628,7 @@ $(document).ready(function () {
       this.maxPosition = 100;
       this.activeThumb = null;
 
-      // Привязка контекста для обработчиков
+      // Привязка контекста
       this.handleMouseUp = this.handleMouseUp.bind(this);
       this.handleTouchEnd = this.handleTouchEnd.bind(this);
       this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -643,42 +643,37 @@ $(document).ready(function () {
       this.track = this.container.querySelector(".price-range__track");
       this.progress = this.container.querySelector(".price-range__progress");
       this.minWrapper = this.container.querySelector(
-        ".price-range__thumb-wrapper--min"
+          ".price-range__thumb-wrapper--min"
       );
       this.maxWrapper = this.container.querySelector(
-        ".price-range__thumb-wrapper--max"
+          ".price-range__thumb-wrapper--max"
       );
       this.minThumb = this.minWrapper.querySelector(".price-range__thumb");
       this.maxThumb = this.maxWrapper.querySelector(".price-range__thumb");
       this.minValueDisplay = this.minWrapper.querySelector(
-        ".price-range__thumb-value"
+          ".price-range__thumb-value"
       );
       this.maxValueDisplay = this.maxWrapper.querySelector(
-        ".price-range__thumb-value"
+          ".price-range__thumb-value"
       );
       this.minInput = this.container.querySelector('input[name="min_price"]');
       this.maxInput = this.container.querySelector('input[name="max_price"]');
     }
 
     initEvents() {
-      this.minThumb.addEventListener("mousedown", (e) =>
-        this.startDrag("min", e)
-      );
-      this.maxThumb.addEventListener("mousedown", (e) =>
-        this.startDrag("max", e)
-      );
-      this.minThumb.addEventListener("touchstart", (e) =>
-        this.startDrag("min", e)
-      );
-      this.maxThumb.addEventListener("touchstart", (e) =>
-        this.startDrag("max", e)
-      );
-      this.minThumb.addEventListener("keydown", (e) =>
-        this.handleKeyDown("min", e)
-      );
-      this.maxThumb.addEventListener("keydown", (e) =>
-        this.handleKeyDown("max", e)
-      );
+      // Мышь
+      this.minThumb.addEventListener("mousedown", (e) => this.startDrag("min", e));
+      this.maxThumb.addEventListener("mousedown", (e) => this.startDrag("max", e));
+
+      // Касание — важно: passive: false, чтобы можно было вызвать preventDefault
+      this.minThumb.addEventListener("touchstart", (e) => this.startDrag("min", e), { passive: false });
+      this.maxThumb.addEventListener("touchstart", (e) => this.startDrag("max", e), { passive: false });
+
+      // Клавиатура
+      this.minThumb.addEventListener("keydown", (e) => this.handleKeyDown("min", e));
+      this.maxThumb.addEventListener("keydown", (e) => this.handleKeyDown("max", e));
+
+      // Клик по треку
       this.track.addEventListener("click", (e) => this.handleTrackClick(e));
     }
 
@@ -688,14 +683,14 @@ $(document).ready(function () {
       } else {
         const formatted = value.toFixed(1);
         return formatted.endsWith(".0")
-          ? `${formatted.split(".")[0]} млн.`
-          : `${formatted} млн.`;
+            ? `${formatted.split(".")[0]} млн.`
+            : `${formatted} млн.`;
       }
     }
 
     getValueFromPosition(position) {
       const value =
-        this.minValue + (this.maxValue - this.minValue) * (position / 100);
+          this.minValue + (this.maxValue - this.minValue) * (position / 100);
       return Math.round(value * 10) / 10;
     }
 
@@ -704,15 +699,15 @@ $(document).ready(function () {
     }
 
     startDrag(thumb, e) {
-      e.preventDefault();
+      e.preventDefault(); // ← предотвращаем скролл/зум на мобильных
       this.activeThumb = thumb;
       this[`${thumb}Thumb`].classList.add("price-range__thumb--active");
 
-      // Добавляем обработчики
+      // Добавляем глобальные обработчики
       document.addEventListener("mouseup", this.handleMouseUp);
       document.addEventListener("touchend", this.handleTouchEnd);
       document.addEventListener("mousemove", this.handleMouseMove);
-      document.addEventListener("touchmove", this.handleTouchMove);
+      document.addEventListener("touchmove", this.handleTouchMove, { passive: false });
     }
 
     handleMouseUp() {
@@ -728,14 +723,15 @@ $(document).ready(function () {
     }
 
     handleTouchMove(e) {
-      this.drag(e.changedTouches[0]);
+      e.preventDefault(); // ← критично: предотвращаем скролл страницы при перетаскивании
+      const touch = e.changedTouches[0];
+      this.drag(touch);
     }
 
     drag(e) {
       if (!this.activeThumb) return;
 
-      e.preventDefault();
-      const clientX = e.clientX;
+      const clientX = e.clientX; // ← работает и для MouseEvent, и для Touch
       this.moveThumb(clientX);
     }
 
@@ -743,6 +739,7 @@ $(document).ready(function () {
       const rect = this.track.getBoundingClientRect();
       let newPos = ((clientX - rect.left) / rect.width) * 100;
 
+      // Ограничиваем позицию и не даём ползункам пересекаться
       if (this.activeThumb === "min") {
         newPos = Math.max(0, Math.min(newPos, this.maxPosition - 5));
         this.minPosition = newPos;
@@ -762,27 +759,27 @@ $(document).ready(function () {
         document.removeEventListener("mousemove", this.handleMouseMove);
         document.removeEventListener("touchmove", this.handleTouchMove);
 
-        this[`${this.activeThumb}Thumb`].classList.remove(
-          "price-range__thumb--active"
-        );
+        this[`${this.activeThumb}Thumb`].classList.remove("price-range__thumb--active");
         this.activeThumb = null;
       }
     }
 
     handleTrackClick(e) {
+      e.preventDefault(); // ← предотвращаем возможный скролл
       const rect = this.track.getBoundingClientRect();
       const clickPos = ((e.clientX - rect.left) / rect.width) * 100;
 
+      // Определяем, какой ползунок ближе к клику
       if (
-        Math.abs(clickPos - this.minPosition) <
-        Math.abs(clickPos - this.maxPosition)
+          Math.abs(clickPos - this.minPosition) <
+          Math.abs(clickPos - this.maxPosition)
       ) {
         this.activeThumb = "min";
-        this.moveThumb(e.clientX);
       } else {
         this.activeThumb = "max";
-        this.moveThumb(e.clientX);
       }
+
+      this.moveThumb(e.clientX);
     }
 
     handleKeyDown(thumb, e) {
@@ -818,19 +815,17 @@ $(document).ready(function () {
           return;
       }
 
+      // Ограничиваем диапазон
       newValue = Math.max(this.minValue, Math.min(this.maxValue, newValue));
 
+      // Не даём ползункам пересекаться
       if (thumb === "min") {
-        newValue = Math.min(
-          newValue,
-          this.getValueFromPosition(this.maxPosition) - 0.5
-        );
+        const maxVal = this.getValueFromPosition(this.maxPosition);
+        newValue = Math.min(newValue, maxVal - 0.5);
         this.minPosition = this.getPositionFromValue(newValue);
       } else {
-        newValue = Math.max(
-          newValue,
-          this.getValueFromPosition(this.minPosition) + 0.5
-        );
+        const minVal = this.getValueFromPosition(this.minPosition);
+        newValue = Math.max(newValue, minVal + 0.5);
         this.maxPosition = this.getPositionFromValue(newValue);
       }
 
@@ -851,13 +846,14 @@ $(document).ready(function () {
       this.minInput.value = currentMin;
       this.maxInput.value = currentMax;
 
+      // Уведомляем внешний код об изменении
       this.container.dispatchEvent(
-        new CustomEvent("change", {
-          detail: {
-            min: currentMin,
-            max: currentMax,
-          },
-        })
+          new CustomEvent("change", {
+            detail: {
+              min: currentMin,
+              max: currentMax,
+            },
+          })
       );
     }
   }
