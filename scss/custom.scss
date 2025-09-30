@@ -1,10 +1,6 @@
 body {
   overflow-x: hidden;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-  
+
   &:not(.index-page) .main {
     padding-top: 137px;
     
