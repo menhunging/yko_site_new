@@ -250,8 +250,7 @@
 
 a.footer__text {
   @include hover {
-    background-color: $colorBlack;
-    color: $colorWhite;
+    opacity: .7;
   }
 }
 
@@ -259,12 +258,10 @@ a.footer__text {
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  border: solid 1px $colorBlack;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 22px 7px;
   transition: all 0.3s;
 
   @include responsive1549 {

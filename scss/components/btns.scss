@@ -3,7 +3,6 @@
   outline: none;
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0;
   position: relative;
   color: $colorBlack;
   border: 1px solid transparent;
@@ -17,7 +16,7 @@
   line-height: 100%;
   letter-spacing: 0em;
   text-align: center;
-  padding: 0px 7px 5px;
+  padding: 0px 7px;
   border-radius: 50px;
   font-variant-ligatures: none;
   font-family: $fontMain;

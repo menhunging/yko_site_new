@@ -7,7 +7,7 @@
   opacity: 1;
   backdrop-filter: blur(16px);
   transition: all 0.3s;
-
+  border: 1px solid $colorBlack;
   @include responsive1549 {
     background-color: $colorWhite;
   }
@@ -25,33 +25,7 @@
     padding: 9px 9px 0;
   }
 
-  @include before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='738' height='699' viewBox='0 0 738 699' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cforeignObject x='-16.8568' y='-16.8568' width='771.714' height='732.714'%3e%3cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(8.43px);clip-path:url(%23bgblur_0_124_651_clip_path);height:100%25;width:100%25'%3e%3c/div%3e%3c/foreignObject%3e%3crect data-figma-bg-blur-radius='16.8568' x='0.5' y='0.5' width='737' height='698' rx='49.5' fill='white' stroke='url(%23paint0_linear_124_651)'/%3e%3cdefs%3e%3cclipPath id='bgblur_0_124_651_clip_path' transform='translate(16.8568 16.8568)'%3e%3crect x='0.5' y='0.5' width='737' height='698' rx='49.5'/%3e%3c/clipPath%3e%3clinearGradient id='paint0_linear_124_651' x1='311.396' y1='-23.8296' x2='266.473' y2='696.197' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23212121'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
 
-    background: linear-gradient(183.77deg, #212121 0.37%, rgba(255, 255, 255, 0) 97.39%);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    padding: 1px;
-    border-radius: 50px;
-
-
-    @include responsive1199 {
-      border-radius: 37px;
-    }
-    @include responsive767{
-      border-radius: 24px;
-    }
-    @include responsive639{
-      border-radius: 25px;
-    }
-  }
 
   p {
     max-width: 473px;

@@ -931,26 +931,11 @@
       background-color: white;
       box-sizing: border-box;
       border-radius: 50px;
+      border: 1px solid $colorBlack;
       padding: 20px 20px 40px;
       position: relative;
       height: 100%;
       margin-left: 20px;
-      @include before {
-        transition: all 0.3s;
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
-        border-radius: 50px;
-        user-select: none;
-        pointer-events: none;
-        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-        mask-composite: exclude;
-        padding: 1px;
-      }
       @include responsive1549{
         margin-left: 0;
       }

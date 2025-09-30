@@ -109,7 +109,7 @@
     }
     &-text {
       &:not(.news-slider-text-detail){
-        margin: 87px 0 60px;
+        margin: 40px 0 60px;
         padding: 83px 0 130px;
         @include responsive1199{
           margin-top: 50px;
@@ -357,7 +357,6 @@
         }
         &.item-current {
           font-size: 30px;
-          font-weight: 700;
           color: #F59E11;
           pointer-events: none;
           user-select: none;

@@ -235,7 +235,7 @@ section {
   padding: 35px 0 50px 0;
 
   @include responsive1549 {
-    padding: 50px 0;
+    padding: 35px 0;
   }
 
   @include responsive1199 {
@@ -1009,7 +1009,7 @@ section {
     border-radius: 50px;
     background-color: $colorWhite;
     font-size: 16px;
-    line-height: 12px;
+    line-height: 16px;
     white-space: nowrap;
     @include responsive1199{
       padding: 16px 39px;
