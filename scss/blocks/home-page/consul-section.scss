@@ -170,7 +170,7 @@
 .consul-section__form {
   background: $colorBlack-a3;
   backdrop-filter: blur(13px);
-  border: solid 1px $colorWhite;
+  //border: solid 1px $colorWhite;
   border-radius: 65px;
   display: grid;
   align-items: center;
@@ -193,7 +193,6 @@
       padding: 0 40px;
       border-radius: 60px;
       font-size: 20px;
-      padding-bottom: 7px;
 
       @include responsive1549 {
         height: 56px;
@@ -225,7 +224,6 @@
   .btn {
     height: 76px;
     font-size: 20px;
-    padding-bottom: 7px;
     width: 100%;
     max-width: 100%;
 

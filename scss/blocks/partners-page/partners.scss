@@ -368,7 +368,7 @@
       width: 100%;
       height: 100%;
       backdrop-filter: blur(3px);
-      background-color: $colorBlack-a8;
+      background-color: $colorBlack-a5;
       z-index: -1;
       border-radius: 65px;
       @include responsive1199{
@@ -382,34 +382,6 @@
       }
     }
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      margin: -$border; /* !importanté */
-      border-radius: inherit; /* !importanté */
-      background: linear-gradient(
-        to bottom,
-        #fff 0%,
-        rgba(255, 255, 255, 0.11) 70%,
-        rgba(255, 255, 255, 0.07) 75%,
-        rgba(255, 255, 255, 0.05) 100%
-      );
-      border-radius: 65px;
-      @include responsive1199{
-        border-radius: 30px;
-      }
-      @include responsive767 {
-        border-radius: 19px;
-      }
-      @include responsive639 {
-        border-radius: 47px;
-      }
-    }
   }
 
   .adv-partner__title {

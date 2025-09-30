@@ -30,7 +30,6 @@
   }
 
   .about-main__numbers {
-    border-top: solid 1px $colorWhite;
     border-radius: 40px;
     backdrop-filter: blur(5px);
     background-color: $colorBlack-a5;
@@ -242,7 +241,6 @@
 
 .awards-block {
   width: 100%;
-  border-top: solid 1px $colorWhite;
   border-radius: 40px;
   backdrop-filter: blur(13px);
   background-color: $colorBlack-a5;

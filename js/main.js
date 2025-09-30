@@ -478,8 +478,7 @@ $(document).ready(function () {
         let navPrev = undefined;
 
         if (!slider.swiper) {
-          navNext = $(slider).find(".swiperBtnNext")[0];
-          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
 
           mySwipers[index] = new Swiper(slider, {
             slidesPerView: 3,
@@ -498,10 +497,7 @@ $(document).ready(function () {
                 spaceBetween: 19,
               },
             },
-            navigation: {
-              nextEl: navNext && navNext,
-              prevEl: navPrev && navPrev,
-            },
+
           });
         } else {
           return;

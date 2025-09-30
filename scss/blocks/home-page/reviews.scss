@@ -289,7 +289,7 @@
   }
   @include responsive639{
     .container{
-      padding-bottom: 70px;
+      //padding-bottom: 70px;
     }
     .swiper-controls{
       left: 50%;
@@ -297,6 +297,7 @@
       top: unset;
       bottom: 0;
       right: unset;
+      display: none;
     }
   }
 }
