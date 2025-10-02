@@ -26,7 +26,32 @@
   }
 
 
-
+.logo-simple{
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  width: 100px;
+  top: 24px;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  @include responsive1199{
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  @include responsive767{
+    left: 12px;
+    top: 12px;
+  }
+}
   p {
     max-width: 473px;
     @include responsive1199{

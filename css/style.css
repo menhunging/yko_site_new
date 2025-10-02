@@ -5861,6 +5861,12 @@ h4,
     left: unset;
   }
 }
+.reviews.nobg .swiper-controls {
+  position: relative;
+  top: unset;
+  right: unset;
+  align-items: center;
+}
 .reviews .container {
   position: relative;
 }
@@ -10710,6 +10716,36 @@ body:not(.index-page) .main {
   .village-item {
     border-radius: 25px;
     padding: 9px 9px 0;
+  }
+}
+.village-item .logo-simple {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  width: 100px;
+  top: 24px;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+@media (max-width: 1200px) {
+  .village-item .logo-simple {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+  .village-item .logo-simple img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .village-item .logo-simple {
+    left: 12px;
+    top: 12px;
   }
 }
 .village-item p {
