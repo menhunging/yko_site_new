@@ -94,7 +94,9 @@
 .rustic-slider {
   overflow: visible;
   height: 100%;
-
+  .slider-nav{
+    display: none;
+  }
   @media (max-width: 1800px) {
     padding: 0 90px;
   }
@@ -110,7 +112,14 @@
   @include responsive767 {
     padding: 0;
   }
-
+  @include responsive639{
+    .slider-nav{
+      display: block;
+    }
+    .swiperBtn{
+      display: none;
+    }
+  }
   .swiper-slide {
     overflow: visible;
     height: auto;

@@ -126,7 +126,7 @@
 .header-bottom {
   grid-column: 2/4;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 
   .header-bottom__controls {
@@ -243,16 +243,36 @@
   }
 
   .sub-menu {
-    display: none;
-
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all;
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0;
+    grid-template-columns: repeat(3,1fr);
+    gap: 14px 100px;
+    padding: 17px 33px 25px;
+    border-radius: 0 0 20px 20px;
+    @include responsive1199{
+      top: calc(100% + 15px);
+      gap: 14px 30px;
+    }
+    @include responsive767{
+      top: calc(100% + 9px);
+    }
     @include responsive639 {
       display: grid;
       grid-template-columns: 50% 40%;
       margin-top: 13px;
-
       justify-content: space-between;
       gap: 13px;
       row-gap: 20px;
+      padding: 0;
+      top: unset;
+      position: relative;
+      visibility: visible;
+      opacity: 1;
     }
 
     li {
@@ -266,14 +286,55 @@
       color: $colorGray;
       font-size: 14px;
       line-height: 16px;
+      white-space: nowrap;
+      &:hover{
+        color: $colorYellow;
+      }
     }
   }
-
+  &>ul>li{
+    position: relative;
+    height: 100%;
+    &>a{
+      height: 100%;
+    }
+    @media(min-width:640px){
+      &:hover{
+        &>a{
+          color: $colorYellow;
+          &.arrow{
+            &:after{
+              transform: rotate(-180deg);
+            }
+          }
+        }
+        .sub-menu{
+          opacity: 1;
+          visibility: visible;
+          background-color: $colorWhite;
+          &::before{
+            content: '';
+            position: absolute;
+            height: 22px;
+            left: 0;
+            right: 0;
+            top: -22px;
+            @include responsive767{
+              top: -9px;
+              height: 9px;
+            }
+            @include responsive639{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
   a {
     display: flex;
     align-items: center;
     gap: 8px;
-    @include text-decoration-hover($colorBlack);
 
     @include responsive1549 {
       font-size: 14px;
@@ -302,7 +363,7 @@
         position: relative;
         width: 10px;
         height: 10px;
-        transform: translateY(2px);
+        transition: .3s all;
       }
     }
   }

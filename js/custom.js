@@ -1,12 +1,21 @@
 $(document).ready(function () {
   if ($(".rustic-slider").length > 0) {
+    let lastIndex;
     const swiper = new Swiper(".rustic-slider", {
       slidesPerView: 1,
       spaceBetween: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
       navigation: {
         prevEl: ".rustic-slider .swiperBtnPrev",
         nextEl: ".rustic-slider .swiperBtnNext",
       },
+      pagination: {
+        el: $('.rustic-slider .slider-nav').find('.slider-dots')[0],
+      },
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -15,6 +24,7 @@ $(document).ready(function () {
         768: {
           slidesPerView: 1,
           spaceBetween: 120,
+          autoplay: false,
         },
         1200: {
           slidesPerView: 1,
@@ -33,17 +43,49 @@ $(document).ready(function () {
           spaceBetween: 180,
         },
       },
+
+      on: {
+        activeIndexChange: function(q) {
+          var $zeroEl = $('.rustic-slider .slider-nav'),
+              $activeBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+1)+')'),
+              $prevActiveBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+2)+')'),
+              activeBulPos = $activeBull.position().left;
+          if($prevActiveBull.length > 0) {
+            var prevActiveBulPos = $prevActiveBull.position().left;
+          }
+
+          if(activeBulPos > center) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
+          }
+          if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+          }
+          lastIndex = q.activeIndex+1;
+        }
+      }
     });
+    if($('.rustic-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').length > 0) {
+      var center = $('.rustic-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').position().left;
+    }
   }
 
   if ($(".contruction-slider").length > 0) {
+    let lastIndex;
     const swiper = new Swiper(".contruction-slider", {
       slidesPerView: 1,
       spaceBetween: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
       navigation: {
         prevEl: ".contruction-slider .swiperBtnPrev",
         nextEl: ".contruction-slider .swiperBtnNext",
       },
+      pagination: {
+        el: $('.contruction-slider .slider-nav').find('.slider-dots')[0],
+      },
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -52,6 +94,7 @@ $(document).ready(function () {
         768: {
           slidesPerView: 1,
           spaceBetween: 120,
+          autoplay: false,
         },
         1200: {
           slidesPerView: 1,
@@ -70,7 +113,29 @@ $(document).ready(function () {
           spaceBetween: 180,
         },
       },
+      on: {
+        activeIndexChange: function(q) {
+          var $zeroEl = $('.contruction-slider .slider-nav'),
+              $activeBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+1)+')'),
+              $prevActiveBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+2)+')'),
+              activeBulPos = $activeBull.position().left;
+          if($prevActiveBull.length > 0) {
+            var prevActiveBulPos = $prevActiveBull.position().left;
+          }
+
+          if(activeBulPos > center) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
+          }
+          if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+          }
+          lastIndex = q.activeIndex+1;
+        }
+      }
     });
+    if($('.contruction-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').length > 0) {
+      var center = $('.contruction-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').position().left;
+    }
   }
 
   if ($(".news-slider:not(.news-slider-detail):not(.news-slider-text-detail):not(#sales-news)").length > 0) {
