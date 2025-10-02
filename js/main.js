@@ -100,7 +100,7 @@ $(document).ready(function () {
             $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
           }
           if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
-            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 15 - center;
           }
           lastIndex = q.activeIndex+1;
         }
@@ -250,7 +250,7 @@ $(document).ready(function () {
             $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
           }
           if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
-            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 15 - center;
           }
           lastIndex = q.activeIndex+1;
         }
