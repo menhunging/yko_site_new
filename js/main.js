@@ -43,12 +43,21 @@ $(document).ready(function () {
   }
 
   if ($(".grettings-slider").length > 0) {
+    let lastIndex;
     const swiper = new Swiper(".grettings-slider", {
       slidesPerView: 2,
       spaceBetween: 329,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
       navigation: {
         prevEl: ".grettings-slider .swiperBtnPrev",
         nextEl: ".grettings-slider .swiperBtnNext",
+      },
+      pagination: {
+        el: $('.grettings-slider .slider-nav').find('.slider-dots')[0],
       },
       breakpoints: {
         0: {
@@ -58,6 +67,7 @@ $(document).ready(function () {
         768: {
           slidesPerView: 1,
           spaceBetween: 20,
+          autoplay: false
         },
         1200: {
           slidesPerView: 2,
@@ -76,7 +86,29 @@ $(document).ready(function () {
           spaceBetween: 160,
         },
       },
+      on: {
+        activeIndexChange: function(q) {
+          var $zeroEl = $('.grettings-slider .slider-nav'),
+              $activeBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+1)+')'),
+              $prevActiveBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+2)+')'),
+              activeBulPos = $activeBull.position().left;
+          if($prevActiveBull.length > 0) {
+            var prevActiveBulPos = $prevActiveBull.position().left;
+          }
+
+          if(activeBulPos > center) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
+          }
+          if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+          }
+          lastIndex = q.activeIndex+1;
+        }
+      }
     });
+    if($('.grettings-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').length > 0) {
+      var center = $('.grettings-slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').position().left;
+    }
   }
 
   if ($(".our-villages-slider").length > 0) {
@@ -176,13 +208,22 @@ $(document).ready(function () {
     });
   }
 
+
+
   if ($(".technologies__slider").length > 0) {
+    let lastIndex;
     const swiper = new Swiper(".technologies__slider", {
       slidesPerView: 2,
       spaceBetween: 19,
+      autoplay:true,
+      speed:500,
+      autoplaySpeed:3000,
       navigation: {
         prevEl: ".technologies__slider .swiperBtnPrev",
         nextEl: ".technologies__slider .swiperBtnNext",
+      },
+      pagination: {
+        el: $('.technologies__slider .slider-nav').find('.slider-dots')[0],
       },
       breakpoints: {
         0: {
@@ -194,17 +235,32 @@ $(document).ready(function () {
           slidesPerView: 1.5,
           spaceBetween: 15,
         },
-        768: {
-          slidesPerView: 1.65,
-          spaceBetween: 19,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 19,
-        },
       },
+      on: {
+        activeIndexChange: function(q) {
+          var $zeroEl = $('.technologies__slider .slider-nav'),
+              $activeBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+1)+')'),
+              $prevActiveBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+2)+')'),
+              activeBulPos = $activeBull.position().left;
+          if($prevActiveBull.length > 0) {
+            var prevActiveBulPos = $prevActiveBull.position().left;
+          }
+
+          if(activeBulPos > center) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
+          }
+          if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 13 - center;
+          }
+          lastIndex = q.activeIndex+1;
+        }
+      }
     });
   }
+  if($('.technologies__slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').length > 0) {
+    var center = $('.technologies__slider .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').position().left;
+  }
+
 
   if ($(".partners-slider").length > 0) {
     const swiper = new Swiper(".partners-slider", {

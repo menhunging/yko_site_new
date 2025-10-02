@@ -23,15 +23,15 @@
     //display: grid;
     //grid-template-columns: repeat(4, 1fr);
     display: flex;
-    gap: 87px;
+    flex-wrap: wrap;
+    gap: 19px;
 
     @include responsive1549 {
       //grid-template-columns: repeat(2, 1fr);
-      gap: 66px;
-    }
 
-    @include responsive1023{
-      gap: 30px;
+    }
+    @media(max-width: 1180px){
+      gap: 30px 16px;
     }
     @include responsive767 {
       //grid-template-columns: 1fr;
@@ -39,7 +39,7 @@
     }
     @include responsive639{
       flex-wrap: wrap;
-      gap: 50px;
+      gap: 30px;
     }
   }
 
@@ -51,62 +51,41 @@
     font-size: 16px;
     line-height: 24px;
     color: $colorGray;
-
+    background-color: $colorWhite;
+    padding: 60px 30px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: calc(25% - 15px);
     @include responsive1199 {
       font-size: 14px;
       line-height: 16px;
       gap: unset;
-      svg{
-        width: 24px;
-        height: 24px;
-      }
+      border-radius: 30px;
+      padding: 43px 25px;
     }
-    @include responsive1023{
-      font-size: 10px;
-      line-height: 11px;
-      svg{
-        width: 16px;
-        height: 16px;
-      }
+    @media(max-width: 1180px){
+      max-width: calc(50% - 8px);
+      padding: 43px 32px;
     }
     @include responsive639 {
       font-size: 16px;
       line-height: 18px;
-      svg{
-        width: 32px;
-        height: 32px;
-      }
+      padding: 30px 20px;
+      max-width: 100%;
     }
   }
-
   .adv-main__name {
     font-weight: 400;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 40px;
     color: $colorBlack;
-    margin-top: 10px;
-
     @include responsive1549 {
-      font-size: 30px;
-      line-height: 35px;
+      font-size: 22px;
+      line-height: 26px;
     }
-
-    @include responsive1199 {
-      font-size: 26px;
-      line-height: 25px;
-      margin-top: 24px;
-    }
-
-    @include responsive1023 {
-      font-size: 18px;
-      line-height: 16px;
-      margin-top: 18px;
-    }
-
     @include responsive639 {
       font-size: 20px;
-      line-height: 20px;
-      margin-top: 20px;
+      line-height: 23px;
       padding-right: 50px;
     }
   }
@@ -117,12 +96,10 @@
       margin-top: 20px;
     }
     @include responsive1023{
-
       margin-top: 10px;
     }
     @include responsive639 {
       margin-top: 20px;
-      padding-right: 20px;
     }
   }
 }

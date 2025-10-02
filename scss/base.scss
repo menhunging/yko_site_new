@@ -401,19 +401,22 @@ section {
   z-index: 5;
 
   .swiper-pagination-bullet {
-    width: 16px;
-    height: 1px;
+    width: 30px;
+    min-width: 30px;
+    height: 9px;
     opacity: 1;
-    border-radius: 0;
     margin: 0 !important;
     flex: 1;
     position: relative;
     transition: all 0.3s;
-    background-color: rgba(15, 15, 15, 0.2);
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
   }
-
   .swiper-pagination-bullet-active {
-    background-color: $colorBlack;
+    background-color: $colorWhite !important;
+    min-width: 55px;
+    backdrop-filter: none;
   }
 }
 

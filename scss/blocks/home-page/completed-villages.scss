@@ -140,7 +140,9 @@
         height: 415px;
         left: -60px;
       }
-
+      @media(max-width: 1175px){
+        width: 450px;
+      }
       @include responsive1023 {
         width: 370px;
       }

@@ -30,7 +30,9 @@
 .grettings-slider {
   overflow: visible;
   height: 665px;
-
+  .slider-nav{
+    display: none;
+  }
   @media (max-width: 1800px) {
     padding: 0 90px;
   }
@@ -41,12 +43,16 @@
 
   @include responsive767 {
     height: 472px;
-  }
-
-  @include responsive767 {
     padding: 0;
   }
-
+  @include responsive639{
+    .swiperBtn{
+      display: none;
+    }
+    .slider-nav{
+      display: block;
+    }
+  }
   .swiper-wrapper {
   }
 
@@ -128,6 +134,9 @@
     left: 0;
     z-index: -1;
     border-radius: 50px;
+    @include responsive639{
+      border-radius: 26px;
+    }
   }
 
 
