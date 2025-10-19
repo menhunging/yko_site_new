@@ -288,3 +288,60 @@ body {
     display: none;
   }
 }
+.landing-title{
+  font-family: Cygre;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $colorBlack;
+  @media(max-width: 767px){
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+.landing-text{
+  font-family: Cygre;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  @media(max-width: 767px){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.marquee {
+  overflow: hidden;
+  &__item {
+    white-space: nowrap;
+    margin: 0 40px 0 0;
+    transition: .3s;
+    position: relative;
+  }
+  &__wrapper {
+    display: flex;
+    width: max-content;
+    animation: marquee 100s linear infinite;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    @media(max-width: 48rem) {
+      animation: marquee 50s linear infinite;
+    }
+  }
+
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-50%);
+  }
+}
+
+.section-gray{
+  background-color: $colorGrayLight;
+}

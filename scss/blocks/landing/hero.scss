@@ -1,0 +1,60 @@
+.hero-block{
+  background-color: $land;
+  padding: 0;
+  &__slider{
+    background-image: url("./../img/land/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  &__slide{
+    padding-top: 179px;
+    padding-bottom: 191px;
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    max-width: 640px;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    max-width: 690px;
+  }
+  &__advantages{
+    display: flex;
+    background-color: $colorWhite;
+    gap: 45px;
+    border-radius: 50px;
+    max-width: 685px;
+    margin-top: 45px;
+    padding: 45px 30px;
+  }
+  &__advantage{
+    width: 100%;
+    max-width: calc(33.33% - 30px);
+    p{
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 20px;
+      letter-spacing: 0;
+      margin-top: 20px;
+    }
+  }
+  .consul-section__form{
+    border-radius: 0;
+    background-color: transparent;
+    padding: 107px 0 109px;
+    color: $colorWhite;
+    .landing-title{
+      color: $colorWhite;
+    }
+  }
+
+}

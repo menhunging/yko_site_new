@@ -1,0 +1,51 @@
+@import "hero";
+@import "parallax";
+@import "picture-slider";
+@import "reviews";
+@import "ways";
+@import "full-pic";
+@import "special";
+@import "tech";
+@import "more-form";
+
+
+
+.landing-page{
+  .container{
+    position: relative;
+  }
+  .projects .swiper-slide{
+    background-color: $colorGrayLight;
+  }
+  .reviews,
+  .projects__wrapper,
+  .news{
+    background-color: $colorWhite;
+    &:before{
+      display: none;
+    }
+  }
+  .geoplan-section__body-item {
+    z-index: 3;
+    .container{
+      position: absolute;
+    }
+  }
+  .village-page .map{
+    //margin-top: 0;
+    margin-top: -289px;
+  }
+  .projects{
+    &-section__head{
+      .landing-text{
+        color: $colorGray;
+      }
+    }
+    &-navigation{
+      margin-top: 33px;
+      &__item{
+        background-color: $colorGrayLight;
+      }
+    }
+  }
+}

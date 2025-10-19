@@ -1,0 +1,77 @@
+.reviews{
+  &__slider{
+    margin-top: 67px;
+    overflow: visible;
+  }
+  &-slide{
+    border-radius: 50px;
+    padding: 27px 27px 54px 58px;
+    background-color: $colorGrayLight;
+    opacity: .2;
+    &.swiper-slide-next,
+    &.swiper-slide-active{
+      opacity: 1;
+    }
+    &__top{
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    &__left{
+
+    }
+    &__name{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 39px;
+      line-height: 42px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    &__info{
+      display: flex;
+      background-color: $colorWhite;
+      gap: 8px;
+      align-items: center;
+      padding: 15px 12px;
+      border-radius: 15px;
+      margin-top: 37px;
+    }
+    &__date{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 23px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    &__rate{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #8E8E8E;
+      margin-left: auto;
+    }
+    &__right{
+      border-radius: 40px;
+      height: 230px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text{
+      color: #8E8E8E;
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0;
+      margin-top: 38px;
+    }
+  }
+}

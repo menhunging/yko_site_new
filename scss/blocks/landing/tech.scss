@@ -1,0 +1,87 @@
+.technologia{
+  background-color: $land;
+  border-radius: 60px;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+  .consul-section__form{
+    border-radius: 0;
+    background-color: transparent;
+    color: $colorWhite;
+    padding: 137px 0 74px;
+  }
+  &-controls{
+    display: flex;
+    gap: 25px;
+    position: absolute;
+    bottom: 37px;
+    right: 0;
+    .swiperBtn{
+      position: relative;
+      left: unset;
+      right: unset;
+      top: unset;
+      transform: translateY(0);
+    }
+  }
+  &__block{
+    min-height: 849px;
+    background-image: url('./../img/land/tech.png');
+    background-position: left;
+    background-size: cover;
+    padding-top: 73px;
+    display: flex;
+    flex-direction: column;
+    .container{
+      flex-grow: 1;
+    }
+  }
+  .landing-title{
+    max-width: 530px;
+    text-align: right;
+    margin-left: auto;
+  }
+  &-slider{
+    max-width: 567px;
+    margin-left: auto;
+    margin-right: 0;
+    overflow: visible;
+    margin-top: 126px;
+    position: relative;
+  }
+  &-slide{
+    padding: 32px 70px 32px 34px;
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    min-height: 340px;
+    color: $colorWhite;
+    &__name{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 39px;
+      line-height: 42px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    &__text{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      margin-top: 40px;
+      max-width: 336px;
+    }
+    &.swiper-slide{
+      opacity: 0;
+      transition: .5s;
+    }
+    &.swiper-slide-next{
+      transform: rotate(15deg) translate(50px, 50px);
+    }
+    &.swiper-slide-next,
+    &.swiper-slide-active{
+      opacity: 1;
+    }
+  }
+}

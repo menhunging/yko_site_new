@@ -1,0 +1,36 @@
+.parallax{
+  padding-top: 103px;
+  padding-bottom: 100px;
+  .landing-text{
+    margin-top: 23px;
+    color: #5D5D5D;
+    margin-bottom: 50px;
+  }
+  &-item{
+    margin-top: 24px;
+    min-height: 549px;
+    height: 549px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+    border-radius: 60px;
+    &+.parallax-item{
+      margin-top: 30px;
+    }
+  }
+  &-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -190px;
+    transform: translate(0,0);
+    will-change: transform;
+    min-width: 100%;
+    min-height: 120%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  &-wrap{
+    pointer-events: none;
+  }
+}
