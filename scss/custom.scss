@@ -345,3 +345,18 @@ body {
 .section-gray{
   background-color: $colorGrayLight;
 }
+
+.visible-desktop{
+  display: block;
+}
+.visible-mobile{
+  display: none;
+}
+@media(max-width: 767px){
+  .visible-desktop{
+    display: none;
+  }
+  .visible-mobile{
+    display: block;
+  }
+}

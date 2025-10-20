@@ -31,7 +31,24 @@
     top: 17px;
   }
   @media(max-width: 767px){
-
+    position: relative;
+    border-radius: 25px;
+    height: 400px;
+    &__info{
+      font-size: 23px;
+      line-height: 26px;
+      min-height: 74px;
+      text-align: center;
+      justify-content: center;
+      padding: 11px 16px;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-radius: 25px;
+    }
+    &+.picture-slide{
+      margin-top: 15px;
+    }
   }
 }
 .next,.prev{
@@ -96,5 +113,13 @@
   .landing-text{
     margin-top: 41px;
     color: #5D5D5D;
+  }
+  @media(max-width: 767px){
+    border-radius: 30px;
+    padding-top: 26px;
+    padding-bottom: 88px;
+    .pictures{
+      margin-top: 28px;
+    }
   }
 }

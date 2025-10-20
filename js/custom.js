@@ -95,8 +95,8 @@ $(document).ready(function () {
         let navPrev = undefined;
 
         if (!slider.swiper) {
-          navNext = $(slider).closest('section').find(".full-pic__slider .swiperBtnNext")[0];
-          navPrev = $(slider).closest('section').find(".full-pic__slider .swiperBtnPrev")[0];
+          navNext = $(slider).closest('section').find(".swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find(".swiperBtnPrev")[0];
 
           mySwipers[index] = new Swiper(slider, {
             slidesPerView: 1,
@@ -237,6 +237,25 @@ $(document).ready(function () {
           slidesPerView: 1,
           spaceBetween: 120,
           autoplay: false,
+        },
+      },
+    });
+  }
+
+  if ($(".parallax-slider .swiper").length > 0) {
+
+    const swiper = new Swiper(".parallax-slider .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 500,
+      navigation: {
+        prevEl: ".parallax-slider .swiperBtnPrev",
+        nextEl: ".parallax-slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
         },
       },
     });
