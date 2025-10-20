@@ -1,0 +1,59 @@
+.ways{
+  background-color: $colorGrayLight;
+  border-radius: 60px;
+  padding-top: 215px;
+  padding-bottom: 125px;
+  margin-top: -135px;
+  position: relative;
+  z-index: 2;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 35px;
+  }
+  .landing{
+    &-text{
+      color: $colorGray;
+      margin-top: 23px;
+    }
+  }
+  &__left{
+    width: 100%;
+    max-width: 685px;
+    border: 1px solid ;
+    border-radius: 50px;
+    background-color: $colorWhite;
+    padding: 36px 93px 58px;
+
+  }
+}
+.way-block{
+  &+.way-block{
+    margin-top: 35px;
+  }
+  &__top{
+    font-family: Cygre;
+    font-weight: 400;
+    font-size: 103.26px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    span{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 51.63px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    &+p{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: $colorGray;
+    }
+  }
+
+}

@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 30px;
-    p {
+    p:not(.landing-text) {
       max-width: calc(100% / 12 * 7.5 + 20px);
       font-size: 16px;
       line-height: 24px;

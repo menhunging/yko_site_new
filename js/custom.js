@@ -1,4 +1,267 @@
 $(document).ready(function () {
+  if ($(".picture-slider").length > 0) {
+    const sliders = document.querySelectorAll(".picture-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".picture-slider .next")[0];
+          navPrev = $(slider).closest('section').find(".picture-slider .prev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 26,
+            breakpoints: {
+              0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+              },
+              769: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1201: {
+                spaceBetween: 26
+              }
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".reviews__slider").length > 0) {
+    const sliders = document.querySelectorAll(".reviews__slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".reviews__slider .next")[0];
+          navPrev = $(slider).closest('section').find(".reviews__slider .prev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 26,
+            breakpoints: {
+              0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+              },
+              769: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1201: {
+                spaceBetween: 26
+              }
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".full-pic__slider").length > 0) {
+    const sliders = document.querySelectorAll(".full-pic__slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 300,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              769: {
+                // spaceBetween: 16,
+              },
+              1201: {
+                spaceBetween: 300
+              }
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".special-slider").length > 0) {
+    const sliders = document.querySelectorAll(".special-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".special-slider .swiperBtnNext--dark")[0];
+          navPrev = $(slider).closest('section').find(".special-slider .swiperBtnPrev--dark")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            speed: 1000,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              769: {
+                // spaceBetween: 16,
+              },
+              1201: {
+                spaceBetween: 86
+              }
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".technologia-slider").length > 0) {
+    const sliders = document.querySelectorAll(".technologia-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".technologia__block .swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find(".technologia__block .swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1.1,
+            spaceBetween: 24,
+            speed: 1000,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              769: {
+                // spaceBetween: 16,
+              },
+              1201: {
+                slidesPerView: 1.1,
+                spaceBetween: 24
+              }
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".hero-block__slider ").length > 0) {
+
+    const swiper = new Swiper(".hero-block__slider .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
+      navigation: {
+        prevEl: ".hero-block__slider  .swiperBtnPrev",
+        nextEl: ".hero-block__slider  .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 120,
+          autoplay: false,
+        },
+      },
+    });
+  }
+
+  if ($(".parallax-slider .swiper").length > 0) {
+
+    const swiper = new Swiper(".parallax-slider .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 500,
+      navigation: {
+        prevEl: ".parallax-slider .swiperBtnPrev",
+        nextEl: ".parallax-slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+
   if ($(".rustic-slider").length > 0) {
     let lastIndex;
     const swiper = new Swiper(".rustic-slider", {
@@ -982,4 +1245,267 @@ $(document).ready(function () {
       });
     }
   }
+  const $parallaxBlocks = $(".parallax-item");
+
+  function parallaxEffect() {
+    const scrollY = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    $parallaxBlocks.each(function () {
+      const $block = $(this);
+      const blockOffsetTop = $block.offset().top;
+      const blockHeight = $block.outerHeight();
+      const $dragon = $block.find("img");
+
+      if (scrollY + windowHeight > blockOffsetTop && scrollY < blockOffsetTop + blockHeight) {
+        const progress = (scrollY + windowHeight - blockOffsetTop) / windowHeight;
+        $dragon.css("transform", `translateY(${progress * 150}px)`);
+      }
+    });
+  }
+
+  let ticking = false;
+  $(window).on("scroll", function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        parallaxEffect();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  parallaxEffect();
+
 });
+// Инициализация
+// (function(){
+//   // Параметры
+//   var ENABLE_ON_MOBILE = false; // true чтобы включить и на мобайле
+//   var MOBILE_MAX_WIDTH = 768;
+//   var DEFAULT_SPEED = 60; // пикселей макс смещение (если data-speed не задан)
+//
+//   // DOM
+//   var items = Array.prototype.slice.call(document.querySelectorAll('.parallax-item'));
+//
+//   if (!items.length) return;
+//
+//   // Состояние
+//   var activeItems = new Set(); // элементы, которые сейчас в viewport (или рядом)
+//   var latestScroll = window.scrollY || window.pageYOffset;
+//   var winH = window.innerHeight;
+//   var ticking = false;
+//   var enabled = true;
+//
+//   // включаем/выключаем эффект на мобиле, если нужно
+//   function checkEnabled() {
+//     if (!ENABLE_ON_MOBILE && window.innerWidth <= MOBILE_MAX_WIDTH) {
+//       enabled = false;
+//       // сбросим трансформы
+//       items.forEach(function(it){
+//         var img = it.querySelector('.parallax-img');
+//         if (img) img.style.transform = '';
+//       });
+//     } else {
+//       enabled = true;
+//     }
+//   }
+//
+//   // IntersectionObserver — добавляет/удаляет элементы в activeItems
+//   var ioOptions = {
+//     root: null,
+//     rootMargin: '200px 0px 200px 0px', // небольшой запас — чтобы начать эффект чуть раньше
+//     threshold: [0, 0.01] // сигнал при появлении/исчезновении
+//   };
+//
+//   var io = new IntersectionObserver(function(entries){
+//     entries.forEach(function(entry){
+//       var el = entry.target;
+//       if (entry.isIntersecting) {
+//         activeItems.add(el);
+//       } else {
+//         activeItems.delete(el);
+//         // сброс трансформации, чтобы картинка вернулась в исходное положение
+//         var img = el.querySelector('.parallax-img');
+//         if (img) img.style.transform = '';
+//       }
+//     });
+//     // если появились активные элементы, запустить рендер (если не запущен)
+//     if (!ticking && activeItems.size > 0) {
+//       ticking = true;
+//       requestAnimationFrame(render);
+//     }
+//   }, ioOptions);
+//
+//   items.forEach(function(it){
+//     io.observe(it);
+//   });
+//
+//   // Скролл (passive) — сохраняет значение прокрутки и стартует rAF, если нужно
+//   function onScroll() {
+//     latestScroll = window.scrollY || window.pageYOffset;
+//     if (!ticking && activeItems.size > 0 && enabled) {
+//       ticking = true;
+//       requestAnimationFrame(render);
+//     }
+//   }
+//   window.addEventListener('scroll', onScroll, { passive: true });
+//
+//   // Resize — обновляем размеры окна и возможно переключаем включение
+//   function onResize() {
+//     winH = window.innerHeight;
+//     checkEnabled();
+//   }
+//   window.addEventListener('resize', onResize, { passive: true });
+//
+//   // Основной рендер — обходит только activeItems
+//   function render() {
+//     if (!enabled) {
+//       ticking = false;
+//       return;
+//     }
+//
+//     var winCenter = winH / 2;
+//
+//     // Обходим Set activeItems (обычно маленький)
+//     activeItems.forEach(function(el){
+//       var img = el.querySelector('.parallax-img');
+//       if (!img) return;
+//
+//       var speedAttr = parseFloat(el.getAttribute('data-speed'));
+//       var maxShift = isNaN(speedAttr) ? DEFAULT_SPEED : speedAttr;
+//
+//       // Используем getBoundingClientRect (cheap для малого числа элементов)
+//       var rect = el.getBoundingClientRect();
+//       var elCenter = rect.top + rect.height / 2;
+//
+//       // расстояние центра элемента от центра окна (px)
+//       var distance = elCenter - winCenter;
+//
+//       // нормализуем в -1..1
+//       var norm = distance / winCenter;
+//       if (norm > 1) norm = 1;
+//       if (norm < -1) norm = -1;
+//
+//       // переводим в смещение (обратите внимание на знак)
+//       var translateY = - norm * maxShift;
+//
+//       // применяем GPU-ускоренный transform
+//       img.style.transform = 'translate3d(0,' + translateY + 'px,0)';
+//     });
+//
+//     // сбрасываем флаг — следующие изменения запустят рендер заново
+//     ticking = false;
+//   }
+//
+//   // инициализация
+//   checkEnabled();
+//   // первые проверки (иногда элементы уже в viewport)
+//   latestScroll = window.scrollY || window.pageYOffset;
+//   winH = window.innerHeight;
+//   // запустим рендер, если есть активные
+//   if (activeItems.size > 0 && enabled) {
+//     requestAnimationFrame(render);
+//   }
+//
+// })();
+// $(function() {
+//   var $win = $(window);
+//   var $items = $('.parallax-item');
+//
+//   $win.on('scroll', function() {
+//     var scrollTop = $win.scrollTop();
+//     var winH = $win.height();
+//
+//     $items.each(function() {
+//       var $el = $(this);
+//       var $img = $el.find('.parallax-img');
+//       var speed = parseFloat($el.data('speed')) || 0.3; // 0.2–0.5 = мягкий эффект
+//       var offsetTop = $el.offset().top;
+//       var elHeight = $el.outerHeight();
+//
+//       // Насколько элемент видим в окне
+//       var visible = (scrollTop + winH) - offsetTop;
+//       if (visible > 0 && visible < winH + elHeight) {
+//         // Рассчёт смещения (просто пропорция)
+//         var move = (scrollTop - offsetTop) * speed;
+//         $img.css('transform', 'translateY(' + move + 'px)');
+//       }
+//     });
+//   });
+//
+// });
+// (function($){
+//   var items = Array.prototype.slice.call(document.querySelectorAll('.parallax-item'));
+//   if (!items.length) return;
+//
+//   // Подготовка: хранит maxShift (data-speed) и ссылку на img
+//   items = items.map(function(el){
+//     return {
+//       el: el,
+//       img: el.querySelector('.parallax-img'),
+//       maxShift: parseFloat(el.getAttribute('data-speed')) || 60
+//     };
+//   });
+//
+//   var latestScroll = window.scrollY || window.pageYOffset;
+//   var latestWinH = window.innerHeight;
+//   var ticking = false;
+//
+//   function onScrollNative() {
+//     latestScroll = window.scrollY || window.pageYOffset;
+//     // запустить рендер, если ещё не запущен
+//     if (!ticking) {
+//       ticking = true;
+//       requestAnimationFrame(render);
+//     }
+//   }
+//
+//   function onResize() {
+//     latestWinH = window.innerHeight;
+//     // при ресайзе лучше сразу обновить позицию
+//     latestScroll = window.scrollY || window.pageYOffset;
+//     if (!ticking) {
+//       ticking = true;
+//       requestAnimationFrame(render);
+//     }
+//   }
+//
+//   function render() {
+//     // для каждого элемента получаем rect (cheap для 3 элементов) и считаем смещение
+//     var winCenter = latestWinH / 2;
+//     items.forEach(function(it){
+//       var rect = it.el.getBoundingClientRect();
+//       var elCenter = rect.top + rect.height / 2;
+//       // расстояние центра элемента от центра окна (в px, положительное — элемент ниже центра окна)
+//       var distance = elCenter - winCenter;
+//       // нормируем в примерно -1..1
+//       var norm = distance / winCenter;
+//       // итоговое смещение: отрицательный, чтобы картинка двигалась «назад» при прокрутке вниз
+//       var translateY = - norm * it.maxShift;
+//       // применяем transform (GPU-accelerated)
+//       it.img.style.transform = 'translate3d(0,' + translateY + 'px,0)';
+//     });
+//
+//     ticking = false;
+//   }
+//
+//   // passive scroll listener чтобы не блокировать wheel/touch
+//   window.addEventListener('scroll', onScrollNative, { passive: true });
+//   window.addEventListener('resize', onResize, { passive: true });
+//
+//   // инициализация сразу (если изображения уже загружены)
+//   if (document.readyState === 'complete') {
+//     latestWinH = window.innerHeight;
+//     latestScroll = window.scrollY || window.pageYOffset;
+//     requestAnimationFrame(render);
+//   } else {
+//     // если нужно — дождёмся load (чтобы размеры картинок уже были)
+//     window.addEventListener('load', function(){
+//       latestWinH = window.innerHeight;
+//       latestScroll = window.scrollY || window.pageYOffset;
+//       requestAnimationFrame(render);
+//     }, { passive: true });
+//   }
+//
+// })(jQuery);

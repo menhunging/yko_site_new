@@ -1,0 +1,68 @@
+.parallax{
+  padding-top: 103px;
+  padding-bottom: 100px;
+  .landing-text{
+    margin-top: 23px;
+    color: #5D5D5D;
+    margin-bottom: 50px;
+  }
+  &-item{
+    margin-top: 24px;
+    min-height: 549px;
+    height: 549px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+    border-radius: 60px;
+    &+.parallax-item{
+      margin-top: 30px;
+    }
+  }
+  &-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -190px;
+    transform: translate(0,0);
+    will-change: transform;
+    min-width: 100%;
+    min-height: 120%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  &-wrap{
+    pointer-events: none;
+  }
+  &-slide{
+    height: 490px;
+    border-radius: 25px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-slider{
+    &__controls{
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 20px;
+      .swiperBtn{
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        transform: translateY(0);
+      }
+    }
+  }
+  @media(max-width: 767px){
+    padding: 40px 0 35px;
+    .landing-text{
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
+  }
+}
