@@ -9,6 +9,10 @@
     background-color: transparent;
     color: $colorWhite;
     padding: 137px 0 74px;
+    .landing-title{
+      text-align: left;
+      color: $colorWhite;
+    }
   }
   &-controls{
     display: flex;

@@ -33,4 +33,10 @@
   &-wrap{
     pointer-events: none;
   }
+  @media(max-width: 767px){
+    padding: 40px 0 35px;
+    .landing-text{
+      margin-top: 0;
+    }
+  }
 }

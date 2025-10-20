@@ -180,8 +180,8 @@ $(document).ready(function () {
         let navPrev = undefined;
 
         if (!slider.swiper) {
-          navNext = $(slider).closest('section').find(".technologia-slider .swiperBtnNext")[0];
-          navPrev = $(slider).closest('section').find(".technologia-slider .swiperBtnPrev")[0];
+          navNext = $(slider).closest('section').find(".technologia__block .swiperBtnNext")[0];
+          navPrev = $(slider).closest('section').find(".technologia__block .swiperBtnPrev")[0];
 
           mySwipers[index] = new Swiper(slider, {
             slidesPerView: 1.1,
