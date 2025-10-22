@@ -1,0 +1,95 @@
+.architecture{
+  padding: 53px 0 0;
+  .landing-text{
+    margin-bottom: 25px;
+    margin-top: 43px;
+    color: $colorGray;
+  }
+  &-block{
+    border-radius: 60px;
+    overflow: hidden;
+    height: 680px;
+    background-image: url("./../img/land/architecture.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 37px;
+    .landing-title{
+      color: $colorWhite;
+    }
+    .inner{
+      max-width: 740px;
+      margin-left: auto;
+    }
+    &__slider{
+      overflow: visible;
+      margin-top: 44px;
+    }
+    .swiperBtn{
+      left: unset;
+      right: unset;
+      top: unset;
+      transform: translateY(0);
+      position: relative;
+      display: block;
+    }
+  }
+  &-controls{
+    position: relative;
+    margin-top: 44px;
+    display: flex;
+    gap: 25px;
+  }
+  &-slide{
+    padding: 25px 31px 25px 41px;
+    border-radius: 33px;
+    backdrop-filter: blur(17px);
+    min-height: 230px;
+    color: $colorWhite;
+    background: #00000059;
+    &__num{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    &__text{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-top: 7px;
+    }
+  }
+  @media(max-width: 767px){
+    &-block{
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-image: url("./../img/land/architecture-mob.png");
+      margin-top: 23px;
+      height: 483px;
+    }
+    .landing-text{
+      margin-bottom: 18px;
+      margin-top: 20px;
+    }
+    &-block{
+
+    }
+    &-slide{
+      min-height: 284px;
+    }
+    &-controls{
+      margin-top: 20px;
+      gap: 7px;
+      justify-content: center;
+    }
+  }
+}

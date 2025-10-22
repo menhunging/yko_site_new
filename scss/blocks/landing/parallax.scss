@@ -64,5 +64,10 @@
       margin-top: 0;
       margin-bottom: 26px;
     }
+    &-item{
+      min-height: 384px;
+      height: 384px;
+      border-radius: 25px;
+    }
   }
 }

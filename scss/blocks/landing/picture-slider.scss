@@ -1,6 +1,31 @@
 .picture-slider{
   margin-top: 45px;
   overflow: visible;
+  @media(min-width: 768px){
+    .next.swiperBtnNext--dark,.prev.swiperBtnPrev--dark{
+      border: none;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+    }
+  }
+  @media(max-width: 767px){
+    margin-top: 17px;
+    .next.swiperBtnNext--dark,.prev.swiperBtnPrev--dark{
+      width: 49px;
+      height: 49px;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      svg{
+        display: none;
+      }
+    }
+    .hand{
+      display: none;
+    }
+  }
 }
 .picture-slide{
   width: 100%;
@@ -31,9 +56,13 @@
     top: 17px;
   }
   @media(max-width: 767px){
-    position: relative;
     border-radius: 25px;
-    height: 400px;
+    position: relative;
+    height: 288px;
+    &:not(.swiper-slide){
+      height: 400px;
+
+    }
     &__info{
       font-size: 23px;
       line-height: 26px;
@@ -46,7 +75,7 @@
       top: 0;
       border-radius: 25px;
     }
-    &+.picture-slide{
+    &+.picture-slide:not(.swiper-slide){
       margin-top: 15px;
     }
   }
@@ -63,6 +92,10 @@
   justify-content: center;
   gap: 30px;
   margin-top: 70px;
+  @media(max-width: 767px){
+    gap: 7px;
+    margin-top: 24px;
+  }
 }
 @keyframes tooltip-hand {
   0% {
@@ -120,6 +153,13 @@
     padding-bottom: 88px;
     .pictures{
       margin-top: 28px;
+    }
+    &--padding-big{
+      padding-top: 43px;
+      padding-bottom: 32px;
+    }
+    .landing-text{
+      margin-top: 14px;
     }
   }
 }

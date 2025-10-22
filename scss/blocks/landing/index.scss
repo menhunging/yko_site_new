@@ -7,12 +7,16 @@
 @import "special";
 @import "tech";
 @import "more-form";
-
+@import "features";
+@import "architecture";
 
 
 .landing-page{
   .container{
     position: relative;
+  }
+  .consul-section__form{
+    backdrop-filter: none;
   }
   .projects .swiper-slide{
     background-color: $colorGrayLight;
@@ -28,10 +32,22 @@
   .reviews{
     padding-top: 89px;
     padding-bottom: 34px;
+    &.forest{
+      background-color: $forest;
+      padding-bottom: 129px;
+    }
+    &+.more-form{
+      margin-top: -95px;
+      z-index: 2;
+    }
+  }
+  .geoplan-section{
+    padding-top: 60px;
+    padding-bottom: 0;
   }
   .geoplan-section__body-item {
     padding-bottom: 10px;
-    padding-top: 60px;
+    padding-top: 56px;
     z-index: 3;
     .container{
       position: absolute;
@@ -54,13 +70,70 @@
       }
     }
   }
+  .about-information{
+    .landing-title{
+      color: $forest;
+      margin-bottom: 40px;
+    }
+  }
+  @media(max-width: 1200px){
+    .village-page .map{
+      margin-top: -122px;
+    }
+  }
   @media(max-width: 767px){
+    .news .news-slider{
+      width: 100%;
+    }
+    .news .section-title .controls .swiperBtnNext, .news .section-title .controls .swiperBtnPrev{
+      border: 1px solid $colorBlack;
+    }
     .projects{
       &-section__head{
         .landing-text{
           grid-column: span 2;
         }
       }
+    }
+    .village-page .map{
+        border-radius: 25px;
+    }
+    .news{
+      padding-bottom: 0;
+    }
+    .reviews{
+      padding-top: 50px;
+      &.forest{
+        background-color: $forest;
+        padding-bottom: 29px;
+        margin-top: 20px;
+        padding-top: 30px;
+        .swiperBtnNext--dark,
+        .swiperBtnPrev--dark{
+          border-color: $colorWhite;
+          background-color: rgb(40, 91, 90);
+        }
+        .swiperBtnNext--dark{
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.32469 1.21387L8.6394 7.48362L1.32469 13.7534' stroke='white' stroke-width='2'/%3e%3c/svg%3e ");
+        }
+        .swiperBtnPrev--dark{
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='13' viewBox='0 0 9 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.14011 1.18335L1.87036 6.55742L8.14011 11.9315' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+        }
+      }
+      &+.more-form{
+        margin-top: 16px;
+        z-index: 2;
+      }
+    }
+    .about-information{
+      .landing-title{
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media(max-width: 639px){
+    .village-page .map{
+      margin-top: -56px;
     }
   }
 }
