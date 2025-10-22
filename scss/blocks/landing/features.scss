@@ -1,0 +1,106 @@
+.features{
+  border-radius: 60px;
+  height: 933px;
+  background-image: url("./../img/land/feature.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color:$colorWhite;
+  padding-top: 106px;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #000000 4.03%, rgba(0, 0, 0, 0) 99.67%);
+    height: 494px;
+  }
+  .swiperBtn{
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset;
+    transform: translateY(0);
+  }
+  .landing-title{
+    color: $colorWhite;
+  }
+  .slider-controls{
+    display: flex;
+    gap: 6px;
+    margin-top: 0;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &-slider{
+    margin-top: 55px;
+    overflow: visible;
+  }
+  @media(max-width: 767px){
+    border-radius: 25px;
+    background-position: -390px;
+    height: 749px;
+    padding-top: 40px;
+    &:before{
+      height: 436px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 4.03%, rgba(0, 0, 0, 0) 99.67%);
+    }
+    &-slider{
+      margin-top: 27px;
+    }
+    .container{
+      padding-bottom: 86px;
+    }
+    .slider-controls{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+.feature-slide{
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding: 17px 20px 14px;
+  &__img{
+    border-radius: 30px;
+    height: 230px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text{
+    margin-top: 18px;
+    font-family: Cygre;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  @media(max-width: 767px){
+    border-radius: 29px;
+    padding: 12px 15px 29px;
+    &__img{
+      height: 201px;
+      border-radius: 22px;
+    }
+    &__text{
+      font-size: 19px;
+      line-height: 25px;
+      margin-top: 10px;
+    }
+  }
+}

@@ -2,12 +2,50 @@
   background-color: $land;
   border-radius: 60px 60px 0 0;
   padding: 0;
+  &.forest{
+    background-color: $colorGrayLight;
+    .consul-section{
+      &__form{
+        color: #212121;
+        .landing-title{
+          color: $forest;
+        }
+        .input-item input{
+          border-color: #212121;
+          color: #212121;
+          &::placeholder{
+            color: #212121;
+          }
+        }
+      }
+      &__check label{
+        &:before{
+          border-color: $colorYellow;
+        }
+        a{
+          color: #212121;
+        }
+      }
+    }
+  }
   .consul-section__form{
     padding: 157px 0 75px;
     background-color: transparent;
     color: $colorWhite;
     .landing-title{
       color: $colorWhite;
+    }
+  }
+  @media(max-width: 1200px){
+    .consul-section__form{
+      padding-top: 70px;
+    }
+  }
+  @media(max-width: 767px){
+    border-radius: 25px 25px 0 0;
+    .consul-section__form{
+      padding-top: 44px;
+      padding-bottom: 41px;
     }
   }
 }

@@ -296,6 +296,9 @@ body {
   letter-spacing: 0;
   text-transform: uppercase;
   color: $colorBlack;
+  &--forest{
+    color: $forest;
+  }
   @media(max-width: 767px){
     font-size: 35px;
     line-height: 42px;

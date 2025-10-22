@@ -17,7 +17,7 @@ $(document).ready(function () {
             spaceBetween: 26,
             breakpoints: {
               0: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 10,
               },
               769: {
@@ -149,11 +149,9 @@ $(document).ready(function () {
                 slidesPerView: 1,
                 spaceBetween: 30,
               },
-              769: {
-                // spaceBetween: 16,
-              },
               1201: {
-                spaceBetween: 86
+                spaceBetween: 86,
+                slidesPerView: 3,
               }
             },
             navigation: {
@@ -170,48 +168,115 @@ $(document).ready(function () {
     sliders.length && sliderinit();
   }
 
-  if ($(".technologia-slider").length > 0) {
-    const sliders = document.querySelectorAll(".technologia-slider");
-    let mySwipers = [];
+  if ($(".architecture-block__slider").length > 0) {
+    let lastIndex;
 
-    function sliderinit() {
-      sliders.forEach((slider, index) => {
-        let navNext = undefined;
-        let navPrev = undefined;
-
-        if (!slider.swiper) {
-          navNext = $(slider).closest('section').find(".technologia__block .swiperBtnNext")[0];
-          navPrev = $(slider).closest('section').find(".technologia__block .swiperBtnPrev")[0];
-
-          mySwipers[index] = new Swiper(slider, {
-            slidesPerView: 1.1,
-            spaceBetween: 24,
-            speed: 1000,
-            breakpoints: {
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              769: {
-                // spaceBetween: 16,
-              },
-              1201: {
-                slidesPerView: 1.1,
-                spaceBetween: 24
-              }
-            },
-            navigation: {
-              nextEl: navNext,
-              prevEl: navPrev,
-            },
-          });
-        } else {
-          return;
+    const swiper = new Swiper(".architecture-block__slider",{
+      slidesPerView: 1,
+      spaceBetween: 24,
+      speed: 1000,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1201: {
+          slidesPerView: 2,
+          spaceBetween: 20
         }
-      });
+      },
+      navigation: {
+        nextEl: ".architecture-block .swiperBtnNext",
+        prevEl: ".architecture-block .swiperBtnPrev",
+      },
+    })
+
+  }
+
+  if ($(".technologia-slider").length > 0) {
+    let lastIndex;
+
+    const swiper = new Swiper(".technologia-slider",{
+      slidesPerView: 1.1,
+      spaceBetween: 24,
+      speed: 1000,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        769: {
+          // spaceBetween: 16,
+        },
+        1201: {
+          slidesPerView: 1.1,
+          spaceBetween: 24
+        }
+      },
+      navigation: {
+        nextEl: ".technologia__block .swiperBtnNext",
+        prevEl: ".technologia__block .swiperBtnPrev",
+      },
+      pagination: {
+        el: $('.technologia__block .slider-nav').find('.slider-dots')[0],
+      },
+      on: {
+        activeIndexChange: function(q) {
+          var $zeroEl = $('.technologia__block .slider-nav'),
+              $activeBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+1)+')'),
+              $prevActiveBull = $zeroEl.find('.swiper-pagination-bullet:nth-child('+(+q.activeIndex+2)+')'),
+              activeBulPos = $activeBull.position().left;
+          if($prevActiveBull.length > 0) {
+            var prevActiveBulPos = $prevActiveBull.position().left;
+          }
+
+          if(activeBulPos > center) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = activeBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - center;
+          }
+          if ($prevActiveBull.length > 0 && lastIndex > q.activeIndex+1) {
+            $zeroEl.find('.slider-dots')[0].scrollLeft = prevActiveBulPos + $zeroEl.find('.slider-dots')[0].scrollLeft  - 15 - center;
+          }
+          lastIndex = q.activeIndex+1;
+        }
+      }
+    })
+    if($('.technologia__block .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').length > 0) {
+      var center = $('.technologia__block .slider-nav').find('.slider-dots .swiper-pagination-bullet:nth-child(2)').position().left;
     }
 
-    sliders.length && sliderinit();
+
+
+  }
+
+  if ($(".features-slider").length > 0) {
+
+    const swiper = new Swiper(".features-slider",{
+      slidesPerView: 3,
+      spaceBetween: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1201: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      },
+      navigation: {
+        nextEl: ".features .swiperBtnNext",
+        prevEl: ".features .swiperBtnPrev",
+      },
+    })
+
   }
 
   if ($(".hero-block__slider ").length > 0) {

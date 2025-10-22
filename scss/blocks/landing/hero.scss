@@ -1,11 +1,37 @@
 .hero-block{
   background-color: $land;
   padding: 0;
+  border-radius: 0 0 60px 60px;
   &__slider{
     background-image: url("./../img/land/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
+  }
+  &.forest{
+    background-color: $forest;
+    .hero-block{
+      &__title,
+      &__desc{
+        color: $colorWhite;
+        br{
+          display: none;
+        }
+      }
+      &__slider{
+        background-image: url("./../img/land/hero-forest.png");
+        background-position: center left;
+      }
+    }
+    .swiperBtn{
+      border-color: $colorWhite;
+    }
+    .swiperBtnPrev{
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.66346 1.21387L2.34875 7.48362L9.66346 13.7534' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+    }
+    .swiperBtnNext{
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.32469 1.21387L8.6394 7.48362L1.32469 13.7534' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+    }
   }
   &__slide{
     padding-top: 179px;
@@ -66,24 +92,96 @@
   .swiperBtnNext{
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.32469 1.21387L8.6394 7.48362L1.32469 13.7534' stroke='black' stroke-width='2'/%3e%3c/svg%3e");
   }
+  @media(max-width: 1800px){
+    &__slide{
+      padding-left: 40px;
+    }
+    .swiperBtnPrev{
+      left: -40px;
+    }
+    .swiperBtnNext{
+      right: -40px;
+    }
+  }
+  @media(max-width: 1600px){
+    &__slide{
+      padding-left: 60px;
+    }
+    .swiperBtnPrev{
+      left: -20px;
+    }
+    .swiperBtnNext{
+      right: -20px;
+    }
+  }
+  @media(max-width: 1300px){
+    &__slide{
+      padding-left: 60px;
+    }
+    .swiperBtnPrev{
+      left: 0px;
+    }
+    .swiperBtnNext{
+      right: 0px;
+    }
+  }
   @media(max-width: 767px){
     border-radius: 0 0 25px 25px;
     &__slider{
       background-image: url('./../img/land/bg-mob.png');
       background-position: top;
     }
+    &.forest{
+      .hero-block{
+        &__slider{
+          background-image: url('./../img/land/hero-forest-mob.png');
+          background-position: top;
+        }
+        &__slide{
+          padding-top: 88px;
+        }
+        &__advantages{
+          margin-top: 240px;
+        }
+        &__desc{
+          max-width: 250px;
+          margin-bottom: 5px;
+        }
+        &__title{
+          br{
+            display: block;
+          }
+        }
+      }
+      .swiperBtnPrev{
+        left: 10px;
+        bottom: 431px;
+      }
+      .swiperBtnNext{
+        right: unset;
+        left: 65px;
+        bottom: 431px;
+      }
+    }
     &__slide{
       padding-top: 255px;
       padding-bottom: 0;
+      padding-left: 0;
       .container{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 0;
       }
     }
     .swiperBtn{
-      //bottom: 375px;
       bottom: 40%;
+    }
+    .swiperBtnPrev{
+      left: calc(50% - 53px);
+    }
+    .swiperBtnNext{
+      right: calc(50% - 53px);
     }
     &__title{
       font-size: 50px;
