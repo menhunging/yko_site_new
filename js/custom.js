@@ -42,6 +42,42 @@ $(document).ready(function () {
     sliders.length && sliderinit();
   }
 
+  if ($(".creative-slider").length > 0) {
+    const sliders = document.querySelectorAll(".creative-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).closest('section').find(".next")[0];
+          navPrev = $(slider).closest('section').find(".prev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+            },
+            navigation: {
+              nextEl: navNext,
+              prevEl: navPrev,
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
   if ($(".reviews__slider").length > 0) {
     const sliders = document.querySelectorAll(".reviews__slider");
     let mySwipers = [];

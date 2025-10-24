@@ -1,0 +1,116 @@
+.creative{
+  &-slider{
+    border-radius: 60px;
+    background-image: url("./../img/land/sl.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: $colorWhite;
+    min-height: 780px;
+    padding: 76px 0 88px;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-wrapper{
+    flex-grow: 1;
+  }
+  .landing-title{
+    color: $colorWhite;
+  }
+  &-controls{
+    display: flex;
+    gap: 25px;
+    position: absolute;
+    bottom: 0;
+  }
+  .swiperBtn{
+    border-color: $colorWhite;
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    transform: translateY(0);
+    &.prev{
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.66346 1.21387L2.34875 7.48362L9.66346 13.7534' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+    }
+    &.next{
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.32469 1.21387L8.6394 7.48362L1.32469 13.7534' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+    }
+  }
+  &-slide{
+    &__name{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 39px;
+      line-height: 42.14px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      margin-top: 87px;
+    }
+    &__text{
+      font-family: Cygre;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      &--br{
+        display: none;
+      }
+    }
+    &__title,
+    &__name,
+    &__text{
+      max-width: 442px;
+    }
+    &__title+.creative-slide__text{
+      margin-top: 152px;
+    }
+  }
+  @media(max-width: 767px){
+    &-slider{
+      border-radius: 25px;
+      padding-top: 42px;
+      background-image: url("./../img/land/sl-mob.png");
+      min-height: 640px;
+      padding-bottom: 0;
+    }
+    &-slide{
+      &__name{
+        font-family: Cygre;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 0;
+        vertical-align: middle;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        margin-top: 16px;
+      }
+      &__text{
+        display: none;
+        &--br{
+          display: block;
+        }
+      }
+      &__title+.creative-slide__text{
+        margin-top: 24px;
+      }
+    }
+    &-controls{
+      gap: 7px;
+      bottom: 117px;
+    }
+  }
+  @media(max-width: 450px){
+    &-slider{
+      background-position: unset;
+    }
+    &+.special{
+      margin-top: -70px;
+      z-index: 2;
+    }
+  }
+}

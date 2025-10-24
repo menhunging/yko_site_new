@@ -2,6 +2,15 @@
   background-color: $land;
   padding: 0;
   border-radius: 0 0 60px 60px;
+  position: relative;
+  .roof-left{
+    left: 0;
+    bottom: 30px;
+  }
+  .roof-right{
+    right: 0;
+    bottom: -78px;
+  }
   &__slider{
     background-image: url("./../img/land/bg.png");
     background-size: cover;
@@ -127,6 +136,14 @@
   }
   @media(max-width: 767px){
     border-radius: 0 0 25px 25px;
+    .roof-left{
+      display: none;
+    }
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+    }
     &__slider{
       background-image: url('./../img/land/bg-mob.png');
       background-position: top;
@@ -210,6 +227,18 @@
     }
     .consul-section__form{
       padding: 40px 0 28px;
+    }
+  }
+  @media(max-width: 500px){
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+      bottom: 172px;
+    }
+    .roof-forest{
+      top: unset;
+      bottom: 150px;
     }
   }
   @media(max-width: 380px){

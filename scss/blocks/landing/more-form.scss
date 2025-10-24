@@ -2,6 +2,16 @@
   background-color: $land;
   border-radius: 60px 60px 0 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  .roof-left{
+    left: 0;
+    bottom: 30px;
+  }
+  .roof-right{
+    right: 0;
+    bottom: -78px;
+  }
   &.forest{
     background-color: $colorGrayLight;
     .consul-section{
@@ -46,6 +56,22 @@
     .consul-section__form{
       padding-top: 44px;
       padding-bottom: 41px;
+    }
+    .roof-left{
+      display: none;
+    }
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+    }
+  }
+  @media(max-width: 500px){
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+      bottom: 172px;
     }
   }
 }

@@ -4,6 +4,19 @@
   position: relative;
   border-radius:60px;
   margin-top: 68px;
+  &:before{
+    content: "";
+    position: absolute;
+    transition: all 0.3s;
+    background-image: url(./../img/svg/lines.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1135px;
+    height: 456px;
+    pointer-events: none;
+    right: -468px;
+    top: 30px;
+  }
   .vector{
     position: absolute;
     left: 0;
@@ -98,6 +111,13 @@
         line-height: 22px;
         padding-inline: 15px;
       }
+    }
+  }
+  @media(max-width: 500px){
+    &:before{
+      right: -658px;
+      top: -50px;
+      scale: .5;
     }
   }
 }
