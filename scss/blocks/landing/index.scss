@@ -9,9 +9,23 @@
 @import "more-form";
 @import "features";
 @import "architecture";
+@import "creative";
 
 
 .landing-page{
+  input{
+    background-color: $land;
+  }
+  &.forest{
+    input{
+      background-color: $forest;
+    }
+    .more-form{
+      input{
+        background-color: #F8F8F8;
+      }
+    }
+  }
   .container{
     position: relative;
   }
@@ -26,6 +40,14 @@
   .news{
     background-color: $colorWhite;
     &:before{
+      display: none;
+    }
+  }
+  .news{
+    &:before{
+      display: block;
+    }
+    &:after{
       display: none;
     }
   }
@@ -135,5 +157,69 @@
     .village-page .map{
       margin-top: -56px;
     }
+    .about-information__wrapper--right-img > :last-child picture{
+      width: 100%;
+    }
+    .news{
+      &:before{
+        top: -80px;
+        scale: .5;
+        left: -200px;
+      }
+    }
+  }
+}
+.roof-left{
+  content: '';
+  background-image: url('./../img/land/roof-left.png');
+  display: block;
+  position: absolute;
+  width: 191px;
+  height: 441px;
+}
+.roof-right{
+  content: '';
+  background-image: url('./../img/land/roof-white.png');
+  display: block;
+  position: absolute;
+  width: 430px;
+  height: 441px;
+}
+.roof{
+  content: '';
+  background-image: url('./../img/land/roof.png');
+  display: block;
+  position: absolute;
+  width: 480px;
+  height: 441px;
+}
+.roof-forest{
+  content: '';
+  background-image: url('./../img/land/roof-forest.svg');
+  display: block;
+  position: absolute;
+  width: 304px;
+  height: 412px;
+  right: 0;
+  left: unset;
+  @media(max-width: 500px){
+    scale: .7;
+    top: -50px;
+    right: -60px;
+  }
+}
+.roof-forest-inv{
+  content: '';
+  background-image: url('./../img/land/roof-forest--inv.svg');
+  display: block;
+  position: absolute;
+  width: 304px;
+  height: 412px;
+  right: 0;
+  left: unset;
+  @media(max-width: 500px){
+    scale: .7;
+    top: -50px;
+    right: -60px;
   }
 }

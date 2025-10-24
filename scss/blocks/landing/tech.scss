@@ -4,8 +4,17 @@
   overflow: hidden;
   padding-bottom: 0;
   padding-top: 0;
+  position: relative;
   &.forest{
     background-color: $forest;
+  }
+  .roof-left{
+    left: 0;
+    top: -120px;
+  }
+  .roof-right{
+    right: 0;
+    top: 30px;
   }
   .consul-section__form{
     border-radius: 0;
@@ -109,6 +118,14 @@
   }
   @media(max-width: 767px){
     border-radius: 25px;
+    .roof-left{
+      display: none;
+    }
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+    }
     .consul-section__form{
       padding-top: 44px;
       padding-bottom: 61px;
@@ -140,6 +157,9 @@
         line-height: 16px;
         margin-top: 32px;
       }
+      &.swiper-slide-next{
+        transform: rotate(0) translate(0, 0);
+      }
     }
     &-controls{
       display: none;
@@ -155,6 +175,14 @@
           margin-top: 142px;
         }
       }
+    }
+  }
+  @media(max-width: 500px){
+    .roof-right{
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+      bottom: 172px;
     }
   }
 }

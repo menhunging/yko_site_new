@@ -124,8 +124,9 @@
     &__right{
       order: 0;
       height: 267px;
-      border-radius: 25px 0 0 25px;
+      border-radius: 25px;
       overflow: hidden;
+      margin-right: 0;
     }
     &__title{
       order: -1;

@@ -58,6 +58,22 @@
       }
     }
   }
+  &--lines{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      transition: all 0.3s;
+      background-image: url(./../img/svg/lines.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 1135px;
+      height: 456px;
+      pointer-events: none;
+      right: -468px;
+      bottom: 0;
+    }
+  }
   @media(max-width: 767px){
     padding: 40px 0 35px;
     .landing-text{
@@ -68,6 +84,15 @@
       min-height: 384px;
       height: 384px;
       border-radius: 25px;
+    }
+  }
+  @media(max-width: 500px){
+    &--lines{
+      &:before{
+        bottom: unset;
+        scale: .5;
+        top: -100px;
+      }
     }
   }
 }

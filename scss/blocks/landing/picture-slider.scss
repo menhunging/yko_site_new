@@ -162,4 +162,12 @@
       margin-top: 14px;
     }
   }
+  @media(max-width: 500px){
+    &:before{
+      scale: .5;
+      bottom: unset;
+      top: -36px;
+      left: -120px;
+    }
+  }
 }
