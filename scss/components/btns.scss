@@ -61,6 +61,11 @@
     color: $colorWhite;
     border: solid 1px $colorBlack;
     background-color: $colorBlack;
+    &:hover,
+    &:active{
+      background-color: #f59e11;;
+      border-color: transparent;
+    }
   }
   &:disabled {
     opacity: 0.5;
