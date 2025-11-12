@@ -398,11 +398,10 @@
   display: flex;
   align-items: center;
   position: relative;
-  top: -2px;
 
   @include responsive1549 {
     position: relative;
-    top: -1px;
+
   }
 
   @include responsive1199 {
